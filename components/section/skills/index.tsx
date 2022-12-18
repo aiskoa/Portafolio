@@ -2,7 +2,6 @@ import { config } from "../../../config";
 import Image from "next/image";
 import Box from "../../common/box";
 import {
-  SiTypescript,
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
@@ -16,7 +15,6 @@ import {
   SiGnubash,
   SiPython,
   SiCplusplus,
-  SiKotlin,
   SiElectron,
   SiMysql,
   SiKalilinux,
@@ -27,6 +25,11 @@ import {
   SiTwitter,
   SiDiscord,
   SiHackthebox,
+  SiJavascript,
+  SiJava,
+  SiFigma,
+  SiMicrosoftsqlserver,
+  SiCisco,
 } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
@@ -58,9 +61,9 @@ const Skills: React.FC = (): ReactElement => {
         <Box
           title={t("languages")}
           icons={[
-          <SkillsIcon text="Typescript" children={<SiTypescript />} />,
+          <SkillsIcon text="Javascript" children={<SiJavascript />} />,
           <SkillsIcon text="Python" children={<SiPython />} />,
-          <SkillsIcon text="Typescript" children={<SiKotlin />} />,
+          <SkillsIcon text="Java" children={<SiJava />} />,
           <SkillsIcon text="C++" children={<SiCplusplus />} />,
         ]}
         />
@@ -70,6 +73,7 @@ const Skills: React.FC = (): ReactElement => {
             <SkillsIcon text="React" children={<SiReact />} />,
             <SkillsIcon text="Nextjs" children={<SiNextdotjs />} />,
             <SkillsIcon text="Electron" children={<SiElectron />} />,
+            <SkillsIcon text="Figma" children={<SiFigma />} />,
             // <SkillsIcon text="Material UI" children={<SiMaterialui />} />,
           ]}
         />
@@ -86,6 +90,7 @@ const Skills: React.FC = (): ReactElement => {
             <SkillsIcon text="MongoDB" children={<SiMongodb />} />,
             <SkillsIcon text="PostgreSQL" children={<SiPostgresql />} />,
             <SkillsIcon text="MySQL" children={<SiMysql />} />,
+            <SkillsIcon text="SQL Server" children={<SiMicrosoftsqlserver />} />,
           ]}
         />
         <Box
@@ -104,6 +109,7 @@ const Skills: React.FC = (): ReactElement => {
             // <SkillsIcon text="Heroku" children={<SiHeroku />} />,
             <SkillsIcon text="Vercel" children={<SiVercel />} />,
             <SkillsIcon text="Azure" children={<SiMicrosoftazure />} />,
+            <SkillsIcon text="Azure" children={<SiCisco />} />,
           ]}
         />
         <Box
@@ -119,7 +125,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
             <a href="https://discord.gg/VFg9SSmPFy"><SkillsIcon text="Discord" children={<SiDiscord />} /></a>,
             <a href="https://twitter.com/Rawierdt"><SkillsIcon text="Twitter" children={<SiTwitter />} /></a>,
-            <a href="https://www.linkedin.com/in/Rawier"><SkillsIcon text="Linkedin" children={<SiLinkedin />} /></a>,
+            <a href="https://www.linkedin.com/in/alejandro-aguilar-a06054257/"><SkillsIcon text="Linkedin" children={<SiLinkedin />} /></a>,
           ]}
         />
       </div>
