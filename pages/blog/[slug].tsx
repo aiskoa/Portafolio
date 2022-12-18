@@ -19,7 +19,7 @@ export default function PostPage({
         <link
           rel="shortcut icon"
           type="image/jpg"
-          href="https://i.ibb.co/ySqhRDD/Rawier-logo.png"
+          href="../Rawier-icon.png"
         />
         <meta property="og:image" content={config.github.url} />
         <meta name="description" content={excerpt}></meta>

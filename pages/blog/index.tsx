@@ -16,13 +16,12 @@ export default function Blog({ posts }: PostsType) {
         <link
           rel="shortcut icon"
           type="image/jpg"
-          href="https://i.ibb.co/ySqhRDD/Rawier-logo.png"
+          href="../Rawier-icon.png"
         />
         <noscript>
           <h1>
             You need to enable JavaScript to run this app.
           </h1>
-          <img loading="lazy" src="https://media.tenor.com/-Lf5EcAikIYAAAAC/crying-gif.gif" width={510}/>
         </noscript>
         <meta property="og:image" content={config.github.url} />
         <meta

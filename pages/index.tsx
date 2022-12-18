@@ -10,7 +10,7 @@ const Home: NextPage = (): ReactElement => {
     <div className="space-y-14 lg:space-y-24">
       <Head>
         <title>Rawier</title>
-        <link rel="shortcut icon" type="image/png" href="https://i.ibb.co/ySqhRDD/Rawier-logo.png" />
+        <link rel="shortcut icon" type="image/png" href="./Rawier-icon.png" />
         <meta property="og:image"
           content={config.github.url} />
         <meta name="description"
