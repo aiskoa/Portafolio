@@ -27,7 +27,6 @@ import {
   SiHackthebox,
   SiJavascript,
   SiJava,
-  SiFigma,
   SiMicrosoftsqlserver,
   SiCisco,
 } from "react-icons/si";
@@ -73,7 +72,6 @@ const Skills: React.FC = (): ReactElement => {
             <SkillsIcon text="React" children={<SiReact />} />,
             <SkillsIcon text="Nextjs" children={<SiNextdotjs />} />,
             <SkillsIcon text="Electron" children={<SiElectron />} />,
-            <SkillsIcon text="Figma" children={<SiFigma />} />,
             // <SkillsIcon text="Material UI" children={<SiMaterialui />} />,
           ]}
         />
@@ -89,8 +87,8 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
             <SkillsIcon text="MongoDB" children={<SiMongodb />} />,
             <SkillsIcon text="PostgreSQL" children={<SiPostgresql />} />,
-            <SkillsIcon text="MySQL" children={<SiMysql />} />,
             <SkillsIcon text="SQL Server" children={<SiMicrosoftsqlserver />} />,
+            <SkillsIcon text="MySQL" children={<SiMysql />} />,
           ]}
         />
         <Box
@@ -109,7 +107,7 @@ const Skills: React.FC = (): ReactElement => {
             // <SkillsIcon text="Heroku" children={<SiHeroku />} />,
             <SkillsIcon text="Vercel" children={<SiVercel />} />,
             <SkillsIcon text="Azure" children={<SiMicrosoftazure />} />,
-            <SkillsIcon text="Azure" children={<SiCisco />} />,
+            <SkillsIcon text="Cisco" children={<SiCisco />} />,
           ]}
         />
         <Box
