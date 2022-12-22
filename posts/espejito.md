@@ -8,7 +8,7 @@ cover_image: "/blog/espejito.webp"
 # Installation
 
 * The complete guide can be found at [GitHub](https://github.com/Rawierdt/espejito)
-* Page can be found [Here](https://Rawierdt.github.io/espejito/)
+* Page can be found [Here](https://rawierdt.github.io/espejito/)
 
 <h1 align="center">🍀 Espejito... My Data 🍀</h1>
 <p align="center">
