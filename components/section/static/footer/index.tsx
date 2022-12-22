@@ -1,6 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 import React, { ReactElement } from "react";
-import { SiCodewars, SiDevdotto, SiDiscord, SiGithub, SiHackthebox, SiInstagram, SiLinkedin, SiPlatzi, SiSteam, SiTwitter } from "react-icons/si";
+import { SiDevdotto, SiDiscord, SiGithub, SiHackthebox, SiInstagram, SiLinkedin, SiPlatzi, SiSteam, SiTwitter } from "react-icons/si";
 import { config } from "../../../../config/index";
 import { SkillsIcon } from "../../../";
 /**
