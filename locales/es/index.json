@@ -22,5 +22,6 @@
   "freelance": "¿Quieres contratar mis servicios como freelance? Puedo diagnosticar cual herramienta  de seguridad informatica para tu empresa o negocio es la adecuada según su tamaño, costo o dificultad de instalación, puedo desarrollar una aplicación web o software para su empresa o negocio. Contacte conmigo via Twitter, Discord o Correo junto a un breve resumen del proyecto seguido de una lista de detalles clave a tener en cuenta en un documento PDF. Por ejemplo:",
   "pdfdoc": "{Nombre del proyecto} Buen día soy {Nombre o alias}, quiero un ____ que me permita hacer ____. Esta es una lista de características que el proyecto debe tener:_____, Mi (correo/twitter/discord) es ________, espero su respuesta.",
   "pdfdoc2": "Con todos esto los detalles explicados puedo calcular un precio estimado y una fecha de entrega. La mitad del dinero debe entregarse la primer semana una vez firmado y enviado el contrato que llegará a su correo si su petición fue aceptada, y la otra mitad se dará al final una vez terminado el pedido. No haré ninguna devolución a no ser que el software no funcione y no pueda hacerlo funcionar.",
-  "posted_on": "Publicado el"
+  "posted_on": "Publicado el",
+  "404": "Esta pagina no esta disponible"
 }

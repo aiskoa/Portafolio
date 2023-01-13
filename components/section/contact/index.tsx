@@ -34,23 +34,23 @@ const Contact: React.FC = (): ReactElement => {
       </div>
       {/* <h2 className="ml-5 text-2xl">{t("contact")}</h2> */}
       <div>
-      <noscript>
-            <h1>
+        <noscript>
+          <h1>
             You need to enable JavaScript to run this app.
-            </h1>
-            </noscript>
+          </h1>
+        </noscript>
         <div className="font-thin m-5 flex-column rounded-2xl dark:hover:border-purple-700 hover:border-blue-700 border-2 border-gray-900 dark:border-white p-2">
           <p className="text-center text-2xl">{t("contact")}</p>
-          {/* Here we prevent the text from being copied */}
+          {/* Evita que las palabras y textos sean copiados */}
           <p className="flex justify-evenly select-none">{t("whoiam")}</p>
           <br />
-          {/* Here we prevent images from being copied. */}
+          {/* Evita que las imagenes sean copiadas. */}
           <div className="flex justify-around hover:justify-evenly">
             <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/1zJ9fW3/UC-d2e58f0b-eb62.jpg" width="300"></img>
           </div>
           <br />
           <div className="flex justify-around hover:justify-evenly">
-            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/KwX4g85/diploma-terminal-page-0001.jpg" width="300"></img>
+            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://avatarfiles.alphacoders.com/336/336559.png" width="300"></img>
           </div>
           <br />
           <p className="flex justify-evenly select-none">{t("text_mail")}</p>

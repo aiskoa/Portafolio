@@ -20,3 +20,12 @@
   user-select: none;
   color: #cc0000;
 }
+
+.not_found{
+  text-align: center;
+}
+
+.not_found a{
+  color: aqua;
+  text-decoration: underline;
+}
