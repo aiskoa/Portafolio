@@ -21,7 +21,7 @@ const Contact: React.FC = (): ReactElement => {
   return (
     <>
       <div className="flex justify-center place-items-center">
-        <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10">
+        <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10" draggable="false">
           <Image
             src={config.github.url}
             alt="Profile"
