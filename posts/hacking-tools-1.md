@@ -14,6 +14,7 @@ Al dar click sobre la herramienta automaticamente serás redirigido a la al siti
 
 Actualizaciones:
 * Aquatone cambio el repositorio a "Archivado" y planea hacer cambios importantes.
+
 &nbsp;
 
 # 1.- [Burp Suite - Framework.](https://portswigger.net/burp/communitydownload)
@@ -39,6 +40,7 @@ Actualizaciones:
 # 22.- [Parameth - Fuerza bruta en parametros GET y POST.](https://github.com/maK-/parameth)
 # 23.- [truffleHog - Escuentra credenciales sobre commints de GitHub.](https://github.com/trufflesecurity/trufflehog)
 
+&nbsp;
 
 # Gracias por leer
 ~ Rawier.
