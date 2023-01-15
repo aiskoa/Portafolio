@@ -17,7 +17,7 @@ const Navigation: React.FC = (): ReactElement => {
               "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"
             }
           >
-            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="../favicon.png" width={30} height={30}></img>
+            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="../favicon.png" width={30} height={30} alt="Rawier Home"></img>
           </a>
         </Link>
         <Theme />
