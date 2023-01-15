@@ -18,9 +18,9 @@ const NotFound: NextPage = (): ReactElement => {
         <title>Rawier - 404</title>
         <link rel="shortcut icon" type="image/png" href="./Rawier-icon.png" />
         <meta name="description"
-          content="404 Not Found."></meta>
+          content="Rawier 404 Not Found."></meta>
         <meta property="og:description"
-          content="404 Not Found." />
+          content="Rawier 404 Not Found." />
         <meta property="og:title" content="Rawier - Not Found" />
         <meta property="og:url" content="https://Rawier.vercel.app" />
     </Head>
@@ -33,7 +33,7 @@ const NotFound: NextPage = (): ReactElement => {
       </div>
       <br />
       <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">Ooops....</h1>
-      <p className="flex justify-center font-bold text-black-900 dark:text-white">La pagina no existe, pero puedes seguir aqui perdiendo el tiempo.</p>
+      <p className="flex justify-center font-bold text-black-900 dark:text-white">La pagina no existe, pero puedes seguir aqui haciendo que siempre haces perder el tiempo.</p>
       <p className="flex justify-center">Regresar a &nbsp;<Link href="/"><a className='font-bold text-purple-500 dark:text-pink'>Home</a></Link></p>
     </div>
     </>

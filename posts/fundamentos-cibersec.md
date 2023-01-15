@@ -76,6 +76,6 @@ Te recomiendo ir al Cheatsheet para una versión mas dinamica y divertida de apr
 
 * Acceso a mi [Sitio Web](https://Rawier.vercel.app/es/blog/)
 
-## Graicas por leer la parte 1
+## Gracias por leer la parte 1
 
 Rawier.
