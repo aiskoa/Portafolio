@@ -50,6 +50,7 @@ const Skills: React.FC = (): ReactElement => {
             alt="Profile"
             priority={true}
             className="rounded-full"
+            draggable="false"
             width={250}
             height={250}
           />

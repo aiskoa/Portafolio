@@ -21,12 +21,13 @@ const Contact: React.FC = (): ReactElement => {
   return (
     <>
       <div className="flex justify-center place-items-center">
-        <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10" draggable="false">
+        <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10 pointer-events-none focus:pointer-events-auto flex-shrink-0 lg:mt-12 lg:px-4 mb-10" draggable="false">
           <Image
             src={config.github.url}
             alt="Profile"
             loading="lazy"
             className="rounded-full"
+            draggable="false"
             width="250"
             height="250"
           />
