@@ -1,4 +1,4 @@
-# 🇳 Portafolio 2022 - Nextjs + Tailwind + Digital Ocean
+# 🇳 Portafolio 2022 - Nextjs + Tailwind + Vercel
 
 ![Portafolio](https://i.ibb.co/hWmrZ2t/scrernportafolio.jpg)
 
