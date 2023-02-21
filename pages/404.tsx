@@ -32,8 +32,8 @@ const NotFound: NextPage = (): ReactElement => {
         <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://media.tenor.com/o-0LaJK3qWcAAAAC/yamada-ryou-yamada-ryo.gif" width="400" height="400"></img>
       </div>
       <br />
-      <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">Ooops....</h1>
-      <p className="flex justify-center font-bold text-black-900 dark:text-white">La pagina no existe, pero puedes seguir aqui haciendo que siempre haces, perder el tiempo.</p>
+      <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">Ooops...</h1>
+      <p className="flex justify-center font-bold text-black-900 dark:text-white">The page you're looking for is now in a better place., my stomach.</p>
       <p className="flex justify-center">Regresar a &nbsp;<Link href="/"><a className='font-bold text-purple-500 dark:text-pink'>Home</a></Link></p>
     </div>
     </>
