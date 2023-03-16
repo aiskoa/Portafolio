@@ -63,8 +63,8 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
           <SkillsIcon text="Javascript" children={<SiJavascript />} />,
           <SkillsIcon text="Python" children={<SiPython />} />,
-          <SkillsIcon text="Java" children={<SiJava />} />,
-          <SkillsIcon text="C++" children={<SiCplusplus />} />,
+          // <SkillsIcon text="Java" children={<SiJava />} />,
+          // <SkillsIcon text="C++" children={<SiCplusplus />} />,
         ]}
         />
         <Box
@@ -86,8 +86,8 @@ const Skills: React.FC = (): ReactElement => {
         <Box
           title="DBs"
           icons={[
-            <SkillsIcon text="MongoDB" children={<SiMongodb />} />,
-            <SkillsIcon text="PostgreSQL" children={<SiPostgresql />} />,
+            // <SkillsIcon text="MongoDB" children={<SiMongodb />} />,
+            // <SkillsIcon text="PostgreSQL" children={<SiPostgresql />} />,
             <SkillsIcon text="SQL Server" children={<SiMicrosoftsqlserver />} />,
             <SkillsIcon text="MySQL" children={<SiMysql />} />,
           ]}
@@ -96,7 +96,7 @@ const Skills: React.FC = (): ReactElement => {
           title={t("other")}
           icons={[
             <SkillsIcon text="Kali" children={<SiKalilinux />} />,
-            <SkillsIcon text="Docker" children={<SiDocker />} />,
+            // <SkillsIcon text="Docker" children={<SiDocker />} />,
             // <SkillsIcon text="Vim" children={<SiVim />} />,
             <SkillsIcon text="Linux" children={<SiLinux />} />,
             <SkillsIcon text="Bash" children={<SiGnubash />} />,

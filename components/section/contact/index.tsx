@@ -50,10 +50,10 @@ const Contact: React.FC = (): ReactElement => {
             <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/1zJ9fW3/UC-d2e58f0b-eb62.jpg" width="300"></img>
           </div>
           <br />
-          <div className="flex justify-around hover:justify-evenly">
+          {/* <div className="flex justify-around hover:justify-evenly">
             <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://avatarfiles.alphacoders.com/336/336559.png" width="300"></img>
           </div>
-          <br />
+          <br /> */}
           <p className="flex justify-evenly select-none">{t("text_mail")}</p>
           <a className="flex justify-evenly" href="mailto:lwnadev@gmail.com?Subject=DUDA%20_%20GENERAL">Rawierdt@gmail.com</a>
           <br />
