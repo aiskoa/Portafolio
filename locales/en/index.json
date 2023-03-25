@@ -23,5 +23,6 @@
   "pdfdoc": "{Project name} Good day I am {Name or alias}, I want a ____ that will allow me to make ____. Here is a list of features that the project should have:________, My (email/twitter/discord) is ________, I look forward to your answer",
   "pdfdoc2": "With all these details explained I can calculate an estimated price and delivery date. Half of the money should be given the first week after signing and sending the contract that will arrive to your mail if your request was accepted, and the other half will be given at the end after finishing the order. I will not give any refund unless the software does not work and I cannot make it work.",
   "posted_on": "Posted on",
-  "404": "This page doesnt avaliable"
+  "404": "This page doesnt avaliable",
+  "projects": "Portfolio"
 }

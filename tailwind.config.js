@@ -6,7 +6,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'dvd': "url('https://thumbs.gfycat.com/BackJitteryCuttlefish-size_restricted.gif')",
+      },
+    },
   },
   plugins: [],
 }

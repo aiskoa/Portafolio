@@ -17,7 +17,7 @@ const SkillsSection: NextPage = (): ReactElement => {
         <meta property="og:description"
           content="Skills section - Here I list most of the skills I use in my daily basis and my personal projects"/>
         <meta property="og:title" content="Rawier - Cybersecurity" />
-        <meta property="og:url" content="https://Rawier.vercel.app" />
+        <meta property="og:url" content="https://Rawier.vercel.app/skills" />
       </Head>
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <Skills />

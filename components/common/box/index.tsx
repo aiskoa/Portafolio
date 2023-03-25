@@ -14,7 +14,7 @@ import { BoxType } from "../../../models";
 
 const Box: React.FC<BoxType> = ({ title, icons }: BoxType): ReactElement => {
   return (
-    <div className="font-thin text-4xl m-5 flex-column rounded-2xl dark:hover:border-blue-700 hover:border-red-700 border-2 border-gray-900 dark:border-white p-2">
+    <div className="font-thin text-4xl m-5 flex-column rounded-2xl dark:hover:border-violet-700 hover:border-yellow-500 border-2 border-gray-900 dark:border-white p-2">
       <h3 className="text-center text-2xl">{title}</h3>
       <div className="flex justify-evenly mt-5">{icons}</div>
     </div>
