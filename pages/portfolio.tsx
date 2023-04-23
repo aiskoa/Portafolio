@@ -36,17 +36,17 @@ const Portfolio: NextPage = (): ReactElement => {
       <br />
         <div className='flex justify-center items-center leading-tight p-2 md:p-4'>
           <div className='flex justify-center items-center'>
-            <article className="overflow-hidden rounded-lg shadow-lg border-2 dark:hover:border-violet-800 hover:border-yellow-500 blur-sm hover:blur-none">
+            <article className="overflow-hidden rounded-lg shadow-lg border-2 dark:hover:border-violet-800 hover:border-yellow-500 grayscale hover:grayscale-0">
                 <a href="https://github.com/Rawierdt/Tidex" target={'_blank'}><img className="block h-auto w-full" draggable="false" loading="lazy" src="https://i.ibb.co/y6VgstT/tidex.gif" width="800" height="400" alt='Tidex' title='Tidex Ransomware'></img></a>
             </article>
             </div>
             <div className='flex justify-center items-center'>
-              <article className="overflow-hidden rounded-lg shadow-lg border-2 dark:hover:border-violet-800 hover:border-yellow-500 blur-sm hover:blur-none">
-              <a href="https://github.com/Rawierdt" target={'_blank'}><img className="block h-auto w-full" draggable="false" loading="lazy" src="https://i.ibb.co/f16Mt2R/rawierID.gif" width="800" height="400" alt='Rawier' title='Rawier'></img></a>
+              <article className="overflow-hidden rounded-lg shadow-lg border-2 dark:hover:border-violet-800 hover:border-yellow-500 grayscale hover:grayscale-0">
+              <a href="https://github.com/Rawierdt/Metacrawler-IPTracker" target={'_blank'}><img className="block h-auto w-full" draggable="false" loading="lazy" src="https://i.ibb.co/FKnL9r1/M-iptrack.gif" width="800" height="400" alt='Rawier' title='Metacrawler & IPTracker'></img></a>
               </article>
             </div>
             <div className='flex justify-center items-center'>
-              <article className="overflow-hidden rounded-lg shadow-lg border-2 dark:hover:border-violet-800 hover:border-yellow-500 blur-sm hover:blur-none">
+              <article className="overflow-hidden rounded-lg shadow-lg border-2 dark:hover:border-violet-800 hover:border-yellow-500 grayscale hover:grayscale-0">
               <a href="https://github.com/Rawierdt" target={'_blank'}><img className="block h-auto w-full" draggable="false" loading="lazy" src="https://i.ibb.co/f16Mt2R/rawierID.gif" width="800" height="400" alt='Rawier' title='Rawier'></img></a>
               </article>
             </div>            
