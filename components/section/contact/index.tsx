@@ -70,12 +70,8 @@ const Contact: React.FC = (): ReactElement => {
           <br />
           <p className="text-center text-2xl">CLAVES</p>
           <small className="flex justify-evenly select-all">
------BEGIN PGP PRIVATE KEY BLOCK-----
-
-v6KmYJe
-vgzTBg9pcwm1w4sjS8qF6oOn2Zr9T7k1Z/ITLIISrs9CE0B+c/HYkg==
-=NxMz
------END PGP PRIVATE KEY BLOCK-----</small>
+-----</small>
+{/* 𝕽♛ */}
         </div>
       </div>
     </>

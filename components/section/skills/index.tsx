@@ -127,6 +127,7 @@ const Skills: React.FC = (): ReactElement => {
             <a href="https://www.linkedin.com/in/alejandro-aguilar-a06054257/"><SkillsIcon text="Linkedin" children={<SiLinkedin />} /></a>,
           ]}
         />
+        {/* 𝕽♛ */}
       </div>
     </>
   );

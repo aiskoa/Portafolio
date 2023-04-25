@@ -80,6 +80,7 @@ const About: React.FC = (): ReactElement => {
             >
               {t("me")}
             </button>
+            {/* 𝕽♛ */}
           </div>
         </Link>
       </div>

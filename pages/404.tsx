@@ -35,7 +35,7 @@ const NotFound: NextPage = (): ReactElement => {
       <br />
       <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">Ooops...</h1>
       <p className="flex justify-center font-bold text-black-900 dark:text-white">Don't look for it anymore, it no longer exists.</p>
-      <p className="flex justify-center text-black-900 dark:text-white">Don't worry here are some of my favorite rock songs</p>
+      <p className="flex justify-center text-black-900 dark:text-white">Don't worry here are some of my favorite rock songs 𝕽♛</p>
       <br />
       <p className="flex justify-center">Regresar a &nbsp;<Link href="/"><a className='font-bold text-purple-500 dark:text-pink'>Home</a></Link></p>
       <br />
