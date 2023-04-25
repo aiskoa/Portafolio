@@ -19,7 +19,7 @@ const Footer: React.FC = (): ReactElement => {
           <div className="flex flex-wrap pt-2 space-x-2 font-medium sm:space-x-4 lg:pt-0">
             <a
               href={config.socials.twitter}
-              className={"transition-colors hover:text-yellow-500"}
+              className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
               target="_blank"
               rel="noreferrer"
             >
@@ -27,7 +27,7 @@ const Footer: React.FC = (): ReactElement => {
             </a>
             <a
               href={config.socials.linkedin}
-              className={"transition-colors hover:text-yellow-500"}
+              className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
               target="_blank"
               rel="noreferrer"
             >
