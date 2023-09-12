@@ -44,7 +44,7 @@ const Skills: React.FC = (): ReactElement => {
   return (
     <>
       <div className="flex justify-center place-items-center">
-        <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10" draggable="false">
+        <div className="flex-shrink-0 mb-10 lg:mt-12 lg:px-4" draggable="false">
           <Image
             src={config.github.url}
             alt="Profile"
@@ -124,7 +124,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
             <a href="https://discord.gg/VFg9SSmPFy"><SkillsIcon text="Discord" children={<SiDiscord />} /></a>,
             <a href="https://twitter.com/Rawierdt"><SkillsIcon text="Twitter" children={<SiTwitter />} /></a>,
-            <a href="https://www.linkedin.com/in/alejandro-aguilar-a06054257/"><SkillsIcon text="Linkedin" children={<SiLinkedin />} /></a>,
+            <a href="https://www.linkedin.com/in/rawier/"><SkillsIcon text="Linkedin" children={<SiLinkedin />} /></a>,
           ]}
         />
         {/* 𝕽♛ */}

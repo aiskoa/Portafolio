@@ -13,7 +13,7 @@ const About: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
   return (
     <div className="container px-4 mx-auto">
-      <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
+      <div className="flex flex-col-reverse text-center lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 lg:text-left">
         <div className="lg:px-4 lg:mt-12 ">
           <h1 className="text-2xl font-bold text-black-900 lg:text-5xl dark:text-white">
             Rawier
@@ -26,7 +26,7 @@ const About: React.FC = (): ReactElement => {
           <h3 className="text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">
             {t("job")}
           </h3>
-          <div className="flex items-center justify-center md:justify-center lg:justify-start xsm:justify-center sm:justify-center space-x-2 mt-2">
+          <div className="flex items-center justify-center mt-2 space-x-2 md:justify-center lg:justify-start xsm:justify-center sm:justify-center">
             <a href={t("resume-link")} target={"_blank"}>
               <button
                 type="button"
@@ -40,7 +40,7 @@ const About: React.FC = (): ReactElement => {
             <p className="mb-4 select-none">{t("about-me")}</p>
           </div>
         </div>
-        <div className="pointer-events-none focus:pointer-events-auto flex-shrink-0 lg:mt-12 lg:px-4 mb-10" draggable="false">
+        <div className="flex-shrink-0 mb-10 pointer-events-none focus:pointer-events-auto lg:mt-12 lg:px-4" draggable="false">
           <Image
             src={config.github.url}
             alt="Profile"
@@ -53,7 +53,7 @@ const About: React.FC = (): ReactElement => {
       </div>
       <div className="flex flex-row">
         <Link href={"/skills"}>
-          <div className="flex items-center justify-center md:justify-center lg:justify-start xsm:justify-center sm:justify-center space-x-2 mt-2">
+          <div className="flex items-center justify-center mt-2 space-x-2 md:justify-center lg:justify-start xsm:justify-center sm:justify-center">
             <button
               type="button"
               className="me-5 mt-3 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-black active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
@@ -63,7 +63,7 @@ const About: React.FC = (): ReactElement => {
           </div>
         </Link>
         <Link href={"/blog"}>
-          <div className="flex items-center justify-center md:justify-center lg:justify-start xsm:justify-center sm:justify-center space-x-2 mt-2">
+          <div className="flex items-center justify-center mt-2 space-x-2 md:justify-center lg:justify-start xsm:justify-center sm:justify-center">
             <button
               type="button"
               className="mx-5 mt-3 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-600 active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
@@ -73,7 +73,7 @@ const About: React.FC = (): ReactElement => {
           </div>
         </Link>
         <Link href={"/contact"}>
-          <div className="flex items-center justify-center md:justify-center lg:justify-start xsm:justify-center sm:justify-center space-x-2 mt-2">
+          <div className="flex items-center justify-center mt-2 space-x-2 md:justify-center lg:justify-start xsm:justify-center sm:justify-center">
             <button
               type="button"
               className="me-5 mt-3 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-700 active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
