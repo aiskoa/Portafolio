@@ -24,7 +24,7 @@ const NotFound: NextPage = (): ReactElement => {
         <meta property="og:title" content="Rawier - Not Found" />
         <meta property="og:url" content="https://Rawier.vercel.app" />
     </Head>
-    <div className="bg-dvd bg-center bg-no-repeat bg-cover bg-fixed">
+    <div className="bg-fixed bg-center bg-no-repeat bg-cover bg-dvd">
     <div className='not_found cursor-crosshair'>
       {/* No consigo que se traduzca */}
       <p className="flex justify-center">{t("404")}</p>
@@ -50,7 +50,7 @@ const NotFound: NextPage = (): ReactElement => {
   </thead>
   <tbody>
     <tr>
-      <td>CHOKE feat. grandson & Zero 9:36</td>
+      <td>AMOUR</td>
       <td>The Warning</td>
       <td>2022</td>
     </tr>

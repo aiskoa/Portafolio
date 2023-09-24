@@ -21,7 +21,7 @@ const Contact: React.FC = (): ReactElement => {
   return (
     <>
       <div className="flex justify-center place-items-center">
-        <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10 pointer-events-none focus:pointer-events-auto flex-shrink-0 lg:mt-12 lg:px-4 mb-10" draggable="false">
+        <div className="flex-shrink-0 mb-10 pointer-events-none lg:mt-12 lg:px-4 focus:pointer-events-auto" draggable="false">
           <Image
             src={config.github.url}
             alt="Profile"
@@ -40,36 +40,36 @@ const Contact: React.FC = (): ReactElement => {
             You need to enable JavaScript to run this app.
           </h1>
         </noscript>
-        <div className="font-thin m-5 flex-column rounded-2xl dark:hover:border-purple-700 hover:border-blue-700 border-2 border-gray-900 dark:border-white p-2">
-          <p className="text-center text-2xl">{t("contact")}</p>
+        <div className="p-2 m-5 font-thin border-2 border-gray-900 flex-column rounded-2xl dark:hover:border-purple-700 hover:border-blue-700 dark:border-white">
+          <p className="text-2xl text-center">{t("contact")}</p>
           {/* Evita que las palabras y textos sean copiados */}
-          <p className="flex justify-evenly select-none cursor-no-drop">{t("whoiam")}</p>
+          <p className="flex select-none justify-evenly cursor-no-drop">{t("whoiam")}</p>
           <br />
           {/* Evita que las imagenes sean copiadas. */}
           <div className="flex justify-around hover:justify-evenly">
-            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/1zJ9fW3/UC-d2e58f0b-eb62.jpg" width="300"></img>
+            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/w7kNmd7/CFC.jpg" width="300"></img>
           </div>
           <br />
           {/* <div className="flex justify-around hover:justify-evenly">
             <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://avatarfiles.alphacoders.com/336/336559.png" width="300"></img>
           </div>
           <br /> */}
-          <p className="flex justify-evenly select-none cursor-no-drop">{t("text_mail")}</p>
+          <p className="flex select-none justify-evenly cursor-no-drop">{t("text_mail")}</p>
           <a className="flex justify-evenly" href="mailto:lwnadev@gmail.com?Subject=DUDA%20_%20GENERAL">Rawierdt@gmail.com</a>
           <br />
-          <p className="text-center text-2xl">Freelance</p>
-          <p className="flex justify-evenly select-none cursor-no-drop">{t("freelance")}</p>
+          <p className="text-2xl text-center">Freelance</p>
+          <p className="flex select-none justify-evenly cursor-no-drop">{t("freelance")}</p>
           <br />
-          <p className="flex justify-evenly select-all">{t("pdfdoc")}</p>
+          <p className="flex select-all justify-evenly">{t("pdfdoc")}</p>
           <br />
           <p className="flex justify-evenly">{t("pdfdoc2")}</p>
           <br />
-          <p className="text-center text-2xl">FAQ</p>
-          <p className="flex justify-evenly select-none">{t("faq")}</p>
+          <p className="text-2xl text-center">FAQ</p>
+          <p className="flex select-none justify-evenly">{t("faq")}</p>
           {/* <SiMetrodelaciudaddemexico /> */}
           <br />
-          <p className="text-center text-2xl">CLAVES</p>
-          <small className="flex justify-evenly select-all">
+          <p className="text-2xl text-center">CLAVES</p>
+          <small className="flex select-all justify-evenly">
 -----</small>
 {/* 𝕽♛ */}
         </div>

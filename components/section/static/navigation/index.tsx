@@ -12,7 +12,7 @@ const Navigation: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
   return (
     <div className="sticky top-0 z-20 py-2 bg-white md:py-6 md:mb-6 dark:bg-black">
-      <div className="container px-4 mx-auto lg:max-w-4xl flex items-center justify-between">
+      <div className="container flex items-center justify-between px-4 mx-auto lg:max-w-4xl">
         <Link href="/">
           <a
             className={
@@ -23,7 +23,7 @@ const Navigation: React.FC = (): ReactElement => {
           </a>
         </Link>
         <Theme />
-        <Link href="/portfolio">💼</Link>
+        <Link href="/portfolio">ᴘʀᴏʏᴇᴄᴛꜱ</Link>
         <Language />
       </div>
     </div>

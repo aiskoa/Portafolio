@@ -29,6 +29,12 @@ import {
   SiJava,
   SiMicrosoftsqlserver,
   SiCisco,
+  SiFigma,
+  SiSpring,
+  SiPhp,
+  SiWindowsterminal,
+  SiVim,
+  SiMicrosoft,
 } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
@@ -63,7 +69,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
           <SkillsIcon text="Javascript" children={<SiJavascript />} />,
           <SkillsIcon text="Python" children={<SiPython />} />,
-          // <SkillsIcon text="Java" children={<SiJava />} />,
+          <SkillsIcon text="Java" children={<SiJava />} />,
           // <SkillsIcon text="C++" children={<SiCplusplus />} />,
         ]}
         />
@@ -72,7 +78,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
             <SkillsIcon text="React" children={<SiReact />} />,
             <SkillsIcon text="Nextjs" children={<SiNextdotjs />} />,
-            <SkillsIcon text="Electron" children={<SiElectron />} />,
+            <SkillsIcon text="Figma" children={<SiFigma />} />,
             // <SkillsIcon text="Material UI" children={<SiMaterialui />} />,
           ]}
         />
@@ -80,7 +86,8 @@ const Skills: React.FC = (): ReactElement => {
           title="Backend"
           icons={[
             <SkillsIcon text="Nodejs" children={<SiNodedotjs />} />,
-            <SkillsIcon text="Express" children={<SiExpress />} />,
+            <SkillsIcon text="PHP" children={<SiPhp />} />,
+            <SkillsIcon text="Spring" children={<SiSpring />} />,
           ]}
         />
         <Box
@@ -95,10 +102,10 @@ const Skills: React.FC = (): ReactElement => {
         <Box
           title={t("other")}
           icons={[
-            <SkillsIcon text="Kali" children={<SiKalilinux />} />,
+            <SkillsIcon text="Kali Linux" children={<SiKalilinux />} />,
             // <SkillsIcon text="Docker" children={<SiDocker />} />,
-            // <SkillsIcon text="Vim" children={<SiVim />} />,
-            <SkillsIcon text="Linux" children={<SiLinux />} />,
+            <SkillsIcon text="Vim" children={<SiVim />} />,
+            <SkillsIcon text="Terminal" children={<SiWindowsterminal/>} />,
             <SkillsIcon text="Bash" children={<SiGnubash />} />,
           ]}
         />
@@ -114,9 +121,10 @@ const Skills: React.FC = (): ReactElement => {
         <Box
           title={t("education")}
           icons={[
+            <a href="https://www.linkedin.com/groups/14079083/"><SkillsIcon text="MS Aleph" children={<SiMicrosoft />} /></a>,
+            <a href="https://app.hackthebox.com/users/1280543"><SkillsIcon text="HacTheBox" children={<SiHackthebox />} /></a>,
             <a href="https://platzi.com/p/alejandro-aguilar74/"><SkillsIcon text="PLatzi" children={<SiPlatzi />} /></a>,
             <a href="https://www.udemy.com/user/alejandro-aguilar-120/"><SkillsIcon text="Udemy" children={<SiUdemy />} /></a>,
-            <a href="https://app.hackthebox.com/users/1280543"><SkillsIcon text="HacTheBox" children={<SiHackthebox />} /></a>,
           ]}
         />
         <Box
