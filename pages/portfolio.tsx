@@ -34,6 +34,14 @@ const Portfolio: NextPage = (): ReactElement => {
       <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">Portfolio</h1>
       <p className="flex justify-center font-bold text-black-900 dark:text-white">Here are some of my most recent projects and contributions.</p>
       <br />
+      <div className='flex items-center justify-center p-2 leading-tight md:p-4'>
+            <div className='flex items-center justify-center'>
+              <article className="overflow-hidden border-2 rounded-lg shadow-lg dark:hover:border-violet-800 hover:border-yellow-500 grayscale hover:grayscale-0">
+              <a href="http://nexdrak.surge.sh" target={'_blank'}><img className="block w-full h-auto" draggable="false" loading="lazy" src="https://i.ibb.co/5YhxMTD/nexpage1.gif" width="800" height="400" alt='NexDrak´s artist page' title='Artist page'></img></a>
+              </article>
+            </div>            
+        </div>
+      <br />
         <div className='flex items-center justify-center p-2 leading-tight md:p-4'>
           <div className='flex items-center justify-center'>
             <article className="overflow-hidden border-2 rounded-lg shadow-lg dark:hover:border-violet-800 hover:border-yellow-500 grayscale hover:grayscale-0">
