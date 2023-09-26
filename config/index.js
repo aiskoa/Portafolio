@@ -11,6 +11,7 @@ export var config = {
         steam: "https://steamcommunity.com/id/NexDrak",
         instagram: "https://www.instagram.com/Rawierdt",
         dev: "https://dev.to/Rawier",
+        hackerone: "https://www.hackerone.com/rawier",
         discord: "https://discord.gg/VFg9SSmPFy",
         Hackthebox: "https://app.hackthebox.com/users/1280543",
     }

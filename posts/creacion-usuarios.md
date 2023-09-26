@@ -24,7 +24,7 @@ alt: "Creacion Usuarios"
 
 Autenticarse como usuario root
 
-```
+```js
 ~$ su -
 Password:
 
@@ -36,16 +36,16 @@ ___
 
 Crear el usuario
 
-~~~
+```js
 useradd nombreUsuario
 
-~~~
+```
 
 ___
 
 Agregar contraseña
 
-```
+```js
 passwd nombreUsuario
 
 ```
@@ -54,17 +54,18 @@ ___
 
 Para cambiarse al usuario nuevo
 
-```
+```js
 su nombreUsuario
 
 ```
+
 ___
 
 **Para crear un usuario root:**
 
 Crear el usuario
 
-```
+```js
 useradd -u 0 -o -g 0 nombreUsuario2
 
 ```
@@ -84,7 +85,7 @@ ___
 
 Entrar como administrador (root) con:
 
-```
+```js
 //opción a)
 ~$ su -
 Password: (honeydrive)
@@ -96,10 +97,9 @@ Password: (honeydrive)
 
 ___
 
-
 Una vez adentro cambiaras al símbolo # y podrás crear el nuevo usuario estándar;
 
-```
+```js
 ~#useradd userPrueba1
 ~#passwd userPrueba1 (prueba1) //contraseña opcional
 
@@ -113,7 +113,7 @@ primero entramos al usuario y después cambiamos la configuración del puerto et
 
 ___
 
-```
+```js
 //entrar como usuario UserPrueba1
 ~# su userPrueba1
 //dentro del usuario hacemos la consulta de los puertos disponibles para confirmar que exista eth0
@@ -130,7 +130,7 @@ ___
 
 Por último, para regresar al usuario Administrador
 
-```
+```js
 //opción a)
 $su –
 Password: (honeydrive)
@@ -144,7 +144,7 @@ ___
 
 Entrar como administrador (root) con: (repetir paso uno o confirmar estar en root #)
 
-```
+```js
 ~# useradd -u 0 -o -g 0 userPrueba2
 ~# passwd userPrueba2 (prueba2) //contraseña opcional
 
@@ -158,7 +158,7 @@ Primero entramos al usuario administrador y después cambiamos la configuración
 
 ___
 
-```
+```js
 //entrar como usuario UserPrueba2
 ~# su userPrueba2
 //dentro del usuario hacemos la consulta de los puertos disponibles para confirmar que exista eth0

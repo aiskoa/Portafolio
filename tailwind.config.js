@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'dvd': "url('https://thumbs.gfycat.com/BackJitteryCuttlefish-size_restricted.gif')",
+        'dvd': "url('https://media.tenor.com/stKjYPvgKDgAAAAC/dvd-old.gif')",
       },
     },
   },

@@ -4,21 +4,27 @@
 
 ## 🏃‍♂️ Run the project
 
-```
 ### Clone the project
 
+```js
 git clone git@github.com:Rawierdt/Portafolio.git
+```
 
 ### Move into the folder
 
+```js
 cd Portafolio
+```
 
 ### Install dependencies
 
+```js
 npm install --global yarn && yarn install
+```
 
 ### Run the project in developer mode
 
+```js
 yarn dev
 ```
 
@@ -33,9 +39,7 @@ yarn dev
 
 - [Twitter](https://twitter.com/Rawierdt)
 - [GitHub](https://github.com/Rawierdt)
-- [Discord](https://discord.gg/VFg9SSmPFy)
-- [Mail](mailto:Rawierdt@gmail.com)
 
-<hr>
+# 𝕽♛
 
 [↼ Back to Rawier](https://Rawier.vercel.app)

@@ -1,6 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 import React, { ReactElement } from "react";
-import { SiDevdotto, SiDiscord, SiGithub, SiHackthebox, SiInstagram, SiLinkedin, SiPlatzi, SiSteam, SiTwitter } from "react-icons/si";
+import { SiDevdotto, SiDiscord, SiGithub, SiHackerone, SiHackthebox, SiInstagram, SiLinkedin, SiPlatzi, SiSteam, SiTelegram, SiTwitter } from "react-icons/si";
 import { config } from "../../../../config/index";
 import { SkillsIcon } from "../../../";
 /**
@@ -42,21 +42,21 @@ const Footer: React.FC = (): ReactElement => {
               <SkillsIcon text="GitHub" children={<SiGithub />} />
             </a>
             <a
-              href={config.socials.dev}
+              href={config.socials.hackerone}
               className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
               target="_blank"
               rel="noreferrer"
             >
-              <SkillsIcon text="Dev" children={<SiDevdotto />} />
+              <SkillsIcon text="HackerOne" children={<SiHackerone />} />
             </a>
-            <a
+            {/* <a
               href={config.socials.platzi}
               className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
               target="_blank"
               rel="noreferrer"
             >
               <SkillsIcon text="Platzi" children={<SiPlatzi />} />
-            </a>
+            </a> */}
             <a
               href={config.socials.discord}
               className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
