@@ -37,7 +37,7 @@ const Contact: React.FC = (): ReactElement => {
       <div>
         <noscript>
           <h1>
-            You need to enable JavaScript to run this app.
+          𝕽♛ You need to enable JavaScript to run this app.
           </h1>
         </noscript>
         <div className="p-2 m-5 font-thin border-2 border-gray-900 flex-column rounded-2xl dark:hover:border-purple-700 hover:border-blue-700 dark:border-white">
@@ -55,7 +55,7 @@ const Contact: React.FC = (): ReactElement => {
           </div>
           <br /> */}
           <p className="flex select-none justify-evenly cursor-no-drop">{t("text_mail")}</p>
-          <a className="flex justify-evenly" href="mailto:lwnadev@gmail.com?Subject=DUDA%20_%20GENERAL">Rawierdt@gmail.com</a>
+          <a className="flex justify-evenly" href="mailto:rawierdt@gmail.com?Subject=DUDA%20_%20GENERAL"><strong>rawierdt@gmail.com</strong></a>
           <br />
           <p className="text-2xl text-center">Freelance</p>
           <p className="flex select-none justify-evenly cursor-no-drop">{t("freelance")}</p>
@@ -66,11 +66,10 @@ const Contact: React.FC = (): ReactElement => {
           <br />
           <p className="text-2xl text-center">FAQ</p>
           <p className="flex select-none justify-evenly">{t("faq")}</p>
-          {/* <SiMetrodelaciudaddemexico /> */}
-          <br />
+          {/* <br />
           <p className="text-2xl text-center">CLAVES</p>
           <small className="flex select-all justify-evenly">
------</small>
+          -----</small> */}
 {/* 𝕽♛ */}
         </div>
       </div>

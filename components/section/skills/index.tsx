@@ -87,7 +87,6 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
             <SkillsIcon text="Nodejs" children={<SiNodedotjs />} />,
             <SkillsIcon text="PHP" children={<SiPhp />} />,
-            <SkillsIcon text="Spring" children={<SiSpring />} />,
           ]}
         />
         <Box
@@ -105,7 +104,6 @@ const Skills: React.FC = (): ReactElement => {
             <SkillsIcon text="Kali Linux" children={<SiKalilinux />} />,
             // <SkillsIcon text="Docker" children={<SiDocker />} />,
             <SkillsIcon text="Vim" children={<SiVim />} />,
-            <SkillsIcon text="Terminal" children={<SiWindowsterminal/>} />,
             <SkillsIcon text="Bash" children={<SiGnubash />} />,
           ]}
         />

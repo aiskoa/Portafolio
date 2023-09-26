@@ -11,7 +11,7 @@ const NotFound: NextPage = (): ReactElement => {
     <>
     <noscript>
       <h1>
-        You need to enable JavaScript to run this EPIC WEBSITE.
+        Yowo nowod towo enablowo Javascriptowo towo rowon thowo epicowo websitowo.
       </h1>
     </noscript>
     <Head>
