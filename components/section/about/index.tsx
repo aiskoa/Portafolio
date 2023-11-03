@@ -16,12 +16,12 @@ const About: React.FC = (): ReactElement => {
       <div className="flex flex-col-reverse text-center lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 lg:text-left">
         <div className="lg:px-4 lg:mt-12 ">
           <h1 className="text-2xl font-bold text-black-900 lg:text-5xl dark:text-white">
-            Rawier
+            Alejandro Aguilar
           </h1>
-          <noscript>
-            <h1>
-            You need to enable JavaScript to run this app.
-            </h1>
+            <noscript>
+              <h1>
+                You need to enable JavaScript to run this app.
+              </h1>
             </noscript>
           <h3 className="text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">
             {t("job")}
