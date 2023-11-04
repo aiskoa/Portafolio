@@ -75,8 +75,8 @@ const NotFound: NextPage = (): ReactElement => {
       <td>2015</td>
     </tr>
     <tr>
-      <td>All These Things I Hate</td>
-      <td>Bullet For My Valentine</td>
+      <td>I Hate Everything About You</td>
+      <td>Vishal Dadlani</td>
       <td>2008</td>
     </tr>
   </tbody>
