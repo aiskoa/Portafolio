@@ -30,11 +30,11 @@ const NotFound: NextPage = (): ReactElement => {
       <p className="flex justify-center">{t("404")}</p>
       <br />
       <div className="flex justify-around invert-0 hover:invert">
-        <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://media.tenor.com/o-0LaJK3qWcAAAAC/yamada-ryou-yamada-ryo.gif" width="400" height="400"></img>
+        <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://media.tenor.com/BjMUorkapiIAAAAi/country-humans-countr-humans-mexico.gif" width="230" height="230"></img>
       </div>
       <br />
       <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">Ooops...</h1>
-      <p className="flex justify-center font-bold text-black-900 dark:text-white">Don't look for it anymore, it no longer exists.</p>
+      <p className="flex justify-center font-bold text-black-900 dark:text-white">Don't look for it anymore, it no longer exists...</p>
       <p className="flex justify-center text-black-900 dark:text-white">Don't worry here are some of my favorite rock songs 𝕽♛</p>
       <br />
       <p className="flex justify-center">Regresar a &nbsp;<Link href="/"><a className='font-bold text-purple-500 dark:text-pink'>Home</a></Link></p>
