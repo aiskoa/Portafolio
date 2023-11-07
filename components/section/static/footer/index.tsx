@@ -18,12 +18,20 @@ const Footer: React.FC = (): ReactElement => {
           <p>{t("footer")}</p>
           <div className="flex flex-wrap pt-2 space-x-2 font-medium sm:space-x-4 lg:pt-0">
             <a
+                href={config.socials.instagram}
+                className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SkillsIcon text="Instagram" children={<SiInstagram />} />
+            </a>
+            <a
               href={config.socials.twitter}
               className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
               target="_blank"
               rel="noreferrer"
             >
-              <SkillsIcon text="Twitter" children={<SiTwitter />} />
+              <SkillsIcon text="X" children={<SiTwitter />} />
             </a>
             <a
               href={config.socials.linkedin}
@@ -42,12 +50,12 @@ const Footer: React.FC = (): ReactElement => {
               <SkillsIcon text="GitHub" children={<SiGithub />} />
             </a>
             <a
-              href={config.socials.hackerone}
+              href={config.socials.discord}
               className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
               target="_blank"
               rel="noreferrer"
             >
-              <SkillsIcon text="HackerOne" children={<SiHackerone />} />
+              <SkillsIcon text="Discord" children={<SiDiscord />} />
             </a>
             {/* <a
               href={config.socials.platzi}
@@ -58,28 +66,12 @@ const Footer: React.FC = (): ReactElement => {
               <SkillsIcon text="Platzi" children={<SiPlatzi />} />
             </a> */}
             <a
-              href={config.socials.discord}
-              className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SkillsIcon text="Discord" children={<SiDiscord />} />
-            </a>
-            <a
               href={config.socials.Hackthebox}
               className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
               target="_blank"
               rel="noreferrer"
             >
               <SkillsIcon text="HackTheBox" children={<SiHackthebox />} />
-            </a>
-            <a
-              href={config.socials.instagram}
-              className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <SkillsIcon text="Instagram" children={<SiInstagram />} />
             </a>
           </div>
         </div>

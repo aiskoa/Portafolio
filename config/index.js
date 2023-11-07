@@ -12,7 +12,7 @@ export var config = {
         instagram: "https://www.instagram.com/Rawierdt",
         dev: "https://dev.to/Rawier",
         hackerone: "https://hackerone.com/rawier",
-        discord: "https://discord.gg/VFg9SSmPFy",
+        discord: "https://discord.com/users/1035181000872951838",
         Hackthebox: "https://app.hackthebox.com/users/1280543",
     }
 }

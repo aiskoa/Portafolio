@@ -128,8 +128,8 @@ const Skills: React.FC = (): ReactElement => {
         <Box
           title={t("comunication")}
           icons={[
-            <a href="https://discord.gg/VFg9SSmPFy"><SkillsIcon text="Discord" children={<SiDiscord />} /></a>,
-            <a href="https://twitter.com/Rawierdt"><SkillsIcon text="Twitter" children={<SiTwitter />} /></a>,
+            <a href="https://discord.com/users/1035181000872951838"><SkillsIcon text="Discord" children={<SiDiscord />} /></a>,
+            <a href="https://twitter.com/Rawierdt"><SkillsIcon text="X" children={<SiTwitter />} /></a>,
             <a href="https://www.linkedin.com/in/rawier/"><SkillsIcon text="Linkedin" children={<SiLinkedin />} /></a>,
           ]}
         />
