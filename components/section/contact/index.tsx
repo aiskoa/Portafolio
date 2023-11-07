@@ -47,7 +47,7 @@ const Contact: React.FC = (): ReactElement => {
           <br />
           {/* Evita que las imagenes sean copiadas. */}
           <div className="flex justify-around hover:justify-evenly">
-            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/w7kNmd7/CFC.jpg" width="300"></img>
+            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/0yWYFgN/lider-en-mundo-cibernetico.jpg" width="300"></img>
           </div>
           <br />
           {/* <div className="flex justify-around hover:justify-evenly">
