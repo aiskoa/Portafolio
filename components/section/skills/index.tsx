@@ -69,7 +69,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
           <SkillsIcon text="Javascript" children={<SiJavascript />} />,
           <SkillsIcon text="Python" children={<SiPython />} />,
-          <SkillsIcon text="Java" children={<SiJava />} />,
+          // <SkillsIcon text="Java" children={<SiJava />} />,
           // <SkillsIcon text="C++" children={<SiCplusplus />} />,
         ]}
         />
@@ -120,7 +120,7 @@ const Skills: React.FC = (): ReactElement => {
           title={t("education")}
           icons={[
             <a href="https://www.linkedin.com/groups/14079083/"><SkillsIcon text="MS Aleph" children={<SiMicrosoft />} /></a>,
-            <a href="https://app.hackthebox.com/users/1280543"><SkillsIcon text="HacTheBox" children={<SiHackthebox />} /></a>,
+            // <a href="https://app.hackthebox.com/users/1280543"><SkillsIcon text="HacTheBox" children={<SiHackthebox />} /></a>,
             <a href="https://platzi.com/p/alejandro-aguilar74/"><SkillsIcon text="PLatzi" children={<SiPlatzi />} /></a>,
             <a href="https://www.udemy.com/user/alejandro-aguilar-120/"><SkillsIcon text="Udemy" children={<SiUdemy />} /></a>,
           ]}
