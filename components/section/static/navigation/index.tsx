@@ -23,7 +23,7 @@ const Navigation: React.FC = (): ReactElement => {
           </a>
         </Link>
         <Theme />
-        <Link href="/portfolio">ᴘʀᴏʏᴇᴄᴛꜱ</Link>
+        <Link href="/portfolio">ᴘᴏʀᴛꜰᴏʟɪᴏ</Link>
         <Language />
       </div>
     </div>
