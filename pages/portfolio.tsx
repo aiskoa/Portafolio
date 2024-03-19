@@ -31,7 +31,7 @@ const Portfolio: NextPage = (): ReactElement => {
         <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="../Rawier-icon.png" width="90" height="90"></img>
       </div>
       <br />
-      <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">PORTFOLIO</h1>
+      <h1 className="flex justify-center text-2xl font-bold text-black-900 lg:text-3xl dark:text-white">PROJECTS</h1>
       <p className="flex justify-center font-bold text-black-900 dark:text-white"><em>Here are some of my most recent projects and contributions.</em></p>
       <br />
       <div className='flex items-center justify-center p-2 leading-tight md:p-4'>

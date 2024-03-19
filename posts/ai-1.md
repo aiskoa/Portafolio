@@ -3,7 +3,7 @@ title: "[ES] Como defenderte de la inteligencia artifical"
 excerpt: "[ES] Exploraremos una lista de paginas y herramientas utiles"
 date: "Feb 25 2024"
 cover_image: "/blog/osint-1.gif"
-alt: "OSINT 1"
+alt: "AI 1"
 ---
 
 **Antes de comenzar.**
