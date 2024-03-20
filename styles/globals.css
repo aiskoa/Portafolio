@@ -29,3 +29,11 @@
   color: aqua;
   text-decoration: underline;
 }
+
+.line-height {
+  line-height: 1.5;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
