@@ -1,0 +1,101 @@
+/* post.module.css */
+
+.markdownContent {
+    font-size: 16px;
+    line-height: 1.6;  
+}
+
+.markdownContent .blockquote {
+    /* Estilos para bloques de citas */
+    border-left: 4px solid #ddd; /* Ejemplo de borde lateral para citas */
+    padding-left: 10px; /* Espaciado a la izquierda del bloque de citas */
+    color: rgb(255, 47, 245); /* Color del texto de la cita */
+}
+
+.markdownContent .code {
+    background-color: #121212;
+    color: rgb(187, 255, 0);
+    /* Estilos para bloques de código */
+    /* Puedes usar una biblioteca como Prism.js para resaltar la sintaxis */
+}
+
+.markdownContent .code pre {
+    /* Estilos para el contenedor de bloques de código */
+    background-color: #f4f4f4; /* Color de fondo del bloque de código */
+    padding: 10px; /* Espaciado dentro del contenedor del bloque de código */
+    border-radius: 5px; /* Bordes redondeados para el contenedor del bloque de código */
+}
+
+/* Estilos para los enlaces no visitados */
+.markdownContent a:link {
+    color: blue; /* Cambia el color del texto del enlace */
+    text-decoration: underline; /* Subraya el texto del enlace */
+}
+
+/* Estilos para los enlaces visitados */
+.markdownContent a:visited {
+    color: purple; /* Cambia el color del texto del enlace visitado */
+}
+
+/* Estilos para los encabezados */
+.markdownContent h1 {
+    font-size: 2rem; /* Tamaño del encabezado H1 */
+}
+
+.markdownContent h2 {
+    font-size: 1.5rem; /* Tamaño del encabezado H2 */
+}
+
+.markdownContent h3 {
+    font-size: 1.2rem; /* Tamaño del encabezado H3 */
+}
+
+/* Estilos para el código de diferencia */
+.diff-code {
+    background-color: #f0f0f0; /* Fondo del bloque de código de diferencia */
+    padding: 10px; /* Espaciado dentro del bloque de código de diferencia */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.diff-code .removed {
+    color: red; /* Color del texto eliminado */
+}
+
+.diff-code .added {
+    color: blue; /* Color del texto añadido */
+}
+
+/* Estilos para las alertas */
+.alert {
+    background-color: #ffe3e3; /* Color de fondo de la alerta */
+    color: #cc0000; /* Color del texto de la alerta */
+    padding: 10px; /* Espaciado dentro de la alerta */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block; /* Mostrar como un bloque en línea */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    background-color: #4caf50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Quitar subrayado del texto */
+    border: none; /* Quitar borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Cambiar color de fondo al pasar el ratón */
+}
+
+/* Estilos para las tablas */
+.markdownContent th,
+.markdownContent td {
+    padding: 0.5rem;
+    border: 1px solid #f88f16;
+}
+
+.markdownContent th {
+    background-color: #f88f16;
+}

@@ -1,17 +1,17 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import marked from "marked";
+import ReactMarkdown from "react-markdown";
+import gfm from 'remark-gfm'; // Este es el plugin que necesitas
 import Link from "next/link";
-import { IPost } from "../../models";
 import Head from "next/head";
 import { config } from "../../config";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import styles from "./post.module.css";
 
 export default function PostPage({
   frontmatter: { title, date, cover_image, alt, excerpt },
   content,
-}: IPost) {
+}) {
   return (
     <>
       <Head>
@@ -22,7 +22,7 @@ export default function PostPage({
           href="../Rawier-icon.png"
         />
         <meta property="og:image" content={config.github.url} />
-        <meta name="description" content={excerpt}></meta>
+        <meta name="description" content={excerpt} />
         <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://Rawier.vercel.app" />
@@ -44,9 +44,18 @@ export default function PostPage({
             <div className="text-xl">{date}</div>
             <img src={cover_image} alt={alt} />
           </div>
-          <div className="text-base mt-3 py-3 bg-slate-200 dark:bg-gray-800">
-            {/* @ts-ignore */}
-            <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+          <div className={`py-3 mt-3 text-base ${styles.markdownContent}`}>
+            {/* Procesa el contenido Markdown */}
+            <ReactMarkdown
+  remarkPlugins={[gfm]} // Añade el plugin aquí
+  className={styles.markdownContent}
+  components={{
+    blockquote: BlockquoteComponent,
+    code: CodeComponent,
+  }}
+>
+  {content}
+</ReactMarkdown>
           </div>
         </div>
       </div>
@@ -54,10 +63,29 @@ export default function PostPage({
   );
 }
 
-export async function getStaticPaths({ locales }: { locales: string[] }) {
+const BlockquoteComponent = ({ children }) => {
+  return <blockquote className={styles.blockquote}>{children}</blockquote>;
+};
+
+const CodeComponent = ({ node, inline, className, children, ...props }) => {
+  const match = /language-(\w+)/.exec(className || "");
+  return !inline && match ? (
+    <pre className={styles.code}>
+      <code className={`language-${match[1]}`} {...props}>
+        {String(children).replace(/\n$/, "")}
+      </code>
+    </pre>
+  ) : (
+    <code className={className} {...props}>
+      {children}
+    </code>
+  );
+};
+
+export async function getStaticPaths({ locales }) {
   const files = fs.readdirSync(path.join("posts"));
-  const paths = files.flatMap((filename: string) => {
-    return locales.map((locale: string) => {
+  const paths = files.flatMap((filename) => {
+    return locales.map((locale) => {
       return {
         params: {
           slug: filename.replace(".md", ""),

@@ -17,7 +17,7 @@ The KEY is: hkpykiiqftupr3okl04azj
 
 Code Example
 
-``` Python
+```python
 def _lock():
     for files in all_Ext:
         for _dotFile in glob.glob(files):
