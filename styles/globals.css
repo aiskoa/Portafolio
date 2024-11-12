@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                         supported by Chrome, Edge, Opera and Firefox */
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #cc0000;
+}
+
+.not_found{
+  text-align: center;
+}
+
+.not_found a{
+  color: aqua;
+  text-decoration: underline;
+}
+
+.line-height {
+  line-height: 1.5;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
