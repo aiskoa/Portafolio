@@ -2,28 +2,12 @@ import { config } from "../../../config";
 import Image from "next/image";
 import Box from "../../common/box";
 import {
-  SiReact,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiVercel,
-  SiGnubash,
-  SiPython,
-  SiMysql,
-  SiKalilinux,
-  SiMicrosoftazure,
-  SiPlatzi,
-  SiUdemy,
-  SiLinkedin,
-  SiTwitter,
-  SiDiscord,
-  SiJavascript,
-  SiMicrosoftsqlserver,
-  SiCisco,
-  SiFigma,
-  SiPhp,
-  SiMicrosoft,
-  SiGit,
-  SiSqlite,
+  SiReact, SiNextdotjs,
+  SiNodedotjs, SiVercel, SiGnubash, SiPython, SiMysql, SiKalilinux,
+  SiMicrosoftazure, SiPlatzi, SiUdemy, SiLinkedin, SiTwitter,
+  SiDiscord, SiJavascript, SiMicrosoftsqlserver, SiCisco,
+  SiFigma, SiPhp, SiMicrosoft, SiGit, SiSqlite, SiCplusplus,
+  SiPostgresql,
 } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
@@ -58,7 +42,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
           <SkillsIcon key={"javascript"} text="Javascript" children={<SiJavascript />} />,
           <SkillsIcon key={"python"} text="Python" children={<SiPython />} />,
-          //<SkillsIcon key={"java"} text="Java" children={<SiJava />} />,
+          <SkillsIcon key={"cplusplus"} text="C++" children={<SiCplusplus />} />,
         ]}
         />
         <Box
@@ -67,7 +51,6 @@ const Skills: React.FC = (): ReactElement => {
             <SkillsIcon key={"react"} text="React" children={<SiReact />} />,
             <SkillsIcon key={"next"} text="Nextjs" children={<SiNextdotjs />} />,
             <SkillsIcon key={"figma"} text="Figma" children={<SiFigma />} />,
-            // <SkillsIcon text="Material UI" children={<SiMaterialui />} />,
           ]}
         />
         <Box
@@ -81,8 +64,7 @@ const Skills: React.FC = (): ReactElement => {
         <Box
           title="DBs"
           icons={[
-            // <SkillsIcon text="MongoDB" children={<SiMongodb />} />,
-            // <SkillsIcon text="PostgreSQL" children={<SiPostgresql />} />,
+            <SkillsIcon key={"postgreSQL"} text="PostgreSQL" children={<SiPostgresql />} />,
             <SkillsIcon key={"sqlServer"} text="SQL Server" children={<SiMicrosoftsqlserver />} />,
             <SkillsIcon key={"mysql"} text="MySQL" children={<SiMysql />} />,
           ]}
