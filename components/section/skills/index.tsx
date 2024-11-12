@@ -17,7 +17,6 @@ import {
   SiTwitter,
   SiDiscord,
   SiJavascript,
-  SiJava,
   SiMicrosoftsqlserver,
   SiCisco,
   SiFigma,
@@ -59,7 +58,7 @@ const Skills: React.FC = (): ReactElement => {
           icons={[
           <SkillsIcon key={"javascript"} text="Javascript" children={<SiJavascript />} />,
           <SkillsIcon key={"python"} text="Python" children={<SiPython />} />,
-          <SkillsIcon key={"java"} text="Java" children={<SiJava />} />,
+          //<SkillsIcon key={"java"} text="Java" children={<SiJava />} />,
         ]}
         />
         <Box
