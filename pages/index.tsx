@@ -8,7 +8,7 @@ const Home: NextPage = (): ReactElement => {
   return (
     <div className="space-y-14 lg:space-y-24">
       <Head>
-        <title>Rawier</title>
+        <title>Rawier - Cybersecurity</title>
         <link rel="shortcut icon" type="image/png" href="./Rawier-icon.png" />
         <meta
           httpEquiv="Content-Security-Policy"
@@ -19,7 +19,7 @@ const Home: NextPage = (): ReactElement => {
         <meta name="description" content="IT consultant and web application developer, focused on results." />
         <meta property="og:description" content="IT consultant and web application developer, focused on results." />
         <meta property="og:title" content="Rawier - Cybersecurity" />
-        <meta property="og:url" content="https://Rawier.vercel.app" />
+        <meta property="og:url" content="https://rawier.vercel.app" />
       </Head>
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <About />
