@@ -1,9 +1,6 @@
 export const sortByDate = (
-  a: { frontmatter: { date?: string | number | Date } },
-  b: { frontmatter: { date?: string | number | Date } }
-) => {
-  const dateA = a.frontmatter.date ? new Date(a.frontmatter.date).getTime() : 0;
-  const dateB = b.frontmatter.date ? new Date(b.frontmatter.date).getTime() : 0;
-
-  return dateB - dateA;
+  a: { slug: string; frontmatter: { date: string | number | Date } },
+  b: { slug: string; frontmatter: { date: string | number | Date } }
+): number => {
+  return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
 };
