@@ -7,12 +7,12 @@ export default function Post({ post }: PostType) {
   const { t } = useTranslation("index");
   return (
     <Link href={`/blog/${post.slug}`}>
-      <div className="w-full px-4 my-4 md:px-6 lg:px-8 lg:w-1/3">
-        <article className="border-2 rounded-lg shadow-lg dark:hover:border-violet-700 hover:border-black dark:bg-slate-800">
+      <div className="w-full px-4 my-4 md:px-6 lg:w-1/3">
+        <article className="overflow-hidden border-2 rounded-lg shadow-lg dark:hover:border-violet-700 hover:border-black dark:bg-slate-800">
           <a href={`/blog/${post.slug}`}>
             <img
               alt={post.frontmatter.title}
-              className="block object-cover w-full h-48" // Adjusted height for a more rectangular shape
+              className="block object-cover w-full h-48" // Mantén la imagen en la parte superior
               src={post.frontmatter.cover_image}
             />
           </a>
