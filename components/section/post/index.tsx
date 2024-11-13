@@ -6,7 +6,7 @@ export default function Post({ post }: PostType) {
   const { t } = useTranslation("index");
   return (
     <Link href={`/blog/${post.slug}`}>
-      <div className="w-full px-4 my-4 md:px-6 lg:w-1/3">
+      <div className="w-full px-4 my-4 md:px-4 lg:w-1/3">
         <article className="container overflow-hidden border-2 rounded-lg shadow-lg dark:hover:border-violet-700 hover:border-black dark:bg-slate-800">
           <a href={`/blog/${post.slug}`}>
             <img
