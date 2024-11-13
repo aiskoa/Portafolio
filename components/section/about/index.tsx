@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react";
-import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import { config } from "../../../config/index";
 import Link from "next/link";
@@ -19,7 +18,7 @@ const About: React.FC = (): ReactElement => {
         </div>
       </noscript>
       <div className="flex flex-col-reverse text-center lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 lg:text-left">
-        <div className="lg:px-4 lg:mt-12 ">
+        <div className="lg:px-4 lg:mt-12">
           <h1 className="text-2xl font-bold text-black-900 lg:text-5xl dark:text-white">
             Alejandro Aguilar
           </h1>
@@ -44,13 +43,13 @@ const About: React.FC = (): ReactElement => {
           </div>
         </div>
         <div className="flex-shrink-0 mb-10 pointer-events-none focus:pointer-events-auto lg:mt-12 lg:px-4" draggable="false">
-          <Image
-            src={config.github.url}
-            priority={true}
-            alt="Profile"
+          {/* Aquí cambias a un GIF */}
+          <img
+            src="https://i.ibb.co/ZY2ZxqK/chessD.gif"  // Asegúrate de tener la ruta correcta para tu GIF
+            alt="Animated Profile"
             className="rounded-full"
             width="250"
-            height="250"            
+            height="250"
           />
         </div>
       </div>
