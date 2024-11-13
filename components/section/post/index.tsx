@@ -7,18 +7,18 @@ export default function Post({ post }: PostType) {
   const { t } = useTranslation("index");
   return (
     <Link href={`/blog/${post.slug}`}>
-      <div className="w-full px-4 my-4 md:px-4 lg:w-1/3">
-        <article className="container overflow-hidden border-2 rounded-lg shadow-lg dark:hover:border-violet-700 hover:border-black dark:bg-slate-800">
-          <a href={`/blog/${post.slug}`}>
+      <div className="w-full px-4 my-4 md:px-6 lg:px-8 lg:w-full">
+        <article className="flex flex-col border-2 rounded-lg shadow-lg md:flex-row dark:hover:border-violet-700 hover:border-black dark:bg-slate-800">
+          <a href={`/blog/${post.slug}`} className="w-full md:w-1/3">
             <img
               alt={post.frontmatter.title}
               className="block object-cover w-full h-48" // Adjusted height for a more rectangular shape
               src={post.frontmatter.cover_image}
             />
           </a>
-          <div className="p-4">
+          <div className="flex flex-col justify-between w-full p-4 md:w-2/3">
             <header className="leading-tight">
-              <h1 className="text-xl font-bold">
+              <h1 className="text-2xl font-bold">
                 <a href={`/blog/${post.slug}`} className="hover:underline dark:text-white">
                   {post.frontmatter.title}
                 </a>
