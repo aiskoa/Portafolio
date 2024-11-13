@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { PostType } from "../../../models";
 import useTranslation from "next-translate/useTranslation";
@@ -11,13 +12,13 @@ export default function Post({ post }: PostType) {
           <a href={`/blog/${post.slug}`}>
             <img
               alt={post.frontmatter.title}
-              className="block object-cover w-full h-64" // Ensure image covers the designated area
+              className="block object-cover w-full h-48" // Adjusted height for a more rectangular shape
               src={post.frontmatter.cover_image}
             />
           </a>
           <div className="p-4">
             <header className="leading-tight">
-              <h1 className="text-2xl font-bold">
+              <h1 className="text-xl font-bold">
                 <a href={`/blog/${post.slug}`} className="hover:underline dark:text-white">
                   {post.frontmatter.title}
                 </a>
