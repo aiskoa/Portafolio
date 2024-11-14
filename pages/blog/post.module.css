@@ -87,14 +87,22 @@
     background-color: #f88f16;
 }
 
-.code-block {
+.markdownCont code-block {
     margin-top: 1.5rem;
 }
 
-.toc-container {
+.markdownContent aside {
+    font-size: 1.5rem;
+    color: #4b45a0;
+    border: 1px solid #707070;
     position: sticky;
     top: 1rem;
     max-height: 80vh;
     overflow-y: auto;
-    border: 1px solid #ddd;
+}
+
+@media (max-width: 767px) {
+    .markdownContent aside {
+        display: none;
+    }
 }
