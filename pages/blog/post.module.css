@@ -87,36 +87,13 @@
     background-color: #f88f16;
 }
 
-/* Estilo para el índice flotante */
 .toc-container {
     position: sticky;
-    top: 1rem; /* El índice se queda pegado a la parte superior del viewport */
-    max-height: 80vh; /* Limita la altura del índice */
-    overflow-y: auto; /* Si el índice es muy largo, se puede desplazar */
-    border: 1px solid #ddd; /* Bordes suaves */
-    background-color: #f7f7f7; /* Fondo claro */
-    border-radius: 8px;
+    top: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
 }
-
-/* Comportamiento en escritorio */
-@media (min-width: 768px) {
-    .toc-container {
-        position: sticky; /* Se pega en la parte superior del contenido */
-        top: 20px; /* Añadimos un pequeño margen desde la parte superior */
-        right: 20px; /* Lo alineamos a la derecha */
-        max-height: 80vh; /* Aseguramos que no ocupe más del 80% de la altura del viewport */
-        overflow-y: auto; /* Permitimos desplazamiento si el índice es largo */
-        z-index: 100; /* Para asegurarnos de que quede por encima del contenido */
-    }
-}
-
-/* En dispositivos móviles el índice desaparece */
-@media (max-width: 767px) {
-    .toc-container {
-        display: none; /* Ocultamos el índice en móviles */
-    }
-}
-
 
 /* Estilos de los bloques de código */
 .code-block {

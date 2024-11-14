@@ -104,12 +104,12 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://rawier.vercel.app" />
-        <meta property="og:image" content={cover_image} />
-        <meta name="theme-color" content="#8e52f5"></meta>
+        <meta property="og:image" content={cover_image}/>
+        <meta name="theme-color:" content="#8e52f5"></meta>
       </Head>
       <div className="container flex mx-auto">
         {/* Contenedor del índice flotante */}
-        <aside className="toc-container">
+        <aside className="fixed w-1/4 p-4 bg-gray-100 rounded-lg toc-container top-20 right-10">
           <h3 className="mb-2 font-bold">Índice</h3>
           <ul>
             {headings.map((heading) => (
