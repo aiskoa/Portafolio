@@ -30,6 +30,7 @@
 
 .markdownContent h2 {
     font-size: 1.5rem; /* Tamaño del encabezado H2 */
+    color: rgb(4, 110, 172);
 }
 
 .markdownContent h3 {
@@ -87,8 +88,9 @@
 }
 
 .toc-container {
+    position: -webkit-sticky;  /* Para Safari */
     position: sticky;
-    top: 1rem; /* Mantener el índice en la parte superior */
+    top: 1rem; /* Mantener el índice en la parte superior del contenido cuando se desplaza */
     max-height: 80vh; /* Limitar la altura del índice */
     overflow-y: auto; /* Permitir desplazamiento si el índice es largo */
     border: 1px solid #ddd; /* Borde para el índice */
@@ -97,13 +99,16 @@
 
 @media (max-width: 768px) {
     .toc-container {
-        position: relative; /* Cambiar a relativo en dispositivos móviles */
-        top: initial; /* Quitar el margen superior */
-        right: 0; /* Asegurar que ocupe el ancho completo */
-        width: 100%; /* Ocupa todo el ancho disponible */
-        max-height: none; /* El índice no necesita límite de altura */
-        margin-top: 20px; /* Añadir un margen superior para que no esté pegado a la parte superior */
-        border: none; /* Eliminar el borde en dispositivos pequeños si es necesario */
+    position: fixed;  /* El índice se queda fijo en la parte superior */
+    top: 0;  /* Pegado al borde superior */
+    right: 0; /* Asegurarse de que esté alineado a la derecha */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-height: none; /* El índice no necesita límite de altura */
+    margin-top: 0; /* Eliminar el margen superior */
+    border: none; /* Eliminar el borde en móviles si es necesario */
+    background-color: white; /* Fondo blanco para mejor visibilidad */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra para destacar el índice */
+    z-index: 1000; /* Asegurarse de que esté sobre el contenido */
     }
 }
 

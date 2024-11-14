@@ -69,11 +69,9 @@ interface Heading {
 export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
 
-  // Definir el tipo de estado `headings` como `Heading[]`
   const [headings, setHeadings] = useState<Heading[]>([]);
 
   useEffect(() => {
-    // Captura los elementos <h2> después de que el contenido se haya renderizado
     const headingElements = Array.from(document.querySelectorAll("h2"));
     const headingsData: Heading[] = headingElements.map((heading) => ({
       id: heading.id,
@@ -99,17 +97,17 @@ export default function PostPage({ frontmatter, content }: Props) {
           href="../Rawier-icon.png"
         />
         <meta name="description" content={excerpt} />
-        <meta property="og:site_name" content="Rawier Cybersecurity"/>
+        <meta property="og:site_name" content="Rawier Cybersecurity" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://rawier.vercel.app" />
-        <meta property="og:image" content={cover_image}/>
-        <meta name="theme-color:" content="#8e52f5"></meta>
+        <meta property="og:image" content={cover_image} />
+        <meta name="theme-color" content="#8e52f5" />
       </Head>
       <div className="container flex mx-auto">
         {/* Contenedor del índice flotante */}
-        <aside className={`toc-container ${styles.tocContainer} w-full md:w-1/4 p-4 bg-gray-100 rounded-lg`}>
+        <aside className="toc-container">
           <h3 className="mb-2 font-bold">Índice</h3>
           <ul>
             {headings.map((heading) => (
@@ -124,6 +122,7 @@ export default function PostPage({ frontmatter, content }: Props) {
             ))}
           </ul>
         </aside>
+
         {/* Contenido del post */}
         <div className="flex-1 post-content">
           <div className="text-center">
