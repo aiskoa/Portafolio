@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        'custom-card': '350px',
+        'custom-card': '550px',
       },
       height: {
         'custom-image': '200px',
