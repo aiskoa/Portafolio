@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        'custom-card': '250px',
+        'custom-card': '350px',
       },
       height: {
-        'custom-image': '200px',
+        'custom-image': '300px',
       },
       backgroundImage: {
         'tv': "url('https://i.makeagif.com/media/4-05-2022/22uZbY.gif')",

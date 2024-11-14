@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import gfm from 'remark-gfm'; // Este es el plugin que necesitas
+import gfm from 'remark-gfm';
 import Link from "next/link";
 import Head from "next/head";
 import { config } from "../../config";
@@ -10,10 +10,10 @@ import styles from "./post.module.css";
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import c from 'react-syntax-highlighter/dist/cjs/languages/prism/c';
 import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql';
+import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import php from 'react-syntax-highlighter/dist/cjs/languages/prism/php';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
-import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import java from 'react-syntax-highlighter/dist/cjs/languages/prism/java';
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml';
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
@@ -22,9 +22,11 @@ import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
 import ignore from 'react-syntax-highlighter/dist/cjs/languages/prism/ignore';
 import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
-import { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import useTranslation from "next-translate/useTranslation";
+import { useEffect, useState } from "react";
+import { scroller } from "react-scroll";
+import rehypeSlug from 'rehype-slug';
 
 // Registra el lenguaje Python
 SyntaxHighlighter.registerLanguage('c', c);
@@ -41,6 +43,7 @@ SyntaxHighlighter.registerLanguage('python', python);
 SyntaxHighlighter.registerLanguage('powershell', powershell);
 SyntaxHighlighter.registerLanguage('javascript', javascript);
 
+// Definir el tipo Frontmatter
 interface Frontmatter {
   title: string;
   date: string;
@@ -51,14 +54,41 @@ interface Frontmatter {
   tags2: string;
 }
 
+// Definir el tipo de Props para el componente
 interface Props {
   frontmatter: Frontmatter;
   content: string;
 }
 
+// Definir el tipo Heading para `headings`
+interface Heading {
+  id: string;
+  text: string;
+}
+
 export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
-  const { t } = useTranslation("index");
+
+  // Definir el tipo de estado `headings` como `Heading[]`
+  const [headings, setHeadings] = useState<Heading[]>([]);
+
+  useEffect(() => {
+    // Captura los elementos <h2> después de que el contenido se haya renderizado
+    const headingElements = Array.from(document.querySelectorAll("h2"));
+    const headingsData: Heading[] = headingElements.map((heading) => ({
+      id: heading.id,
+      text: heading.innerText,
+    }));
+    setHeadings(headingsData);
+  }, [content]);
+
+  const scrollTo = (id: string) => {
+    scroller.scrollTo(id, {
+      smooth: true,
+      offset: -100,
+    });
+  };
+
   return (
     <>
       <Head>
@@ -77,20 +107,26 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta property="og:image" content={cover_image}/>
         <meta name="theme-color:" content="#8e52f5"></meta>
       </Head>
-      <div className="container mx-auto">
-        <div className="flex justify-start text-center">
-          <Link href="/blog">
-            <button
-              type="button"
-              className="me-5 mt-3 inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-yellow-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
-            >
-              <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m15 19-7-7 7-7"/>
-              </svg>
-            </button>
-          </Link>
-        </div>
-        <div>
+      <div className="container flex mx-auto">
+        {/* Contenedor del índice flotante */}
+        <aside className="fixed w-1/4 p-4 bg-gray-100 rounded-lg toc-container top-20 right-10">
+          <h3 className="mb-2 font-bold">Índice</h3>
+          <ul>
+            {headings.map((heading) => (
+              <li key={heading.id}>
+                <button
+                  onClick={() => scrollTo(heading.id)}
+                  className="text-blue-600 hover:underline"
+                >
+                  {heading.text}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        {/* Contenido del post */}
+        <div className="flex-1 post-content">
           <div className="text-center">
             <h1 className="text-3xl">{title}</h1>
             <div className="text-xl">{excerpt}</div>
@@ -99,10 +135,9 @@ export default function PostPage({ frontmatter, content }: Props) {
             <img src={cover_image} alt={alt} />
           </div>
           <div className={`py-3 mt-3 text-base ${styles.markdownContent}`}>
-            {/* Procesa el contenido Markdown */}
             <ReactMarkdown
-              remarkPlugins={[gfm]} // Añade el plugin aquí
-              className={styles.markdownContent}
+              remarkPlugins={[gfm]}
+              rehypePlugins={[rehypeSlug]}
               components={{
                 blockquote: BlockquoteComponent,
                 code: CodeComponent,
@@ -117,6 +152,7 @@ export default function PostPage({ frontmatter, content }: Props) {
   );
 }
 
+// Componente de blockquote
 interface BlockquoteProps {
   children?: React.ReactNode;
 }
@@ -125,15 +161,14 @@ const BlockquoteComponent: React.FC<BlockquoteProps> = ({ children }) => {
   return <blockquote className={styles.blockquote}>{children}</blockquote>;
 };
 
+// Componente de código
 interface CodeComponentProps {
-  node?: any; // Hacer la prop 'node' opcional
   inline?: boolean;
-  className?: string; // Hacer la prop 'className' opcional
-  children?: React.ReactNode; // Hacer la prop 'children' opcional
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const CodeComponent: React.FC<CodeComponentProps> = ({
-  node,
   inline,
   className,
   children,
@@ -146,7 +181,6 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
       const timer = setTimeout(() => {
         setCopied(false);
       }, 2000);
-
       return () => clearTimeout(timer);
     }
   }, [copied]);
@@ -156,6 +190,7 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
 
   return !inline && match ? (
     <div style={{ position: "relative" }}>
+      {/* Indicar el lenguaje de programación en la esquina superior izquierda */}
       <div
         style={{
           position: "absolute",
@@ -172,6 +207,7 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
         #{language.toUpperCase()}
       </div>
       <div style={{ position: "relative" }}>
+        {/* Botón de copiar en la esquina superior derecha */}
         <div
           style={{
             position: "absolute",
@@ -191,6 +227,7 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
             </CopyToClipboard>
           )}
         </div>
+        {/* Componente de resaltado de sintaxis */}
         <SyntaxHighlighter language={language} style={okaidia}>
           {String(children)}
         </SyntaxHighlighter>
@@ -203,17 +240,18 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
   );
 };
 
+// Definir el tipo para los parámetros en getStaticPaths y getStaticProps
+interface Params {
+  slug: string;
+}
+
 export async function getStaticPaths({ locales }: { locales: string[] }) {
   const files = fs.readdirSync(path.join("posts"));
   const paths = files.flatMap((filename) => {
-    return locales.map((locale) => {
-      return {
-        params: {
-          slug: filename.replace(".md", ""),
-        },
-        locale,
-      };
-    });
+    return locales.map((locale) => ({
+      params: { slug: filename.replace(".md", "") },
+      locale,
+    }));
   });
 
   return {
@@ -222,11 +260,7 @@ export async function getStaticPaths({ locales }: { locales: string[] }) {
   };
 }
 
-interface Params {
-  params: { slug: string; locale: string };
-}
-
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps({ params }: { params: Params }) {
   const markdownWithMeta = fs.readFileSync(
     path.join("posts", params.slug + ".md"),
     "utf-8"

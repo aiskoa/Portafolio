@@ -85,3 +85,11 @@
 .markdownContent th {
     background-color: #f88f16;
 }
+
+.toc-container {
+    position: sticky;
+    top: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}  

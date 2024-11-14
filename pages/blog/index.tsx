@@ -75,13 +75,7 @@ export default function Blog({ posts }: PostsType) {
           </div>
         </div>
 
-        {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {currentPosts.map((post: IPost) => (
-            <Post key={post.slug} post={post} />
-          ))}
-        </div> */}
-
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-3">
           {currentPosts.map((post: IPost) => (
             <Post key={post.slug} post={post} />
           ))}
