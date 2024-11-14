@@ -161,7 +161,7 @@ const BlockquoteComponent: React.FC<BlockquoteProps> = ({ children }) => {
   return <blockquote className={styles.blockquote}>{children}</blockquote>;
 };
 
-// Componente de código
+// Define las props para el componente CodeComponent
 interface CodeComponentProps {
   inline?: boolean;
   className?: string;

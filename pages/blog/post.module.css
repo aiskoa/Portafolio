@@ -93,9 +93,4 @@
     max-height: 80vh;
     overflow-y: auto;
     border: 1px solid #ddd;
-}
-
-/* Estilos de los bloques de código */
-.code-block {
-  margin-top: 1.5rem; /* Añadir espacio para no cubrir el índice */
-}
+}  
