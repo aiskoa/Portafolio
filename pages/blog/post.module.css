@@ -87,33 +87,36 @@
     background-color: #f88f16;
 }
 
-/* Estilo común para el índice (TOC) */
+/* Estilo para el índice flotante */
 .toc-container {
-    width: 250px;
-    padding: 1rem;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
+    position: sticky;
+    top: 1rem; /* El índice se queda pegado a la parte superior del viewport */
+    max-height: 80vh; /* Limita la altura del índice */
+    overflow-y: auto; /* Si el índice es muy largo, se puede desplazar */
+    border: 1px solid #ddd; /* Bordes suaves */
+    background-color: #f7f7f7; /* Fondo claro */
     border-radius: 8px;
 }
 
 /* Comportamiento en escritorio */
 @media (min-width: 768px) {
     .toc-container {
-        position: fixed; /* El índice se queda fijo a la derecha */
-        top: 20px; /* Empujamos el índice hacia abajo para que no esté pegado a la parte superior */
+        position: sticky; /* Se pega en la parte superior del contenido */
+        top: 20px; /* Añadimos un pequeño margen desde la parte superior */
         right: 20px; /* Lo alineamos a la derecha */
-        max-height: 80vh; /* Limita la altura máxima para evitar que ocupe demasiado espacio */
-        overflow-y: auto; /* Si hay mucho contenido, el índice se desplazará */
-        z-index: 100; /* Asegura que el índice esté por encima del contenido */
+        max-height: 80vh; /* Aseguramos que no ocupe más del 80% de la altura del viewport */
+        overflow-y: auto; /* Permitimos desplazamiento si el índice es largo */
+        z-index: 100; /* Para asegurarnos de que quede por encima del contenido */
     }
 }
 
-/* Comportamiento en móvil */
+/* En dispositivos móviles el índice desaparece */
 @media (max-width: 767px) {
     .toc-container {
-        display: none; /* El índice no se muestra en dispositivos móviles */
+        display: none; /* Ocultamos el índice en móviles */
     }
 }
+
 
 /* Estilos de los bloques de código */
 .code-block {
