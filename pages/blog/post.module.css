@@ -87,28 +87,34 @@
     background-color: #f88f16;
 }
 
+/* Estilo común para el índice (TOC) */
 .toc-container {
-    position: -webkit-sticky;  /* Para Safari */
-    position: sticky;
-    top: 1rem; /* Mantener el índice en la parte superior del contenido cuando se desplaza */
-    max-height: 80vh; /* Limitar la altura del índice */
-    overflow-y: auto; /* Permitir desplazamiento si el índice es largo */
-    border: 1px solid #ddd; /* Borde para el índice */
-    z-index: 10; /* Asegurarse de que el índice esté por encima de otros elementos */
+    width: 250px;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+/* Comportamiento en móvil */
+@media (max-width: 767px) {
     .toc-container {
-    position: fixed;  /* El índice se queda fijo en la parte superior */
-    top: 0;  /* Pegado al borde superior */
-    right: 0; /* Asegurarse de que esté alineado a la derecha */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    max-height: none; /* El índice no necesita límite de altura */
-    margin-top: 0; /* Eliminar el margen superior */
-    border: none; /* Eliminar el borde en móviles si es necesario */
-    background-color: white; /* Fondo blanco para mejor visibilidad */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra para destacar el índice */
-    z-index: 1000; /* Asegurarse de que esté sobre el contenido */
+        position: sticky;
+        top: 0; /* Se queda fijo en la parte superior de la pantalla */
+        max-height: 100vh; /* Evita que el índice sea demasiado grande */
+        margin-bottom: 1rem; /* Espacio debajo del índice */
+        z-index: 10; /* Asegura que esté encima del contenido */
+        width: 100%; /* Asegura que ocupe el ancho completo en móvil */
+    }
+}
+
+/* Comportamiento en escritorio */
+@media (min-width: 768px) {
+    .toc-container {
+        position: sticky;
+        top: 20px; /* Empuja el índice un poco hacia abajo en la vista de escritorio */
+        max-height: 80vh;
+        overflow-y: auto; /* Permite desplazamiento si el índice es largo */
     }
 }
 
