@@ -69,11 +69,9 @@ interface Heading {
 export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
 
-  // Definir el tipo de estado `headings` como `Heading[]`
   const [headings, setHeadings] = useState<Heading[]>([]);
 
   useEffect(() => {
-    // Captura los elementos <h2> después de que el contenido se haya renderizado
     const headingElements = Array.from(document.querySelectorAll("h2"));
     const headingsData: Heading[] = headingElements.map((heading) => ({
       id: heading.id,
@@ -93,23 +91,19 @@ export default function PostPage({ frontmatter, content }: Props) {
     <>
       <Head>
         <title>Rawier - Blog</title>
-        <link
-          rel="shortcut icon"
-          type="image/jpg"
-          href="../Rawier-icon.png"
-        />
+        <link rel="shortcut icon" type="image/jpg" href="../Rawier-icon.png" />
         <meta name="description" content={excerpt} />
-        <meta property="og:site_name" content="Rawier Cybersecurity"/>
+        <meta property="og:site_name" content="Rawier Cybersecurity" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://rawier.vercel.app" />
-        <meta property="og:image" content={cover_image}/>
+        <meta property="og:image" content={cover_image} />
         <meta name="theme-color:" content="#8e52f5"></meta>
       </Head>
       <div className="container flex mx-auto">
-        {/* Contenedor del índice flotante */}
-        <aside className="fixed w-1/4 p-4 rounded-lg toc-container top-20 right-10">
+        {/* Índice flotante, oculto en pantallas pequeñas */}
+        <aside className="z-10 hidden w-1/4 p-4 bg-white rounded-lg shadow-lg md:block md:fixed top-20 right-10">
           <h3 className="mb-2 font-bold">Índice</h3>
           <ul>
             {headings.map((heading) => (
@@ -134,7 +128,7 @@ export default function PostPage({ frontmatter, content }: Props) {
             <div className="text-sm">{tags1}, {tags2}</div>
             <img src={cover_image} alt={alt} />
           </div>
-          <div className={`py-3 mt-3 text-base ${styles.markdownContent}`}>
+          <div className="relative z-0 py-3 mt-3 text-base">
             <ReactMarkdown
               remarkPlugins={[gfm]}
               rehypePlugins={[rehypeSlug]}

@@ -91,18 +91,10 @@
     margin-top: 1.5rem;
 }
 
-.markdownContent aside {
-    font-size: 1.5rem;
-    color: #4b45a0;
-    border: 1px solid #707070;
+.toc-container {
     position: sticky;
     top: 1rem;
     max-height: 80vh;
     overflow-y: auto;
-}
-
-@media (max-width: 767px) {
-    .markdownContent aside {
-        display: none;
-    }
+    border: 1px solid #ddd;
 }
