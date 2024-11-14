@@ -52,7 +52,7 @@ const About: React.FC = (): ReactElement => {
               <p className="mb-4 select-none">{t("about-me")}</p>
             </div>
           </div>
-          <div className="flex-shrink-0 mb-10 pointer-events-none focus:pointer-events-auto lg:mt-12 lg:px-4" draggable="false">
+          <div className="flex-shrink-0 mx-auto mb-10 pointer-events-none focus:pointer-events-auto lg:mt-12 lg:px-4" draggable="false">
             <Image
               src={config.github.url}
               priority={true}
@@ -89,6 +89,7 @@ const About: React.FC = (): ReactElement => {
             </button>
           </Link>
         </div>
+        <br />
       </div>
     </div>
   );
