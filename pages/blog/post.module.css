@@ -90,3 +90,11 @@
 .code-block {
     margin-top: 1.5rem;
 }
+
+.toc-container {
+    position: sticky;
+    top: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
