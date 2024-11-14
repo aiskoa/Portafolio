@@ -109,14 +109,14 @@ export default function PostPage({ frontmatter, content }: Props) {
       </Head>
       <div className="container flex mx-auto">
         {/* Contenedor del índice flotante */}
-        <aside className="fixed w-1/4 p-4 bg-gray-100 rounded-lg toc-container top-20 right-10">
+        <aside className={`toc-container ${styles.tocContainer} w-full md:w-1/4 p-4 bg-gray-100 rounded-lg`}>
           <h3 className="mb-2 font-bold">Índice</h3>
           <ul>
             {headings.map((heading) => (
               <li key={heading.id}>
                 <button
                   onClick={() => scrollTo(heading.id)}
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-600 hover:underline dark:text-white"
                 >
                   {heading.text}
                 </button>
@@ -124,7 +124,6 @@ export default function PostPage({ frontmatter, content }: Props) {
             ))}
           </ul>
         </aside>
-
         {/* Contenido del post */}
         <div className="flex-1 post-content">
           <div className="text-center">

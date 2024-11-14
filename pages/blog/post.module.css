@@ -88,8 +88,25 @@
 
 .toc-container {
     position: sticky;
-    top: 1rem;
-    max-height: 80vh;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-}  
+    top: 1rem; /* Mantener el índice en la parte superior */
+    max-height: 80vh; /* Limitar la altura del índice */
+    overflow-y: auto; /* Permitir desplazamiento si el índice es largo */
+    border: 1px solid #ddd; /* Borde para el índice */
+    z-index: 10; /* Asegurarse de que el índice esté por encima de otros elementos */
+}
+
+@media (max-width: 768px) {
+    .toc-container {
+        position: relative; /* Cambiar a relativo en dispositivos móviles */
+        top: initial; /* Quitar el margen superior */
+        right: 0; /* Asegurar que ocupe el ancho completo */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-height: none; /* El índice no necesita límite de altura */
+        margin-top: 20px; /* Añadir un margen superior para que no esté pegado a la parte superior */
+        border: none; /* Eliminar el borde en dispositivos pequeños si es necesario */
+    }
+}
+
+.code-block {
+    margin-top: 1.5rem;
+}
