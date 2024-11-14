@@ -30,7 +30,7 @@
 
 .markdownContent h2 {
     font-size: 1.5rem; /* Tamaño del encabezado H2 */
-    color: rgb(4, 110, 172);
+    color: #4b45a0;
 }
 
 .markdownContent h3 {
@@ -87,6 +87,14 @@
     background-color: #f88f16;
 }
 
+.toc-container {
+    position: sticky;
+    top: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+
 /* Estilo común para el índice (TOC) */
 .toc-container {
     width: 250px;
@@ -96,28 +104,26 @@
     border-radius: 8px;
 }
 
-/* Comportamiento en móvil */
-@media (max-width: 767px) {
-    .toc-container {
-        position: sticky;
-        top: 0; /* Se queda fijo en la parte superior de la pantalla */
-        max-height: 100vh; /* Evita que el índice sea demasiado grande */
-        margin-bottom: 1rem; /* Espacio debajo del índice */
-        z-index: 10; /* Asegura que esté encima del contenido */
-        width: 100%; /* Asegura que ocupe el ancho completo en móvil */
-    }
-}
-
 /* Comportamiento en escritorio */
 @media (min-width: 768px) {
     .toc-container {
-        position: sticky;
-        top: 20px; /* Empuja el índice un poco hacia abajo en la vista de escritorio */
-        max-height: 80vh;
-        overflow-y: auto; /* Permite desplazamiento si el índice es largo */
+        position: fixed; /* El índice se queda fijo a la derecha */
+        top: 20px; /* Empujamos el índice hacia abajo para que no esté pegado a la parte superior */
+        right: 20px; /* Lo alineamos a la derecha */
+        max-height: 80vh; /* Limita la altura máxima para evitar que ocupe demasiado espacio */
+        overflow-y: auto; /* Si hay mucho contenido, el índice se desplazará */
+        z-index: 100; /* Asegura que el índice esté por encima del contenido */
     }
 }
 
+/* Comportamiento en móvil */
+@media (max-width: 767px) {
+    .toc-container {
+        display: none; /* El índice no se muestra en dispositivos móviles */
+    }
+}
+
+/* Estilos de los bloques de código */
 .code-block {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem; /* Añadir espacio para no cubrir el índice */
 }
