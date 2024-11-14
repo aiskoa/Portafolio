@@ -101,9 +101,11 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta property="og:image" content={cover_image} />
         <meta name="theme-color:" content="#8e52f5"></meta>
       </Head>
-      <div className="container flex mx-auto">
+
+      {/* Contenedor principal */}
+      <div className="container flex flex-col px-4 mx-auto md:px-0 md:flex-row">
         {/* Índice flotante, oculto en pantallas pequeñas */}
-        <aside className="z-10 hidden w-1/4 p-4 bg-white rounded-lg shadow-lg md:block md:fixed top-20 right-10">
+        <aside className="z-10 hidden w-full p-4 bg-white rounded-lg shadow-lg dark:bg-slate-800 md:block md:fixed md:w-1/4 top-20 right-10">
           <h3 className="mb-2 font-bold">Índice</h3>
           <ul>
             {headings.map((heading) => (
@@ -120,15 +122,15 @@ export default function PostPage({ frontmatter, content }: Props) {
         </aside>
 
         {/* Contenido del post */}
-        <div className="flex-1 post-content">
-          <div className="text-center">
-            <h1 className="text-3xl">{title}</h1>
-            <div className="text-xl">{excerpt}</div>
-            <div className="text-xl">{date}</div>
-            <div className="text-sm">{tags1}, {tags2}</div>
-            <img src={cover_image} alt={alt} />
+        <div className="flex-1 mt-5 md:mt-0 post-content">
+          <div className="px-2 text-center md:px-0">
+            <h1 className="text-2xl md:text-3xl">{title}</h1>
+            <div className="text-lg md:text-xl">{excerpt}</div>
+            <div className="text-base md:text-xl">{date}</div>
+            <div className="mb-4 text-xs md:text-sm">{tags1}, {tags2}</div>
+            <img src={cover_image} alt={alt} className="w-full mx-auto mb-4 md:w-auto" />
           </div>
-          <div className="relative z-0 py-3 mt-3 text-base">
+          <div className="py-3 mt-3 text-sm md:text-base">
             <ReactMarkdown
               remarkPlugins={[gfm]}
               rehypePlugins={[rehypeSlug]}
