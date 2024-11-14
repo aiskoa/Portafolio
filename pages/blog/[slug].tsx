@@ -109,7 +109,7 @@ export default function PostPage({ frontmatter, content }: Props) {
       </Head>
       <div className="container flex mx-auto">
         {/* Contenedor del índice flotante */}
-        <aside className="fixed w-1/4 p-4 bg-gray-100 rounded-lg toc-container top-20 right-10">
+        <aside className="fixed w-1/4 p-4 toc-container top-20 right-10">
           <h3 className="mb-2 font-bold">Índice</h3>
           <ul>
             {headings.map((heading) => (
