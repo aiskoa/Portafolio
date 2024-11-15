@@ -102,7 +102,8 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta property="og:image" content={cover_image} />
         <meta name="theme-color:" content="#8e52f5"></meta>
       </Head>
-      <div className="flex justify-start text-center">
+      <div className="container mx-auto">
+        <div className="flex justify-start ml-5 text-center">
           <Link href="/blog">
             <button
               type="button"
@@ -132,7 +133,6 @@ export default function PostPage({ frontmatter, content }: Props) {
             ))}
           </ul>
         </aside>
-
         {/* Contenido del post */}
         <div className={`flex-1 mt-5 md:mt-0 post-content ${styles.markdownContent}`}>
           <div className="px-2 text-center md:px-0">
@@ -156,6 +156,7 @@ export default function PostPage({ frontmatter, content }: Props) {
               {content}
             </ReactMarkdown>
           </div>
+        </div>
         </div>
       </div>
     </>
