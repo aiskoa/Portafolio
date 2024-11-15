@@ -88,7 +88,6 @@ const About: React.FC = (): ReactElement => {
               <span>{t("me")}</span>
             </button>
           </Link>
-          <br />
         </div>
       </div>
     </div>

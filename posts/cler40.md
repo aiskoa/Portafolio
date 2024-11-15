@@ -77,7 +77,7 @@ Para instalar y ejecutar Cler localmente, sigue estos pasos:
 6. **Ejecuta el comando de inicio**:
 
     ```bash
-    npm index.js
+    npm start
     ```
 
     Dirigete a tu servidor de discord al que invitaste a tu bot y ejecuta el comando de /help.
@@ -90,14 +90,14 @@ Estructura y Diagramación en Repositorio de [Github](https://github.com/Rawierd
 
 ## Admin / Mod
 
-* `c!mute  <@member> <reason>` Silencia al miembro etiquetado.
-* `c!unmute  <@member> <reason>` Quita el Silenco del miembro etiquetado.
-* `c!set_mute  <@rol>` Define el rol de Mute en el servidor **Importante**.
-* `c!ban <@member> <reason>` Expulsa del servidor de manera difinitiva al miembro etiquetado.
-* `c!unban <@member>` Revoca la prohibición del comando anterior.
-* `c!kick <@member> <reason>` Expulsa del servidor al miembro etiquetado.
-* `c!softban <@member> <reason>` Expulsa del servidor al miembro etiquetado de manera temporal por 7 dias.
-* `c!warn <@member> <reason>` Notifica al miembro seleccionado
+* `/mute  <@member> <reason>` Silencia al miembro etiquetado.
+* `/unmute  <@member> <reason>` Quita el Silenco del miembro etiquetado.
+* `/set_mute  <@rol>` Define el rol de Mute en el servidor **Importante**.
+* `/ban <@member> <reason>` Expulsa del servidor de manera difinitiva al miembro etiquetado.
+* `/unban <@member>` Revoca la prohibición del comando anterior.
+* `/kick <@member> <reason>` Expulsa del servidor al miembro etiquetado.
+* `/softban <@member> <reason>` Expulsa del servidor al miembro etiquetado de manera temporal por 7 dias.
+* `/warn <@member> <reason>` Notifica al miembro seleccionado
 
 Lista completa de comandos en [Documentación](https://rawier.gitbook.io/cler)
 
