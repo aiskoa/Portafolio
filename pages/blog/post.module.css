@@ -23,13 +23,12 @@
     color: purple; /* Cambia el color del texto del enlace visitado */
 }
 
-/* Estilos para los encabezados */
 .markdownContent h1 {
-    font-size: 2rem; /* Tamaño del encabezado H1 */
+    font-size: 2rem;
 }
 
 .markdownContent h2 {
-    font-size: 1.5rem; /* Tamaño del encabezado H2 */
+    font-size: 1.5rem;
     color: #4b45a0;
 }
 
@@ -87,7 +86,7 @@
     background-color: #f88f16;
 }
 
-.markdownCont code-block {
+.code-block {
     margin-top: 1.5rem;
 }
 

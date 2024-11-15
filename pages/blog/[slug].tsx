@@ -69,9 +69,11 @@ interface Heading {
 export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
 
+  // Definir el tipo de estado `headings` como `Heading[]`
   const [headings, setHeadings] = useState<Heading[]>([]);
 
   useEffect(() => {
+    // Captura los elementos <h2> después de que el contenido se haya renderizado
     const headingElements = Array.from(document.querySelectorAll("h2"));
     const headingsData: Heading[] = headingElements.map((heading) => ({
       id: heading.id,
@@ -112,7 +114,7 @@ export default function PostPage({ frontmatter, content }: Props) {
               <li key={heading.id}>
                 <button
                   onClick={() => scrollTo(heading.id)}
-                  className="text-blue-600 hover:underline"
+                  className="font-semibold text-blue-500 dark:text-violet-300 hover:underline"
                 >
                   {heading.text}
                 </button>
@@ -122,12 +124,14 @@ export default function PostPage({ frontmatter, content }: Props) {
         </aside>
 
         {/* Contenido del post */}
-        <div className="flex-1 mt-5 md:mt-0 post-content">
+        <div className={`flex-1 mt-5 md:mt-0 post-content ${styles.markdownContent}`}>
           <div className="px-2 text-center md:px-0">
             <h1 className="text-2xl md:text-3xl">{title}</h1>
             <div className="text-lg md:text-xl">{excerpt}</div>
             <div className="text-base md:text-xl">{date}</div>
-            <div className="mb-4 text-xs md:text-sm">{tags1}, {tags2}</div>
+            <div className="mb-4 text-xs md:text-sm">
+              {tags1}, {tags2}
+            </div>
             <img src={cover_image} alt={alt} className="w-full mx-auto mb-4 md:w-auto" />
           </div>
           <div className="py-3 mt-3 text-sm md:text-base">
