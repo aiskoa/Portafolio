@@ -12,6 +12,13 @@
     font-family: sans-serif;
 }
 
+.markdownContent .blockquote:dark {
+    color: #fff;
+    border-left: 4px solid #ddd;
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+
 .markdownContent a:link {
     color: aqua;
     text-decoration: underline;
