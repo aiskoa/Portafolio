@@ -84,14 +84,10 @@
 .markdownContent td {
     padding: 0.5rem;
     border: 1px solid #f88f16;
-    justify-content: center;
-    align-items: center;
 }
 
 .markdownContent th {
     background-color: #f88f16;
-    justify-content: center;
-    align-items: center;
 }
 
 .markdownContent br {

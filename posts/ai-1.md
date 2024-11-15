@@ -77,6 +77,7 @@ Las grandes entidades tienen control de estos datos por lo tanto esto seria lo p
 
 **Tabla de anti malware y otros**
 \
+
 | Nombre | Enlace |
 | --|--|
 | [Triage](https://tria.ge) | Permite crear un entorno seguro para el analisis de malware o aplicaciones sospechosas |
@@ -108,5 +109,7 @@ Las grandes entidades tienen control de estos datos por lo tanto esto seria lo p
 * 📌 **Algoritmo** = Conjunto de pasos para completar una tarea con exito.
 
 &nbsp;
+
+<br>
 
 = Ewd
