@@ -27,6 +27,15 @@ const Footer: React.FC = (): ReactElement => {
               <SkillsIcon text="Linkedin" children={<SiLinkedin />} />
             </a>
             <a
+              href={config.socials.github}
+              className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500 p-1"}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <SkillsIcon text="GitHub" children={<SiGithub />} />
+            </a>
+            <a
                 href={config.socials.instagram}
                 className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500 p-1"}
                 target="_blank"
@@ -43,15 +52,6 @@ const Footer: React.FC = (): ReactElement => {
               aria-label="Twitter"
             >
               <SkillsIcon text="X" children={<SiTwitter />} />
-            </a>
-            <a
-              href={config.socials.github}
-              className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500 p-1"}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-            >
-              <SkillsIcon text="GitHub" children={<SiGithub />} />
             </a>
             <a
               href={config.socials.discord}

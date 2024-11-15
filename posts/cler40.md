@@ -26,8 +26,6 @@ tags2: "MegaDB"
 
 **v4.7.20**
 
-## Lo que puede hacer en ATM
-
 ## (Asynchronous Transfer Mode)
 
 * Usa el prefix. `c!` o el Slash `/` Para comandos de moderación
@@ -219,7 +217,7 @@ Pero en resumen el proyecto lo revivi, si lo abandono de nuevo es porque me abur
 Contributions, issues and feature requests are welcome! Feel free to check issues page.
 
 1. **Haz un Fork del Repositorio**: Crea una copia del repositorio en tu cuenta de GitHub.
-2. **Crea una Rama**: 
+2. **Crea una Rama**:
 
     ```bash
     git checkout -b nombre-de-tu-rama
@@ -238,7 +236,7 @@ Contributions, issues and feature requests are welcome! Feel free to check issue
 
 ### ❤️ Show your support
 
-Give a ⭐️ if this _project helped you!_ 
+Give a ⭐️ if this _project helped you!_
 
 ### 💜 License
 

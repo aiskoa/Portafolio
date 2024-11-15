@@ -8,12 +8,20 @@ tags1: "Helpdesk"
 tags2: "AI"
 ---
 
+# Defenderte de la Ai
+
+&nbsp;
+
 ## Atención
 
 He de aclarar que estas recomendaciones son para 2024 - 2026 como máximo después de esas fechas no tengo ni idea que pueda pasar con la evolución informática, tambien he de aclarar que muchas de las cosas que mostraré son **teoricas** y no deben ser tomadas a pie de letra per se no serán de mucha ayuda.
 
+&nbsp;
+
 **! Al final del articulo detallaré fuentes de consulta, asi como también terminos usados y este es solo la primera parte**
-\
+
+&nbsp;
+
 *Comenzemos* :)
 Abordaré por púntos ciertas problematicas con posibles soluciones.
 
@@ -109,7 +117,5 @@ Las grandes entidades tienen control de estos datos por lo tanto esto seria lo p
 * 📌 **Algoritmo** = Conjunto de pasos para completar una tarea con exito.
 
 &nbsp;
-
-<br>
 
 = Ewd
