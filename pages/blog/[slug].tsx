@@ -23,7 +23,7 @@ import ignore from 'react-syntax-highlighter/dist/cjs/languages/prism/ignore';
 import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { scroller } from "react-scroll";
 import rehypeSlug from 'rehype-slug';
@@ -68,12 +68,11 @@ interface Heading {
 
 export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
+  const router = useRouter(); // Inicializar el hook useRouter
 
-  // Definir el tipo de estado `headings` como `Heading[]`
   const [headings, setHeadings] = useState<Heading[]>([]);
 
   useEffect(() => {
-    // Captura los elementos <h2> después de que el contenido se haya renderizado
     const headingElements = Array.from(document.querySelectorAll("h2"));
     const headingsData: Heading[] = headingElements.map((heading) => ({
       id: heading.id,
@@ -103,6 +102,14 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta property="og:image" content={cover_image} />
         <meta name="theme-color:" content="#8e52f5"></meta>
       </Head>
+
+      {/* Botón de regreso */}
+      <button
+        onClick={() => router.back()}
+        className="px-4 py-2 mb-4 text-white bg-blue-500 rounded hover:bg-blue-600"
+      >
+        Regresar
+      </button>
 
       {/* Contenedor principal */}
       <div className="container flex flex-col px-4 mx-auto md:px-0 md:flex-row">
