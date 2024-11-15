@@ -8,14 +8,14 @@
 .markdownContent .blockquote {
     border-left: 4px solid #ddd;
     padding-left: 10px; /* Espaciado a la izquierda del bloque de citas */
-    color: rgb(204, 207, 33);
-    background-color: black;
+    color: rgb(187, 27, 94);
     font-family: sans-serif;
 }
 
 .markdownContent a:link {
     color: aqua;
     text-decoration: underline;
+    font-style: italic;
 }
 
 .markdownContent a:visited {
