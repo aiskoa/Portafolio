@@ -6,34 +6,38 @@
 }
 
 .markdownContent .blockquote {
-    /* Estilos para bloques de citas */
-    border-left: 4px solid #ddd; /* Ejemplo de borde lateral para citas */
+    border-left: 4px solid #ddd;
     padding-left: 10px; /* Espaciado a la izquierda del bloque de citas */
-    color: rgb(255, 47, 245); /* Color del texto de la cita */
+    color: rgb(255, 47, 245);
+    font-family: cursive;
 }
 
-/* Estilos para los enlaces no visitados */
 .markdownContent a:link {
-    color: blue; /* Cambia el color del texto del enlace */
-    text-decoration: underline; /* Subraya el texto del enlace */
+    color: blue;
+    text-decoration: underline;
 }
 
-/* Estilos para los enlaces visitados */
 .markdownContent a:visited {
     color: purple; /* Cambia el color del texto del enlace visitado */
 }
 
 .markdownContent h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .markdownContent h2 {
     font-size: 1.5rem;
-    color: #4b45a0;
+    color: #1a75eb;
+    padding-bottom: 0.2rem;
 }
 
 .markdownContent h3 {
     font-size: 1.2rem; /* Tamaño del encabezado H3 */
+}
+
+.markdownContent img {
+    padding-bottom: 4px;
 }
 
 /* Estilos para el código de diferencia */
@@ -52,7 +56,7 @@
 }
 
 /* Estilos para las alertas */
-.alert {
+.markdownContent alert {
     background-color: #ffe3e3; /* Color de fondo de la alerta */
     color: #cc0000; /* Color del texto de la alerta */
     padding: 10px; /* Espaciado dentro de la alerta */
@@ -60,7 +64,7 @@
 }
 
 /* Estilos para los botones */
-.btn {
+.markdownContent btn {
     display: inline-block; /* Mostrar como un bloque en línea */
     padding: 0.5rem 1rem; /* Espaciado interno */
     background-color: #4caf50; /* Color de fondo del botón */
@@ -71,7 +75,7 @@
     cursor: pointer; /* Cambiar cursor al pasar el ratón */
 }
 
-.btn:hover {
+.markdownContent btn:hover {
     background-color: #45a049; /* Cambiar color de fondo al pasar el ratón */
 }
 
@@ -80,10 +84,18 @@
 .markdownContent td {
     padding: 0.5rem;
     border: 1px solid #f88f16;
+    justify-content: center;
+    align-items: center;
 }
 
 .markdownContent th {
     background-color: #f88f16;
+    justify-content: center;
+    align-items: center;
+}
+
+.markdownContent br {
+    padding: 0.5rem;
 }
 
 .code-block {
