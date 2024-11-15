@@ -55,9 +55,9 @@ Un framework es un marco de como hacer las cosas y una normativa es como hacerlo
 
 ---
 
-## Tipos de pruebas de intrusión.
+## Tipos de pruebas de intrusión
 
-### Caja Negra.
+### Caja Negra:
 
 Consiste en obtener la mayor información posible debido a que no se tiene NULOS conocimiento ni información previa sobre el sistema o red a ser analizado. *Es la simulación perfecta de un ataque por parte de un autor que no conoce la empresa*.
 
@@ -87,7 +87,7 @@ Consiste en que el consultor tiene un conocimiento COMPLETO del sistema o red qu
 
 &nbsp;
 
-![Caja NGB](https://auditech.es/wp-content/uploads/2023/01/black-box-white-box-gray-box-ethical-hacking.webp)
+![Caja NGB](https://pbs.twimg.com/media/E2Qatt0XIAc7LJM.jpg)
 
 &nbsp;
 
