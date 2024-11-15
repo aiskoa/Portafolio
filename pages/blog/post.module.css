@@ -8,17 +8,17 @@
 .markdownContent .blockquote {
     border-left: 4px solid #ddd;
     padding-left: 10px; /* Espaciado a la izquierda del bloque de citas */
-    color: rgb(199, 75, 193);
-    font-family: monospace;
+    color: rgb(209, 76, 202);
+    font-family: sans-serif;
 }
 
 .markdownContent a:link {
-    color: blue;
+    color: aqua;
     text-decoration: underline;
 }
 
 .markdownContent a:visited {
-    color: purple; /* Cambia el color del texto del enlace visitado */
+    color: purple;
 }
 
 .markdownContent h1 {
@@ -31,15 +31,17 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #1a75eb;
-    padding-bottom: 0.2rem;
+    padding: 0.2rem;
 }
 
 .markdownContent h3 {
-    font-size: 1.2rem; /* Tamaño del encabezado H3 */
+    font-size: 1.2rem;
+    color: #1ec52c;
+    font-weight: bold;
 }
 
 .markdownContent img {
-    padding-bottom: 4px;
+    padding: 0.2rem;
 }
 
 /* Estilos para el código de diferencia */
