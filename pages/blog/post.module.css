@@ -9,6 +9,7 @@
     border-left: 4px solid #ddd;
     padding-left: 10px; /* Espaciado a la izquierda del bloque de citas */
     color: rgb(204, 207, 33);
+    background-color: black;
     font-family: sans-serif;
 }
 

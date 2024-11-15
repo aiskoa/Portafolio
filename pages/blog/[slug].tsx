@@ -119,12 +119,12 @@ export default function PostPage({ frontmatter, content }: Props) {
       <div className="container flex flex-col px-4 mx-auto md:px-0 md:flex-row">
         {/* Índice flotante, oculto en pantallas pequeñas */}
         <aside className="z-10 hidden w-full p-4 bg-white rounded-lg shadow-lg dark:bg-slate-800 md:block md:fixed md:w-1/4 top-20 right-10">
-          <h3 className="justify-center mb-2 font-bold">--- Índice ---</h3>
+          <h3 className="mb-2 font-bold text-center">--- Índice ---</h3>
           <ul>
             {headings.map((heading) => (
               <li key={heading.id}>
                 <button
-                  onClick={() => scrollTo(heading.id)}
+                  onClick={() => scrollTo(heading.id)} disabled={heading.id === ""}
                   className="font-semibold text-blue-500 dark:text-violet-300 hover:underline"
                 >
                   {heading.text}
@@ -132,6 +132,7 @@ export default function PostPage({ frontmatter, content }: Props) {
               </li>
             ))}
           </ul>
+          <h3 className="mb-2 font-bold text-center">--- ♡ ---</h3>
         </aside>
         {/* Contenido del post */}
         <div className={`flex-1 mt-5 md:mt-0 post-content ${styles.markdownContent}`}>
