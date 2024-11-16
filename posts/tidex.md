@@ -1,6 +1,6 @@
 ---
-title: "[EN] Tidex Ransomware"
-excerpt: "[EN] Ransomware Tidex for Linux"
+title: "[🇺🇸] Tidex Ransomware"
+excerpt: "Ransomware Example "Tidex" for Linux"
 date: "Jan 30 2023"
 cover_image: "/blog/rtidex.webp"
 alt: "Ransomware"
@@ -12,7 +12,9 @@ tags2: "Hacking"
 Simple little Ransomware, only works to encrypt files in the directory path Desktop and subdirectories.
 
 &nbsp;
-# Important
+
+## Important
+
 At the moment it can only be executed on Linux machines. it lacks decryption function.
 The KEY is: hkpykiiqftupr3okl04azj
 
@@ -38,7 +40,7 @@ def _lock():
             newArr.close()
 ```
 
-# [Dowload Here From GitHub](https://github.com/Rawierdt/Tidex)
+### [Dowload Here From GitHub](https://github.com/Rawierdt/Tidex)
 
-# Thx
-# ~ Rawier.
+Thx
+~ Rawier.

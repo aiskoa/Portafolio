@@ -1,6 +1,6 @@
 ---
 title: "[🇪🇸] Fundamentos Ciberseguridad 3"
-excerpt: "Exploraremos la Criptografia 🔑!"
+excerpt: "Exploraremos la Criptografia 🔑 Parte 1!"
 date: "Nov 15 2024"
 cover_image: "/blog/cibersec.webp"
 alt: "Cibersec 3"
@@ -8,9 +8,12 @@ tags1: "Helpdesk"
 tags2: "Hacking"
 ---
 
-# Fundamentos Ciberseguridad (Parte 3).
+# Fundamentos Ciberseguridad (Parte 3)
 
 &nbsp;
+
+> 🚨 ADVERTENCIA 🚨: Esta será una de las entradas más largas y un tanto avanzadas, recomiendo leer detenidamente y si pondrá en practica algo aqui visto deberá hacerlo bajo su propio riesgo.
+> *Dificulty Level: ⭐⭐⭐*
 
 Te recomiendo ir al Cheatsheet para una versión mas dinamica y divertida de aprender estos terminos.
 [Click para encontrar el Cheatsheet Completo](https://rawier.gitbook.io/glosario-de-hacking-ciberseguridad-y-redes/)
@@ -21,6 +24,13 @@ Te recomiendo ir al Cheatsheet para una versión mas dinamica y divertida de apr
 
 **CRIPTOGRAFIA**: Es el arte de representar información mediante simbolos y sistemas de codificación para transmitir la información de manera segura y confiable.
 ¿Cúal es su uso?: Cifrar confidenciales o privados para mantenerlos seguros ante cualquier tipo de ataque y para cumplir la normativa de seguridad de la información, (aunque esto no siempre es infalible).
+
+## Ejemplos en tu dia a dia
+
+- 🏠 Al ingresar a tu red social favorita con tu contraseña.
+- 🏠 Al desbloquear tu celular.
+- 🏠 Al mandar un mensaje de whatsapp a tu pareja.
+- 🏠 Al escuchar a un taxista hablar con otro en codigo ejemplo: 10-4, 7-40, etc.
 
 &nbsp;
 
@@ -39,7 +49,7 @@ Te recomiendo ir al Cheatsheet para una versión mas dinamica y divertida de apr
 
 &nbsp;
 
-### Código de Ejemplo
+### Código de Ejemplo de Criptografía Simétrica
 
 ```jsx
 import * as crypto from 'crypto';
@@ -124,6 +134,14 @@ Esto descifra el contenido del anterior codigo.
 
 &nbsp;
 
+### Código de Ejemplo de Criptografía Asimétrica
+
+```jsx
+
+```
+
+&nbsp;
+
 ## 3. Hash Criptográfico
 
 - 💫 **Características**: Los hash criptográficos son algoritmos que toman un input de cualquier tamaño y producen un output de tamaño fijo, conocido como hash. Estos son unidireccionales, lo que significa que a partir del hash no se puede obtener el mensaje original. Además, una pequeña modificación en el input produce un hash completamente diferente.
@@ -139,7 +157,18 @@ Esto descifra el contenido del anterior codigo.
 
 &nbsp;
 
+### Código de Ejemplo de Hash Criptográfico
+
+```jsx
+
+```
+
+&nbsp;
+
 ## 4. Criptografía de Curva Elíptica
+
+- 💫 **Características**: Basada en la aritmética de curvas elípticas sobre campos finitos, ofrece un alto nivel de seguridad con claves más cortas en comparación con la criptografía asimétrica tradicional. Esto se traduce en operaciones más rápidas y menor uso de recursos.
+- 💫 **Aplicaciones**: Es ampliamente utilizada en aplicaciones móviles y dispositivos con recursos limitados. También es fundamental en la creación de criptomonedas, como Bitcoin y Ethereum, para asegurar las transacciones y gestionar las claves privadas.
 
 ### Ejemplos de Curva Elíptica
 
@@ -148,7 +177,20 @@ Esto descifra el contenido del anterior codigo.
 | 🐦 **ECDSA** | (Elliptic Curve Digital Signature Algorithm) Utilizado para crear firmas digitales. |
 | 🐦 **ECDH** | (Elliptic Curve Diffie-Hellman) Un método para intercambiar claves secretas. |
 
+&nbsp;
+
+### Código de Ejemplo de Curva Elíptica
+
+```jsx
+
+```
+
+&nbsp;
+
 ## 5. Criptografía Cuántica
+
+- 💫 **Características**: Aprovecha los principios de la mecánica cuántica, como el entrelazamiento cuántico y la incertidumbre, para crear sistemas de comunicación que no pueden ser interceptados sin ser detectados. Ofrece una seguridad teóricamente incondicional.
+- 💫 **Aplicaciones**: Aunque todavía está en las primeras fases de desarrollo e implementación, tiene el potencial de revolucionar la seguridad en comunicaciones sensibles y en la protección contra las amenazas de la computación cuántica a la criptografía tradicional.
 
 ### Ejemplos de criptografía Cuántica
 
@@ -158,20 +200,66 @@ Esto descifra el contenido del anterior codigo.
 
 Esto esta aun en desarrollo, pero la idea principal de la criptografía cuántica promete revolucionar la seguridad informática al ofrecer métodos que son teóricamente invulnerables a ataques futuros basados en computadoras cuántica
 
----
-> Se necesitan especialistas, si existe algún problema con al gún miembro, la cosa se vuelve jodida.
+### Código de Ejemplo de criptografía Cuántica
 
-Un framework es un marco de como hacer las cosas y una normativa es como hacerlo.
+```python
+import numpy as np
+import random
+
+class QKD:
+    def __init__(self, n_bits):
+        self.n_bits = n_bits
+        self.alice_bits = []
+        self.bob_bits = []
+        self.bases_alice = []
+        self.bases_bob = []
+        self.shared_key = []
+
+    def generate_bits_and_bases(self):
+        # Alice genera bits aleatorios y bases
+        for _ in range(self.n_bits):
+            self.alice_bits.append(random.randint(0, 1))  # Bit aleatorio (0 ó 1)
+            self.bases_alice.append(random.choice(['H', 'V']))  # Base aleatoria (horizontal o vertical)
+
+    def simulate_bob_measurement(self):
+        # Bob elige aleatoriamente bases para medir los bits de Alice
+        for _ in range(self.n_bits):
+            self.bases_bob.append(random.choice(['H', 'V']))
+            # Simular la medición (si las bases coinciden, se lleva el bit)
+            if self.bases_alice[_] == self.bases_bob[_]:
+                self.bob_bits.append(self.alice_bits[_])
+            else:
+                self.bob_bits.append(None)  # Ningún bit si las bases no coinciden
+
+    def sift_key(self):
+        # Tamizar la clave en función de las bases coincidentes
+        for i in range(self.n_bits):
+            if self.bases_alice[i] == self.bases_bob[i]:
+                self.shared_key.append(self.alice_bits[i])
+
+    def run_qkd_protocol(self):
+        self.generate_bits_and_bases()
+        self.simulate_bob_measurement()
+        self.sift_key()
+        
+        return self.shared_key
+
+# Ejemplo de uso
+n_bits = 10  # Número de bits a intercambiar
+qkd_protocol = QKD(n_bits)
+secure_key = qkd_protocol.run_qkd_protocol()
+
+print("Shared secure key:", secure_key)
+```
+
+> Esta clasificación refleja la diversidad y profundidad del campo de la criptografía, mostrando cómo sus distintas técnicas se aplican para proteger la información en variados contextos. Desde el cifrado de mensajes hasta la seguridad de las transacciones en línea y la autenticación de usuarios, la criptografía es fundamental para la seguridad en el mundo digital.
 
 ---
 
 &nbsp;
 
-> *"Acontinuación mostraré algunas formas de romper ciertos tipos de cifrado o hasing, cabe aclarar que esto es con fines educativos.*
-
-&nbsp;
-
-![Caja NGB](https://pbs.twimg.com/media/E2Qatt0XIAc7LJM.jpg)
+> Acontinuación mostraré algunas formas de romper ciertos tipos de cifrado o hasing, cabe aclarar que esto es con fines educativos.
+> Resulta que dividiré en dos partes esto ya que es muy largo jaja, en el sigiente post veremos explicaré el como es el proceso de encriptación matematicamente.
 
 &nbsp;
 
@@ -184,5 +272,3 @@ Un framework es un marco de como hacer las cosas y una normativa es como hacerlo
 ### Fuentes de consulta
 
 - 🔖 [Pentesting, qué es y para qué sirve By Josué López 07/03/2024](https://auditech.es/blog/pentesting-que-es-y-para-que-sirve/)
-- 🔖 [Pentesting de Caja Gris by DragonJAR](https://www.dragonjar.org/pentesting-de-caja-gris.xhtml)
-- 🔖 *Pentesting playground 101*

@@ -1,6 +1,6 @@
 ---
-title: "[EN] GIE Encrypt and Decrypt files"
-excerpt: "[EN] An Encrypt and Decrypt for files and folders!"
+title: "[🇺🇸] GIE Encrypt and Decrypt files"
+excerpt: "An Encrypt and Decrypt for files and folders!"
 date: "Apr 10 2024"
 cover_image: "/blog/giew.webp"
 alt: "GIE"

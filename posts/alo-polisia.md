@@ -1,6 +1,6 @@
 ---
-title: "[ES] ALO POLISIA Community"
-excerpt[Title](https://www.youtube.com/watch?v%253D7aU5zBpenfE): "[EN] An Encrypt and Decrypt for files and folders!"
+title: "[🇪🇸] ALO POLISIA Community"
+excerpt: "Comunidad gamer para todos!"
 date: "Dec 12 2022"
 cover_image: "/blog/alop.webp"
 alt: "Alo Polisia"

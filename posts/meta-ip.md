@@ -1,6 +1,6 @@
 ---
-title: "[EN] Metacrawler & IPTrack"
-excerpt: "[EN] Metadata Eraser and IPLookup"
+title: "[🇺🇸] Metacrawler & IPTrack"
+excerpt: "Metadata Eraser and IPLookup"
 date: "Apr 23 2023"
 cover_image: "/blog/metacrawler.webp"
 tags1: "Helpdesk"

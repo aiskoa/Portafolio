@@ -1,6 +1,6 @@
 ---
-title: "[EN] Casa de los Comics Store"
-excerpt: "[EN] Comics, manga and merchandising store!"
+title: "[🇺🇸] Casa de los Comics Store"
+excerpt: "Comics, manga and merchandising store with Laravel!"
 date: "Oct 14 2021"
 cover_image: "/blog/lalaravel.webp"
 alt: "La Casa de los Comics"

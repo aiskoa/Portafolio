@@ -1,6 +1,6 @@
 ---
-title: "[EN] Anayansi cracker and create hashes"
-excerpt: "[EN] A script for crack or create a hash!"
+title: "[🇺🇸] Anayansi cracker and create hashes"
+excerpt: "A script for crack or create a hashes and passwords!"
 date: "Mar 30 2024"
 cover_image: "/blog/anayansi0.webp"
 alt: "Anayansi"

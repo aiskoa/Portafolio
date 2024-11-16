@@ -1,6 +1,6 @@
 ---
-title: "[EN] Thoughts in Pink"
-excerpt: "[EN] How the noddles fucks me here"
+title: "[🇺🇸] Thoughts in Pink"
+excerpt: "How my noddles fucks me here"
 date: "Mar 21 2024"
 cover_image: "/blog/thoinpink.webp"
 alt: "IRL N1"
@@ -129,4 +129,4 @@ RESULT= J
 
 &nbsp;
 
-## [IS THIS PINK?](https://mega.nz/file/JjFASRTB)
+### [IS THIS PINK?](https://mega.nz/file/JjFASRTB)

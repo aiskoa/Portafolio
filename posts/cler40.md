@@ -1,11 +1,11 @@
 ---
 title: "[🇪🇸] Cler Discord Bot Version 4.7"
-excerpt: "[ES] Discord bot in nodejs"
+excerpt: "Multiprospose Discord Bot for Node and PostgreSQL"
 date: "Oct 01 2024"
 cover_image: "/blog/cler2.webp"
 alt: "Cler 14 Discord"
 tags1: "JavaScript"
-tags2: "MegaDB"
+tags2: "PostgreSQL"
 ---
 
 ![Cler](https://raw.githubusercontent.com/Rawierdt/Cler/refs/heads/main/title.jpg)

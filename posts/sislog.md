@@ -1,6 +1,6 @@
 ---
-title: "[EN] SISLOG Forensic Tool"
-excerpt: "[EN] Forensic Tool to generate reports and logs"
+title: "[🇺🇸] SISLOG Forensic Tool"
+excerpt: "Forensic Tool to generate reports and logs"
 date: "Apr 30 2023"
 cover_image: "/blog/sislog.webp"
 tags1: "Python"

@@ -13,6 +13,7 @@ tags2: "Tools"
 # PassPai
 
 ## Secure Password Manager
+
 **PassPai** es una herramienta para la generación y gestión de contraseñas de codigo abierto que permite la generación de contraseñas seguras gracias a la encriptación  AES-256
 
 ![PassPai1](https://i.ibb.co/Q9w0D1t/1.png)
@@ -20,12 +21,10 @@ tags2: "Tools"
 ![PassPai2](https://i.ibb.co/gRBFQ3v/passpaiim2.png)
 
 ## Website
-## [➡️ Go to PassPai](https://rawierdt.github.io/PassPai/)
+
+### [➡️ Go to PassPai](https://rawierdt.github.io/PassPai/)
 
 ## [Code](https://github.com/Rawierdt/PassPai)
-
-## Lastest Version and What's New
-**N/A**
 
 ## Features
 
@@ -60,8 +59,8 @@ Para instalar y ejecutar KeyForge localmente, sigue estos pasos:
 
 ## 🔒 Configuración de Contraseña Maestra
 
-- **Descargar Contraseñas**: Al descargar el archivo con las contraseñas se le pedira asignar una contraseña maestra. Una vez creada se descargará un archivo llamado **mypasswords** (*puede cambiar el nombre del archivo a su gusto*) con la extención **.pai**.
-- **Cargar Contraseñas**: Si desea consultar sus contraseñas, deberá cargar su archivo con extensión **.pai** y escribir su contraseña maestra (*sin ella el archivo no se cargará y deberá intentar de nuevo*).
+* **Descargar Contraseñas**: Al descargar el archivo con las contraseñas se le pedira asignar una contraseña maestra. Una vez creada se descargará un archivo llamado **mypasswords** (*puede cambiar el nombre del archivo a su gusto*) con la extención **.pai**.
+* **Cargar Contraseñas**: Si desea consultar sus contraseñas, deberá cargar su archivo con extensión **.pai** y escribir su contraseña maestra (*sin ella el archivo no se cargará y deberá intentar de nuevo*).
 
 ---
 
@@ -112,23 +111,24 @@ Para instalar y ejecutar KeyForge localmente, sigue estos pasos:
 
 > Se esta usando AES en modo GCM y PBKDF2 con SHA-256
 
-- 🔵 AES-GCM no solo cifra los datos para mantenerlos confidenciales, sino que también incluye un mecanismo para verificar la integridad y autenticidad de los datos cifrados.
-- 🔵 Rendimiento: Es conocido por su eficiencia y rendimiento, lo que lo hace adecuado para aplicaciones que requieren alta velocidad de cifrado y descifrado.
-- 🔵 Uso Común: Es ampliamente adoptado en protocolos de seguridad como TLS (Transport Layer Security) y en aplicaciones que requieren cifrado seguro y rápido.
+* 🔵 AES-GCM no solo cifra los datos para mantenerlos confidenciales, sino que también incluye un mecanismo para verificar la integridad y autenticidad de los datos cifrados.
+* 🔵 Rendimiento: Es conocido por su eficiencia y rendimiento, lo que lo hace adecuado para aplicaciones que requieren alta velocidad de cifrado y descifrado.
+* 🔵 Uso Común: Es ampliamente adoptado en protocolos de seguridad como TLS (Transport Layer Security) y en aplicaciones que requieren cifrado seguro y rápido.
 
-- 🔵 PBKDF2 es una función criptográfica utilizada para derivar claves seguras a partir de contraseñas.
-- 🔵 Resistente a ataques de fuerza bruta y ataques de diccionario.
-- 🔵 “Key stretching” y aumenta significativamente el tiempo necesario para romper una contraseña.
-- 🔵 Sal: Un valor aleatorio que se añade a la contraseña para asegurar que contraseñas iguales no generen la misma clave derivada.
-- 🔵 Iteraciones: El número de veces que se repite el proceso de derivación. Un mayor número de iteraciones aumenta la seguridad.
-
+* 🔵 PBKDF2 es una función criptográfica utilizada para derivar claves seguras a partir de contraseñas.
+* 🔵 Resistente a ataques de fuerza bruta y ataques de diccionario.
+* 🔵 “Key stretching” y aumenta significativamente el tiempo necesario para romper una contraseña.
+* 🔵 Sal: Un valor aleatorio que se añade a la contraseña para asegurar que contraseñas iguales no generen la misma clave derivada.
+* 🔵 Iteraciones: El número de veces que se repite el proceso de derivación. Un mayor número de iteraciones aumenta la seguridad.
 
 **generateEncryptionKey(password):**
+
 ```nx
  Genera una clave de cifrado a partir de una contraseña usando PBKDF2 con SHA-256. La sal utilizada es la propia contraseña, lo cual no es una práctica recomendada por motivos de seguridad, pero se hace aquí por simplicidad.
 ```
 
 **savePasswordsToFile():**
+
 ```nx
  Guarda las contraseñas en un archivo cifrado. Primero, solicita una contraseña maestra, genera una clave de cifrado con ella, y luego cifra las contraseñas almacenadas en un objeto. El archivo resultante se descarga con la extensión .pai.
 ```
@@ -149,7 +149,7 @@ Contributions, issues and feature requests are welcome! Feel free to check issue
 
 ### 💜 Show your support
 
-Give a ⭐️ if this _project helped you!_ 
+Give a ⭐️ if this *project helped you!*
 
 ### 📝 License
 

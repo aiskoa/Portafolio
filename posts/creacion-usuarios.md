@@ -1,6 +1,6 @@
 ---
-title: "[ES] El Principio de Minimo Privilegio"
-excerpt: "[ES] Abordamos el principio de minimo privilegio"
+title: "[🇪🇸] El Principio de Minimo Privilegio"
+excerpt: "Abordamos el principio de minimo privilegio"
 date: "Sep 11 2023"
 cover_image: "/blog/lmenor-privilegio.webp"
 alt: "Creacion Usuarios"

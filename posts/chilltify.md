@@ -1,6 +1,6 @@
 ---
-title: "[EN] Spotify Clon for Diana Sessions"
-excerpt: "[ES] Music aplication (electron), for Diana Sessions from Riot Games Music"
+title: "[🇺🇸] Spotify Clon for Diana Sessions"
+excerpt: "Music aplication (electron), for Diana Sessions from Riot Games Music"
 date: "Aug 14 2022"
 cover_image: "/blog/dianasessions.webp"
 alt: "entities"

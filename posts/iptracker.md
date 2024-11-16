@@ -1,6 +1,6 @@
 ---
-title: "[EN] Tracker IP"
-excerpt: "[EN]  Tracker IP Sobre sitios web y mas"
+title: "[🇺🇸] Tracker IP"
+excerpt: "Tracker IP over web sites and more"
 date: "Dec 21 2022"
 cover_image: "/blog/tiptracker.webp"
 alt: "entities"
@@ -8,7 +8,8 @@ tags1: "Python"
 tags2: "Tools"
 ---
 
-# Installation
+### Installation
+
 * Download, and run.
 
 It is a small tool that displays data from a web site or ip entered.
@@ -30,5 +31,6 @@ print("ISP:", got["isp"])
 print("Tipo:", lat["type"])
 ```
 
-# Download Here
+### Download Here
+
 * [Download Here](https://drive.google.com/file/d/1jlsOKaZSsocnx_mwd9pfCeWuZIDCKKaU/view?usp=share_link)
