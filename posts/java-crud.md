@@ -1,6 +1,6 @@
 ---
 title: "[🇪🇸] Java CRUD"
-excerpt: "Java CRUD para IPN"
+excerpt: "Java CRUD para el IPN"
 date: "Dec 28 2021"
 cover_image: "/blog/JavaCrud.webp"
 alt: "Java"

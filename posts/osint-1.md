@@ -95,4 +95,6 @@ Intelx es una herramienta de inteligencia poderosa que permite buscar por fechas
 
 Adicional a esto, existen herramientas como TheHarvester, Maltego, Osintagram, Phoneinfoga y más que peuden ser usadas en su intestigación, algunas de estas son nativas en Kali o ParrotOS, se abordara este tema a mas profundidad la entrada para Osint-2.
 
+Esta herramienta  no siempre es fiable
+
 ![TheHarvester](https://miro.medium.com/v2/resize:fit:1144/1*-hPh74OGmurbhduZNGcMLg.png)

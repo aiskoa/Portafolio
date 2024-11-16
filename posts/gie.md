@@ -18,7 +18,7 @@ tags2: "Tools"
 
 ## Encrypt and Decrypt
 
-An Encrypt and Decrypt for files and folders for Windows, written in Python.
+An Encrypt and Decrypt for files and folders for Windows, written in Python using AES.
 
 > [!CAUTION]
 > Disclaimer: This tool was created for educational purposes only. I do not take any responsibility for the misuse of this tool.

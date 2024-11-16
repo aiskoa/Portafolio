@@ -1,6 +1,6 @@
 ---
 title: "[🇪🇸] W1chSystem2 SO escaneo de puertos"
-excerpt: "Script en python que nos dice si un sistema es windows o linux y sus puertos abiertos"
+excerpt: "Un Script en Python que nos dice si un sistema es windows o linux y sus puertos abiertos"
 date: "Aug 23 2022"
 cover_image: "/blog/whichsystem.webp"
 alt: "wichsystem"
@@ -11,6 +11,8 @@ tags2: "Tools"
 **Script realizado por [S4vitar](https://www.youtube.com/c/s4vitar), modificado por mi agregando una función para analizar los puertos abiertos.**
 
 *El codigo completo se encuentra en [GitHub](https://github.com/Rawierdt/W1chsystem)*
+
+Herramienta sencilal.
 
 ```python
 #!/usr/bin/python3

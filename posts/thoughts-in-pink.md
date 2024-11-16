@@ -14,7 +14,7 @@ tags2: "Mental Health"
 
 How many times have you heard of me, how many times have you heard the voice in your head, I am here, the sour sound to hurt your ears, to touch the front of your head, the one that makes you ache every morning when you wake up, that annoying noise you hear every day, the one that will kiss you goodbye on the day of your death.
 
-I would like to write mathematical poetry.
+I would like to write mathematical poetry. 💁
 
 &nbsp;
 

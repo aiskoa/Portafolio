@@ -1,5 +1,5 @@
 ---
-title: "[🇪🇸] Como defenderte de la IA"
+title: "[🇪🇸] Defiendete de la IA"
 excerpt: "Veremos de cerca que podemos hacer frente a la singularidad"
 date: "Feb 25 2024"
 cover_image: "/blog/ia1.webp"
@@ -62,7 +62,7 @@ Respuesta = Al igual que el de la voz, es algo complicado, ya que no tenemos con
 
 &nbsp;
 
-Intenta no tomarte muchas fotos, en especial del rostro, si te lo quieres tomar de la forma mas estricta, no uses el movil, ni dispositivos con camara, pero hacer esto no resultará, por ello te recomiento conocerte, revisa cuantos lunares tienes, revisa si cuales son aquellas cosas que te diferencian, arrugas, bello, forma de sorisa, rostro caido?, conocete, vete al espejo y describete, la mejor arma es cuando la sabes usar hasta con ojos vendados.
+Intenta no tomarte muchas fotos, en especial del rostro, si te lo quieres tomar de la forma mas estricta, no uses el movil, ni dispositivos con camara, pero hacer esto no resultará, por ello te recomiento conocerte, revisa cuantos lunares tienes, revisa si cuales son aquellas cosas que te diferencian, arrugas, bello, forma de sorisa, rostro, conocete, vete al espejo y describete, la mejor arma la sabes usar hasta con ojos vendados.
 
 No conozco herramientas que puedan ser de ayuda, pero puedes intentar, usar filtros, ¿filtros?, si filtros, esto dificulta al algoritmo revisar tus pumulos y mirada ya que estos distorsionan o incluso crean una falsa apariencia, posa de formas originales en fotos (las casuales).
 

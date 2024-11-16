@@ -8,9 +8,9 @@ tags1: "PHP"
 tags2: "SQL"
 ---
 
-![imageTitle](https://i.ibb.co/f4TJcSD/casacomics.png)
-
 # CASA DE LOS COMICS
+
+![imageTitle](https://i.ibb.co/f4TJcSD/casacomics.png)
 
 ## Laravel, PHP and MySQL
 

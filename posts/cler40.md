@@ -208,7 +208,7 @@ module.exports = {
 
 El apartado o modulo más complejo es el index.js, pero debido a que es muy largo no pienso ponerlo, recomiendo revisar el github del proyecto.
 
-Pero en resumen el proyecto lo revivi, si lo abandono de nuevo es porque me aburri jajaja, asi que ahora tiene mas comandos y tiene una funcion de guardar, a si, lo aloje en un intel celeron con poca ram, de igual forma en otro blog daré las caracteristicas del NAS.
+Pero en resumen el proyecto lo revivi, si lo abandono de nuevo es porque me aburri jajaja, asi que ahora tiene mas comandos y tiene una funcion de guardar, a si, lo aloje en un intel celeron con poca ram, de igual forma en otro blog daré las caracteristicas del NAS y de la PC.
 
 ---
 

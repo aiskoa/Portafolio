@@ -22,9 +22,11 @@ I invite anyone to make modifications to this repository and improve the program
 
 
 ### Features
+
 Encrypt and decrypt your files and folders with AES, for any file, jpg, png, mp4, mp3, docx, pdf, etc... 
 
 ### Why GIE?
+
 GIE is the name of my first girldfriend (JK 😂), GIE is the acronym of **G**entle, **I**ntelligent and **E**asy file encryption.
 
 ## 📦 Requirements
@@ -32,6 +34,7 @@ GIE is the name of my first girldfriend (JK 😂), GIE is the acronym of **G**en
 - **[Python](https://www.python.org/downloads/)**, (not necessary).
 
 ## 💻 Installation
+
 Execute the commands according to your case
 
 Run the project
@@ -49,6 +52,7 @@ python main.py
 Excecute **SISLOG.exe** file.
 
 ---
+
 ### VIEW DNS CACHE FUCTION
 
 ```python
@@ -84,12 +88,15 @@ def get_running_services():
             pass
     return services_info
 ```
+
 ---
 
-## Output TXT Example 
+### Output TXT Example
+
 ![IMG](https://i.ibb.co/cx4bMw6/SisLog-2.jpg)
 
-## Download
+### Download
+
 `git clone git@github.com:Rawierdt/SisLog.git`
 
 [⬇️ Check the latest release ⬇️](https://github.com/Rawierdt/SisLog/releases/tag/SISLOG)

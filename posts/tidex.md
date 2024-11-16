@@ -9,6 +9,7 @@ tags2: "Hacking"
 ---
 
 # Tidex
+
 Simple little Ransomware, only works to encrypt files in the directory path Desktop and subdirectories.
 
 &nbsp;
@@ -16,7 +17,7 @@ Simple little Ransomware, only works to encrypt files in the directory path Desk
 ## Important
 
 At the moment it can only be executed on Linux machines. it lacks decryption function.
-The KEY is: hkpykiiqftupr3okl04azj
+The KEY is: **hkpykiiqftupr3okl04azj**
 
 &nbsp;
 

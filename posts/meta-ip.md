@@ -8,15 +8,18 @@ tags2: "Tools"
 ---
 
 # Tidex
+
 2 programs written in Python Metacrawler (Metadata Eraser) and IPTracker (IP Lookup).
 
 &nbsp;
+
 * Metacrawler: Erases metadata in any image or photo file.
 * IPTracker: Finds the location of an IP address provided by URL (optional) and finds its open ports as well as generates malicious IP address report.
 
 &nbsp;
 
 ## Here is Metacrawler
+
 ![IMG](https://i.ibb.co/Qv9TfyZ/Metacrawler.png)
 
 Code Example for Metacrawler
@@ -50,6 +53,7 @@ def load_image():
 &nbsp;
 Code Example for IPTrack
 ## Here is IPTracker
+
 ![IMG](https://i.ibb.co/tbTMP0g/IPTracker.png)
 
 ```python
@@ -66,14 +70,15 @@ def is_malicious(ip, api_key):
     return False
 ```
 
-## Modify 
+## Modify
+
 In IPTracker
 `api_key = 'API_KEY_HERE' with you API VirusTotal Key`
 
-# [Dowload Here From GitHub](https://github.com/Rawierdt/Metacrawler-IPTracker)
+[Dowload Here From GitHub](https://github.com/Rawierdt/Metacrawler-IPTracker)
 
-# [Check the latest release](https://github.com/Rawierdt/Metacrawler-IPTracker/releases/tag/Metacrawlerv1)
+[Check the latest release](https://github.com/Rawierdt/Metacrawler-IPTracker/releases/tag/Metacrawlerv1)
 
 &nbsp;
 
-# ~ [Rawier](https://rawier.vercel.app/portfolio)💜
+~ [Rawier](https://rawier.vercel.app/portfolio)💜

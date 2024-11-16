@@ -7,7 +7,7 @@ tags1: "Helpdesk"
 tags2: "Hacking"
 ---
 
-# Acontinuación veremos algunos terminos fundamentales para entender esta hermosa rama de la informática.
+# Fundamentos Ciberseguridad Pt 1.
 
 &nbsp;
 

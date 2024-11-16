@@ -1,6 +1,6 @@
 ---
 title: "[🇺🇸] Tracker IP"
-excerpt: "Tracker IP over web sites and more"
+excerpt: "A Tracker IP over web sites and more"
 date: "Dec 21 2022"
 cover_image: "/blog/tiptracker.webp"
 alt: "entities"

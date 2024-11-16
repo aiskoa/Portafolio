@@ -16,11 +16,11 @@ tags2: "Hacking"
 - Un ~~perro~~ informático “viejo”, **debe** aprender nuevos trucos.
 - La seguridad informática es trabajo de todos.
 
-*En WINDOWS*
+## En WINDOWS
 
   ![Minimoprivilegio](https://i.ibb.co/nLqgQRQ/image.png)
 
-*En LINUX*
+## En LINUX
 
 **Para crear un usuario convencional:**
 

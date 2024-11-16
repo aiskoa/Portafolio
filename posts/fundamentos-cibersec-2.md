@@ -25,7 +25,7 @@ Un framework es un marco de como hacer las cosas y una normativa es como hacerlo
 
 ---
 
-**¿Qúe es el Ethical Hacking (Hacking Ético)?**: El hacking ético es una práctica importante para mejorar la seguridad informática de las organizaciones, ya que permite identificar y remediar vulnerabilidades de manera legal y ética, este simula el comportamiento de un ataque real, con el proposito de comprometer a la organización para posterior mente realizar un informe de prueba de penetración.
+**¿Qúe es el Ethical Hacking (Hacking Ético)?**: El hacking ético es una práctica importante para mejorar la seguridad informática de las organizaciones, ya que permite identificar y remediar vulnerabilidades de manera legal y ética, este simula el comportamiento de un ataque real, con el proposito de comprometer a la organización para posterior mente realizar un informe de prueba de penetración y pruebas de intrusión.
 
 &nbsp;
 

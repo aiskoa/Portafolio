@@ -13,16 +13,17 @@ tags2: "Tools"
 # GIE-UI
 
 ## GIE now with User Interface || Encrypt and Decrypt Files
-An Encrypt and Decrypt your files using AES, easily and folders, and send it secure, written in Python with UI.
 
+An Encrypt and Decrypt your files using AES, easily and folders, and send it secure, written in Python with UI.
 
 ![Screenshott](https://i.imgur.com/NC2A0HT.jpeg)
 
-
 ### Features
+
 Encrypt and decrypt your files and folders with AES, for any file, jpg, png, mp4, mp3, docx, pdf, etc... 
 
 ### Why GIE?
+
 GIE is the name of my first girldfriend (JK 😂), GIE is the acronym of **G**entle, **I**ntelligent and **E**asy file encryption.
 
 ## 📦 Requirements
@@ -30,6 +31,7 @@ GIE is the name of my first girldfriend (JK 😂), GIE is the acronym of **G**en
 - **[Python](https://www.python.org/downloads/)**, should be installed on your system (not required).
 
 ### 🦠 Antivirus advertisement
+
 GIE has the ability to encrypt vital paths and files on your system, so it is considered a risk by the operating system. If you still decide to use it, you should create an exception to the GIE program.
 
 [Virustotal scan](https://www.virustotal.com/gui/file/49a6c879bb46ad0f357a545f6f6577bb418c7f210cac60556f45051a9473851b/detection)
@@ -37,6 +39,7 @@ GIE has the ability to encrypt vital paths and files on your system, so it is co
 [Triage](https://tria.ge/240428-bnst8acg68)
 
 ## 💻 Installation
+
 Execute the commands according to your case
 
 Run the project
@@ -67,6 +70,7 @@ supports = jpg, png, mp3, mp4, docx, xlsx, sql, py, zip, etc...
 **Enter a password:**
 
 **IMPORTANT**
+
 > The password cannot contain the characters $ or "" and ''
 > The password will not be visible while you type it.
 
@@ -83,7 +87,7 @@ When you click the Encrypt button, the operation will begin., it will start encr
 
 ## For Decrypt
 
-To **Decrypt** a folder or file 
+To **Decrypt** a folder or file
 
 **IMPORTANT**  
 > The password must be the same as the one used to encrypt the file, otherwise you will lose your file forever.
@@ -93,6 +97,7 @@ The program will search if the .GKY file exists in the path provided and will tr
 It is very important to save the .GKY and the PASSWORD very well.
 
 ---
+
 ### ENCRYPT FUNCTION
 
 ```python
@@ -146,7 +151,7 @@ def decrypt_file(input_file: str, password: bytes):
             derived_key = hashlib.pbkdf2_hmac('sha256', password, salt, 100000, 32)
 ```
 
-> .GKY using for decrypt the file coz it is the passkey, .GKY extension name is not enable to change. 
+> .GKY using for decrypt the file coz it is the passkey, .GKY extension name is not enable to change.
 
 ```python
         with open(input_file, "rb") as file_in:
@@ -173,6 +178,7 @@ def decrypt_file(input_file: str, password: bytes):
     else:
         print(Fore.LIGHTRED_EX + "Key not found." + Style.RESET_ALL)
 ```
+
 > If the GKY file is not removed after the decryption, it is possible to make trash on your system or even issues with other encrypted files.
 
 ---

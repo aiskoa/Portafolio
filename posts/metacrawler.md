@@ -9,11 +9,12 @@ tags2: "Tools"
 ---
 
 # Metacrawler 2
+
 New version of Metacrawler, erases metadata from any file format, even creating a copy of it, now written in Javascript, using Electron.
 
 ## Here is Metacrawler 2
-![IMG](https://i.ibb.co/kqjLPSd/metacrawlerr.png)
 
+![IMG](https://i.ibb.co/kqjLPSd/metacrawlerr.png)
 
 ## How to run
 
@@ -70,6 +71,7 @@ document.getElementById('downloadButton').addEventListener('click', () => {
 [Download from Github](https://github.com/Rawierdt/metacrawler)
 
 ### License
+
 MIT
 
 &nbsp;

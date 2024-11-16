@@ -10,7 +10,7 @@ tags2: "Tools"
 
 ![Captura](https://raw.githubusercontent.com/Rawierdt/Chilltify/main/Screenshots/Index.png)
 
-# Installation
+## Installation
 
 * The complete guide can be found at [GitHub](https://github.com/Rawierdt/Chilltify)
 
@@ -29,7 +29,7 @@ tags2: "Tools"
 
 > This project was made for educational purposes only, and the music originally comes from [Riot Games Music](https://www.youtube.com/c/riotgamesmusic)
 
-# Download
+## Download
 
 Available for Mac, Linux and Windows.
 
@@ -41,7 +41,7 @@ Installer `.exe` only available for Windows.
 
 [Linux](https://drive.google.com/drive/folders/1_6AQhmQ0W0Uni2w_MwGZR6uMiy_oZVb7?usp=sharing)
 
-# License
+## License
 💜 [MIT License](https://github.com/Rawierdt/Chilltify/blob/main/LICENSE)
 
 ### Code Example

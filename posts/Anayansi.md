@@ -129,7 +129,7 @@ def md5():
 
 ### ✅ ⬇ Download ⬇
 
-Available for Mac, Linux and Windows.
+Available for Mac, Linux and Windows 10 / 11.
 
 [Download](https://github.com/Rawierdt/Anayansi)
 

@@ -13,16 +13,10 @@ tags2: "Tools"
 * Page can be found [Here](https://rawierdt.github.io/espejito/)
 
 <h1 align="center">🍀 Espejito... My Data 🍀</h1>
-<p align="center">
   Small application that displays the data that a web page can obtain
 </p>
 
 > This project was made for learning purposes only
-
-
-# How to use
-
-## Step 1
 
 * Access to the [Website](https://Rawierdt.github.io/espejito/)
 
@@ -30,13 +24,13 @@ tags2: "Tools"
 
 * View your data, if you are using VPN it will show another address, if you are using Brave or another browser it may block tracking.
 
-# Download
+#### Download
 
 Available for Mac, Linux and Windows.
 
 [Check the latest release](https://github.com/Rawierdt/espejito)
 
-# License
+### License
 
 💜 [MIT License](https://github.com/Rawierdt/espejito/blob/main/LICENSE)
 

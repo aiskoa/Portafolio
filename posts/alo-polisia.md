@@ -1,6 +1,6 @@
 ---
 title: "[🇪🇸] ALO POLISIA Community"
-excerpt: "Comunidad gamer para todos!"
+excerpt: "Una comunidad gamer para todos!"
 date: "Dec 12 2022"
 cover_image: "/blog/alop.webp"
 alt: "Alo Polisia"
@@ -20,7 +20,7 @@ Se agradece de todo corazón a todos y todas aquellas que nos acompañarón tant
 
 El sitio estaba construido con **PHP** y **MySQL** param el manejo de usuario y la base de datos tanto para el servidor web como para el de juegos.
 
-Se uso **Oracle y PL/SQL** en una ocación para el manejo de la base de datos con minecraft bedrock.
+Se uso **Oracle y PL/SQL** en una ocación para el manejo de la base de datos con minecraft bedrock server.
 
 ### Imagen de la consola de administrador
 
