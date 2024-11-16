@@ -1,6 +1,6 @@
 ---
-title: "[ES] Cler Discord Bot Version 4.7"
-excerpt: "[Es] Discord bot in nodejs"
+title: "[🇪🇸] Cler Discord Bot Version 4.7"
+excerpt: "[ES] Discord bot in nodejs"
 date: "Oct 01 2024"
 cover_image: "/blog/cler2.webp"
 alt: "Cler 14 Discord"

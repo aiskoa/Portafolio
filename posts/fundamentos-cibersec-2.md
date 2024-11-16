@@ -1,6 +1,6 @@
 ---
-title: "[ES] Fundamentos Ciberseguridad 2"
-excerpt: "[EN] Welcome to the red team!"
+title: "[🇪🇸] Fundamentos Ciberseguridad 2"
+excerpt: "Exploraremos ¿Qué es el Pentesting? y las pruebas de Intrusión!"
 date: "Mar 21 2024"
 cover_image: "/blog/cibersec.webp"
 alt: "Cibersec 2"
@@ -8,7 +8,7 @@ tags1: "Helpdesk"
 tags2: "Hacking"
 ---
 
-# Acontinuación continuamos con algunos terminos fundamentales para entender esta hermosa rama de la informática (Parte 2).
+# Fundamentos Ciberseguridad (Parte 2).
 
 &nbsp;
 
@@ -103,7 +103,7 @@ Consiste en que el consultor tiene un conocimiento COMPLETO del sistema o red qu
 
 - 💜 Acceso al [--> Blog](https://rawier.vercel.app/es/blog/)
 
-## Gracias por leer la parte 2
+### Gracias por leer la parte 2
 
 &nbsp;
 
