@@ -1,6 +1,6 @@
 ---
 title: "[🇺🇸] Tidex Ransomware"
-excerpt: "Ransomware Example "Tidex" for Linux"
+excerpt: "Ransomware Example Tidex for Linux"
 date: "Jan 30 2023"
 cover_image: "/blog/rtidex.webp"
 alt: "Ransomware"
