@@ -15,6 +15,7 @@ const About: React.FC = (): ReactElement => {
           backgroundImage: "url('https://i.ibb.co/z8TfsWQ/chess-Bg-2.gif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          filter: "blur(5px)",
           opacity: 0.3,
           mixBlendMode: "multiply",
         }}
