@@ -12,15 +12,13 @@ const About: React.FC = (): ReactElement => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('https://github.com/Rawierdt/Portafolio/blob/main/public/chessBg.gif?raw=true')",
+          backgroundImage: "url('https://i.ibb.co/z8TfsWQ/chess-Bg-2.gif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 0.3,
           mixBlendMode: "multiply",
         }}
       />
-
-      {/* Contenido principal */}
       <div className="relative z-10">
         <noscript>
           <div>

@@ -1,6 +1,6 @@
 ---
 title: "[🇪🇸] Fundamentos Ciberseguridad 3"
-excerpt: "Exploraremos la Criptografia 🔑 Parte 1!"
+excerpt: "Exploraremos la Criptografia 🔑!"
 date: "Nov 15 2024"
 cover_image: "/blog/cibersec.webp"
 alt: "Cibersec 3"
@@ -181,7 +181,95 @@ Esto descifra el contenido del anterior codigo.
 
 ### Código de Ejemplo de Curva Elíptica
 
-```jsx
+```python
+from cryptography.hazmat.primitives.asymmetric import x25519
+from cryptography.hazmat.primitives.asymmetric.x25519 import X25519PrivateKey, X25519PublicKey
+from cryptography.hazmat.primitives import serialization, hashes
+from cryptography.hazmat.primitives.asymmetric import padding
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+import os
+import math
+
+
+def generate_key_pair():
+    """Generate an ECDH key pair."""
+    private_key = X25519PrivateKey.generate()
+    public_key = private_key.public_key()
+    return private_key, public_key
+
+
+def derive_key(private_key, public_key):
+    """Derive a shared key using ECDH."""
+    shared_key = private_key.exchange(public_key)
+    return shared_key
+
+
+def fibonacci_sequence(n):
+    """Generate a Fibonacci sequence up to the nth term."""
+    sequence = [0, 1]
+    while len(sequence) < n:
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
+
+
+def xor_encrypt(data, key):
+    """XOR the data with the key."""
+    return bytes([b ^ key[i % len(key)] for i, b in enumerate(data)])
+
+
+def encrypt(plaintext, public_key):
+    """Encrypt the plaintext using the public key and a Fibonacci sequence."""
+    # Generate a random symmetric key
+    symmetric_key = os.urandom(32)
+
+    # Derive the shared key using ECDH
+    private_key, _ = generate_key_pair()  # Generate temporary private key
+    shared_key = derive_key(private_key, public_key)
+
+    # Generate a Fibonacci sequence based on the length of the plaintext
+    fib_sequence = fibonacci_sequence(len(plaintext))
+
+    # Adjust the length of the combined key to match the plaintext
+    combined_key = bytes(
+        [shared_key[i % len(shared_key)] ^ fib_sequence[i % len(fib_sequence)] for i in range(len(plaintext))])
+
+    # Encrypt the plaintext with the combined key
+    encrypted_text = xor_encrypt(plaintext.encode(), combined_key)
+
+    return encrypted_text, private_key  # Return the temporary private key
+
+
+def decrypt(encrypted_text, private_key, public_key):
+    """Decrypt the encrypted text using the private key and public key."""
+    # Derive the shared key using ECDH
+    shared_key = derive_key(private_key, public_key)
+
+    # Generate a Fibonacci sequence based on the length of the encrypted text
+    fib_sequence = fibonacci_sequence(len(encrypted_text))
+
+    # Adjust the length of the combined key to match the encrypted text
+    combined_key = bytes(
+        [shared_key[i % len(shared_key)] ^ fib_sequence[i % len(fib_sequence)] for i in range(len(encrypted_text))])
+
+    # Decrypt the encrypted text with the combined key
+    decrypted_text = xor_encrypt(encrypted_text, combined_key)
+
+    return decrypted_text.decode(errors='ignore')  # Ignore errors during decoding
+
+
+print("Enter a password to encrypt")
+
+passwd = input(": ")
+
+# Example usage
+plaintext = passwd
+private_key, public_key = generate_key_pair()
+encrypted_text, temp_private_key = encrypt(plaintext, public_key)
+print(f"Encrypted: {encrypted_text}")
+
+decrypted_text = decrypt(encrypted_text, temp_private_key, public_key)
+print(f"Decrypted: {decrypted_text}")
 
 ```
 
@@ -259,7 +347,7 @@ print("Shared secure key:", secure_key)
 &nbsp;
 
 > Acontinuación mostraré algunas formas de romper ciertos tipos de cifrado o hasing, cabe aclarar que esto es con fines educativos.
-> Resulta que dividiré en dos partes esto ya que es muy largo jaja, en el sigiente post veremos explicaré el como es el proceso de encriptación matematicamente.
+> En otra endrada revisaremos como funciona el cifrado AES.
 
 &nbsp;
 
