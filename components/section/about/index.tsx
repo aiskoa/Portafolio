@@ -8,7 +8,7 @@ const About: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
   return (
     <div className="container relative px-4 mx-auto">
-      {/* Fondo GIF */}
+      {/* background image gif */}
       <div
         className="absolute inset-0"
         style={{
@@ -19,6 +19,7 @@ const About: React.FC = (): ReactElement => {
           mixBlendMode: "multiply",
         }}
       />
+      {/* principal content */}
       <div className="relative z-10">
         <noscript>
           <div>

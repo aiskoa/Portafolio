@@ -94,7 +94,7 @@ const Portfolio: NextPage = () => {
       <div className='portfolio'>
         <br />
         <div className="flex justify-around hover:justify-evenly">
-          <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="../Rawier-icon.png" width="90" height="90"></img>
+          <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="../rawier-modern-logo.png" width="90" height="90"></img>
         </div>
         <br />
         <h1 className="flex justify-center text-2xl font-bold lg:text-3xl">
