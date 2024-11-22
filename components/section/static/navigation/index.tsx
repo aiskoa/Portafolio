@@ -30,7 +30,7 @@ const Navigation: React.FC = (): ReactElement => {
                   className="pointer-events-none focus:pointer-events-auto"
                 />
               </div> */}
-            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="./favicon.ico" width={30} height={30} alt="Rawier Home"></img>
+            <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="./icon.png" width={30} height={30} alt="Rawier Home"></img>
           </a>
         </Link>
         <Theme />
