@@ -6,8 +6,8 @@
         "date": "Oct 12, 2024",
         "image": "https://i.ibb.co/G26jRx3/cler4.png",
         "altText": "Cler Version 4",
-        "githubLink": "https://github.com/Rawierdt/PassPai",
-        "description1": "Discord bot, using PostgreSQL and AI.",
+        "githubLink": "https://github.com/Rawierdt/Cler",
+        "description1": "Discord bot, using PostgreSQL and API.",
         "description2": "Most powerful open source discord bot, PostgreSQL, MegaDB and Endpoints, AI GPT, API's, Birthdays, Context, and more, using for moderation, utility and fun.",
         "readMoreLink": "https://rawier.vercel.app/es/blog/cler40",
         "GoToLink": "https://rawierdt.github.io/Cler-page/"
@@ -89,6 +89,19 @@
         "description2": "Metadata eraser, copy and other, with beauty visuals and effects. Project made in Electron, HTML 5 and CSS, compatible with Windows, MacOS and Linux, mmmmm.",
         "readMoreLink": "https://rawier.vercel.app/blog/metacrawler",
         "GoToLink": "https://rawierdt.github.io/Metacrawler/"
+    },
+    {
+        "title": "MASmotors",
+        "language": "Astro",
+        "language2": "TypeScript",
+        "date": "Nov 12, 2023",
+        "image": "https://i.ibb.co/wCSj4jm/masmotor.png",
+        "altText": "MASmotors Maintenance",
+        "githubLink": "https://rawierdt.github.io/404",
+        "description1": "MASmotors Quality Automotive Maintenance.",
+        "description2": "MASmotors offers personalized and professional service for experience and safety on the road since 1997, Bogotá, Colombia, project made in Astro and hosting on Vercel.",
+        "readMoreLink": "https://rawier.vercel.app/404",
+        "GoToLink": "https://masmotors-web.vercel.app/"
     },
     {
         "title": "NexDrak - Artist Landing Page",
