@@ -12,7 +12,7 @@ const About: React.FC = (): ReactElement => {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('https://i.ibb.co/z8TfsWQ/chess-Bg-2.gif')",
+          backgroundImage: "url('./bgChess.gif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "blur(5px)",

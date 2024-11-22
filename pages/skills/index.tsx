@@ -9,7 +9,7 @@ const SkillsSection: NextPage = (): ReactElement => {
     <div className="space-y-14 lg:space-y-24">
       <Head>
         <title>Rawier - Skills</title>
-        <link rel="shortcut icon" type="image/jpg" href="../Rawier-icon.png" />
+        <link rel="shortcut icon" type="image/jpg" href="../favicon.ico" />
         <meta name="theme-color:" content="#8e52f5"></meta>
         <meta
           httpEquiv="Content-Security-Policy"

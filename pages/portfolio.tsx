@@ -78,7 +78,7 @@ const Portfolio: NextPage = () => {
       </noscript>
       <Head>
         <title>Rawier - Portfolio</title>
-        <link rel="shortcut icon" type="image/png" href="../Rawier-icon.png" />
+        <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
         <meta name="description"
           content="Rawier's Portfolio."></meta>
         <meta property="og:description"

@@ -9,7 +9,7 @@ const Home: NextPage = (): ReactElement => {
     <div className="space-y-14 lg:space-y-24">
       <Head>
         <title>Rawier - Cybersecurity</title>
-        <link rel="shortcut icon" type="image/png" href="./Rawier-icon.png" />
+        <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
         <meta
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: *; font-src 'self'; connect-src 'self' https://vitals.vercel-insights.com;"

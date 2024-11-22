@@ -68,7 +68,7 @@ const NotFound: NextPage = (): ReactElement => {
       </noscript>
       <Head>
         <title>Rawier - 404</title>
-        <link rel="shortcut icon" type="image/png" href="./Rawier-icon.png" />
+        <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
         <meta name="description" content="Rawier 404 Not Found." />
         <meta property="og:description" content="Rawier 404 Not Found." />
         <meta name="theme-color" content="#8e52f5" />

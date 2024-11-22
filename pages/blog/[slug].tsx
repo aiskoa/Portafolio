@@ -92,7 +92,7 @@ export default function PostPage({ frontmatter, content }: Props) {
     <>
       <Head>
         <title>Rawier - Blog</title>
-        <link rel="shortcut icon" type="image/jpg" href="../Rawier-icon.png" />
+        <link rel="shortcut icon" type="image/jpg" href="../favicon.ico" />
         <meta name="description" content={excerpt} />
         <meta property="og:site_name" content="Rawier Cybersecurity" />
         <meta property="og:type" content="article" />

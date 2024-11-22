@@ -39,7 +39,7 @@ export default function Blog({ posts }: PostsType) {
     <div>
       <Head>
         <title>Rawier - Blog</title>
-        <link rel="shortcut icon" type="image/jpg" href="../Rawier-icon.png" />
+        <link rel="shortcut icon" type="image/jpg" href="../favicon.ico" />
         <noscript>
           <h1>You need to enable JavaScript to run this app.</h1>
         </noscript>
