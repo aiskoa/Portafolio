@@ -46,9 +46,9 @@ const Contact: React.FC = (): ReactElement => {
           <p className="flex select-none justify-evenly cursor-no-drop">{t("whoiam")}</p>
           <br />
           {/* Evita que las imagenes sean copiadas. */}
-          <div className="flex justify-around hover:justify-evenly">
+          {/* <div className="flex justify-around hover:justify-evenly">
             <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://i.ibb.co/W5jGmsM/asesor-crestomatia.jpg" width="300"></img>
-          </div>
+          </div> */}
           <br />
           {/* <div className="flex justify-around hover:justify-evenly">
             <img className="pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://avatarfiles.alphacoders.com/336/336559.png" width="300"></img>

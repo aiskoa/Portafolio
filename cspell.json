@@ -1,9 +1,39 @@
 {
     "version": "0.2",
-    "ignorePaths": [],
+    "ignorePaths": ["**/node_modules/**", "**/dist/**", "**/lib/**", "**/build/**"],
     "dictionaryDefinitions": [],
-    "dictionaries": [],
-    "words": [],
+    "dictionaries": [
+        "es-es",
+        "en-us",
+        "en-us-common-misspellings",
+        "sql",
+        "css",
+        "git",
+        "node",
+        "html",
+        "markdown",
+        "networking-terms",
+        "computing-acronyms",
+        "web-services",
+        "software-term-suggestions",
+        "npm",
+        "html-symbol-entities",
+        "fullstack",
+        "gaming-terms",
+        "companies",
+        "latex",
+        "typescript",
+        "powershell",
+        "cryptocurrencies",
+        "bash",
+        "filetypes",
+        "public-licenses",
+        "python"
+    ],
+    "words": [
+        "Pentesting",
+        "Rawier"
+    ],
     "ignoreWords": [],
     "import": []
 }

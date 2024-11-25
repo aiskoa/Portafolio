@@ -13,17 +13,17 @@ tags2: "Hacking"
 &nbsp;
 
 > 🚨 ADVERTENCIA 🚨: Esta será una de las entradas más largas y un tanto avanzadas, recomiendo leer detenidamente y si pondrá en practica algo aqui visto deberá hacerlo bajo su propio riesgo.
-> *Dificulty Level: ⭐⭐⭐*
+> *Difficulty Level: ⭐⭐⭐*
 
-Te recomiendo ir al Cheatsheet para una versión mas dinamica y divertida de aprender estos terminos.
-[Click para encontrar el Cheatsheet Completo](https://rawier.gitbook.io/glosario-de-hacking-ciberseguridad-y-redes/)
+Te recomiendo ir al CheatSheet para una versión mas dinamica y divertida de aprender estos terminos.
+[Click para encontrar el CheatSheet Completo](https://rawier.gitbook.io/glosario-de-hacking-ciberseguridad-y-redes/)
 
 &nbsp;
 
 ## ¿Qué es la Criptografia? 🔑
 
 **CRIPTOGRAFIA**: Es el arte de representar información mediante simbolos y sistemas de codificación para transmitir la información de manera segura y confiable.
-¿Cúal es su uso?: Cifrar confidenciales o privados para mantenerlos seguros ante cualquier tipo de ataque y para cumplir la normativa de seguridad de la información, (aunque esto no siempre es infalible).
+¿Cual es su uso?: Cifrar confidenciales o privados para mantenerlos seguros ante cualquier tipo de ataque y para cumplir la normativa de seguridad de la información, (aunque esto no siempre es infalible).
 
 ## Ejemplos en tu dia a dia
 
@@ -87,10 +87,10 @@ La función recibe los siguientes parámetros:
 
 Dentro de la función, crea un cifrado utilizando el método `createCipheriv` del módulo `crypto`. Especifica el algoritmo de cifrado como `aes-{size}-cbc`, donde `{size}` es el valor del parámetro `size`. También genera una clave utilizando el método `scryptSync`, pasando la `password`, `salt`, y `size / 8` como argumentos.
 
-A continuación, la función utiliza el método `pipeline` para leer el contenido del fichero de entrada, encriptarlo utilizando el cifrado, y escribir el resultado encriptado en el fichero de salida. Si se produce un error durante el proceso de cifrado, lanza el error.
+A continuación, la función utiliza el método `pipeline` para leer el contenido del fichero de entrada, encriptar lo utilizando el cifrado, y escribir el resultado encriptado en el fichero de salida. Si se produce un error durante el proceso de cifrado, lanza el error.
 
 ```jsx
-import * as crypto from 'crypto';
+import * as crypto from 'crypto';s
 import { createReadStream, createWriteStream, PathLike } from 'fs';
 import { pipeline } from 'stream';
 
@@ -346,8 +346,8 @@ print("Shared secure key:", secure_key)
 
 &nbsp;
 
-> Acontinuación mostraré algunas formas de romper ciertos tipos de cifrado o hasing, cabe aclarar que esto es con fines educativos.
-> En otra endrada revisaremos como funciona el cifrado AES.
+> A continuación mostraré algunas formas de romper ciertos tipos de cifrado o hashing, cabe aclarar que esto es con fines educativos.
+> En otra entrada revisaremos como funciona el cifrado AES.
 
 &nbsp;
 

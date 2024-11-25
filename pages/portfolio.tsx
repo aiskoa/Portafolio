@@ -82,7 +82,7 @@ const Portfolio: NextPage = () => {
         <meta name="description"
           content="Rawier's Portfolio."></meta>
         <meta property="og:description"
-          content="Rawier's Proyects and portfolio." />
+          content="Rawier's Projects and portfolio." />
         <meta property="og:title" content="Rawier - Portfolio" />
         <meta name="theme-color:" content="#8e52f5"></meta>
         <meta
