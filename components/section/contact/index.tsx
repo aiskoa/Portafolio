@@ -5,7 +5,7 @@ import { SiDiscord, SiHackthebox } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
 import { SkillsIcon } from "../..";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 /**
  * @description Contac section
@@ -13,28 +13,32 @@ import { useEffect, useRef } from "react";
  */
 
 const TextCarousel: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const texts = ["Texto 1", "Texto 2", "Texto 3", "Texto 4", "Texto 5"]; // Tus textos
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (carouselRef.current) {
-        carouselRef.current.scrollBy({ left: 200, behavior: "smooth" });
-      }
-    }, 2000); // Cambia el texto cada 2 segundos
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length); // Cambiar de texto
+    }, 2000); // Cambiar cada 2 segundos
 
     return () => clearInterval(interval);
-  }, []);
+  }, [texts.length]);
 
   return (
     <div className="w-full overflow-hidden">
       <div
         ref={carouselRef}
-        className="flex space-x-8 transition-all duration-500 whitespace-nowrap"
+        className="flex transition-transform duration-500"
+        style={{
+          transform: `translateX(-${currentIndex * 200}px)`, // Mueve los textos
+        }}
       >
-        <div className="px-4 py-2 min-w-max">AIEP</div>
-        <div className="px-4 py-2 min-w-max">Carnes-a-Domicilio</div>
-        <div className="px-4 py-2 min-w-max">Texto 3</div>
-        <div className="px-4 py-2 min-w-max">Texto 4</div>
+        {texts.map((text, index) => (
+          <div key={index} className="flex-shrink-0 px-4 py-2 min-w-max">
+            {text}
+          </div>
+        ))}
       </div>
     </div>
   );
