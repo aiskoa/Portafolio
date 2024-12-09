@@ -16,10 +16,8 @@ const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const images = [
-    "https://i.ibb.co/NCd7TXD/Aiep.webp",
-    "https://i.ibb.co/NCd7TXD/Aiep.webp",
-    "https://i.ibb.co/NCd7TXD/Aiep.webp",
-    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    "../rawier-modern-logo.png",
+    "https://i.ibb.co/8MYVLSH/omg.png",
     // "/path/to/image5.jpg",
   ]; // Rutas de tus imágenes
 
