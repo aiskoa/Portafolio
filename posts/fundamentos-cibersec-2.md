@@ -12,6 +12,8 @@ tags2: "Hacking"
 
 &nbsp;
 
+> *Difficulty Level: ⭐*
+
 Te recomiendo ir al Cheatsheet para una versión mas dinamica y divertida de aprender estos terminos.
 [Click para encontrar el Cheatsheet Completo](https://rawier.gitbook.io/glosario-de-hacking-ciberseguridad-y-redes/)
 

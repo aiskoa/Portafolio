@@ -66,8 +66,9 @@ const Contact: React.FC = (): ReactElement => {
           <br />
           <p className="text-2xl text-center">FAQ</p>
           <p className="flex select-none justify-evenly">{t("faq")}</p>
-{/* 𝕽♛ */}
+          {/* 𝕽♛ */}
         </div>
+        <p className="flex select-none justify-evenly">BTC 1sPVqrtZNvAF8NawLHvVSGCP4aNWvUuTf || ETH/BSC 0xcdf8d202be9876afcdb727d36a10d1ac1d0df52b</p>
       </div>
     </>
   );

@@ -261,7 +261,7 @@ En resumen, esta función genera un par de claves RSA o RSA-PSS con tamaño de c
 
 ### Código de Ejemplo de Hash Criptográfico
 
-```typescript
+```jsx
 import * as crypto from 'crypto';
 import { PathLike, readFileSync } from 'fs';
 
