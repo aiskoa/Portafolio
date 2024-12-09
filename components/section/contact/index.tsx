@@ -20,22 +20,22 @@ const TextCarousel: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length); // Cambiar de texto
-    }, 2000); // Cambiar cada 2 segundos
+    }, 3000); // Cambiar cada 3 segundos
 
     return () => clearInterval(interval);
   }, [texts.length]);
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="flex items-center justify-center w-full overflow-hidden">
       <div
         ref={carouselRef}
-        className="flex transition-transform duration-500"
+        className="flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${currentIndex * 200}px)`, // Mueve los textos
+          transform: `translateX(-${currentIndex * 100}%)`, // Mueve los textos
         }}
       >
         {texts.map((text, index) => (
-          <div key={index} className="flex-shrink-0 px-4 py-2 min-w-max">
+          <div key={index} className="flex-shrink-0 min-w-full px-4 py-2 text-center">
             {text}
           </div>
         ))}
