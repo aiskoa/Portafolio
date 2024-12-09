@@ -74,16 +74,6 @@ const Footer: React.FC = (): ReactElement => {
           </div>
         </div>
       </div>
-      <div className="flex text-xs border-2 border-gray-300 border-solid rounded-lg justify-evenly dark:border-white">
-          <p className="font-bold text-yellow-500">
-            BTC
-          </p>
-          1sPVqrtZNvAF8NawLHvVSGCP4aNWvUuTf
-          <p className="font-bold text-sky-500">
-            ETH/BSC
-          </p>
-          0xcdf8d202be9876afcdb727d36a10d1ac1d0df52b    
-      </div>
     </div>
   );
 };

@@ -1,20 +1,44 @@
 import { config } from "../../../config";
 import Image from "next/image";
 import Box from "../../common/box";
-import {
-  SiDiscord,
-  SiHackthebox,
-  SiMetrodelaciudaddemexico,
-} from "react-icons/si";
+import { SiDiscord, SiHackthebox } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
 import { SkillsIcon } from "../..";
+import { useEffect, useRef } from "react";
 
 /**
  * @description Contac section
  * @returns { ReactElement } A preview of the skills section
  */
 
+const TextCarousel: React.FC = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current) {
+        carouselRef.current.scrollBy({ left: 200, behavior: "smooth" });
+      }
+    }, 2000); // Cambia el texto cada 2 segundos
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="w-full overflow-hidden">
+      <div
+        ref={carouselRef}
+        className="flex space-x-8 transition-all duration-500 whitespace-nowrap"
+      >
+        <div className="px-4 py-2 min-w-max">AIEP</div>
+        <div className="px-4 py-2 min-w-max">Carnes-a-Domicilio</div>
+        <div className="px-4 py-2 min-w-max">Texto 3</div>
+        <div className="px-4 py-2 min-w-max">Texto 4</div>
+      </div>
+    </div>
+  );
+};
 
 const Contact: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
@@ -68,7 +92,10 @@ const Contact: React.FC = (): ReactElement => {
           <p className="flex select-none justify-evenly">{t("faq")}</p>
           {/* 𝕽♛ */}
         </div>
-        <div className="flex text-xs border-2 border-solid rounded-lg justify-evenly border-slate-400">
+        
+        <TextCarousel />
+
+        <div className="flex text-xs border-2 border-gray-300 border-solid rounded-md justify-evenly dark:border-white">
           <p className="font-bold text-yellow-500">
             BTC
           </p>
