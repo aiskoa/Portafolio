@@ -12,18 +12,24 @@ import React, { useEffect, useRef, useState } from "react";
  * @returns { ReactElement } A preview of the skills section
  */
 
-const TextCarousel: React.FC = () => {
+const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const texts = ["Texto 1", "Texto 2", "Texto 3", "Texto 4", "Texto 5"]; // Tus textos
+  const images = [
+    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    // "/path/to/image5.jpg",
+  ]; // Rutas de tus imágenes
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length); // Cambiar de texto
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Cambiar de imagen
     }, 3000); // Cambiar cada 3 segundos
 
     return () => clearInterval(interval);
-  }, [texts.length]);
+  }, [images.length]);
 
   return (
     <div className="flex items-center justify-center w-full overflow-hidden">
@@ -31,12 +37,18 @@ const TextCarousel: React.FC = () => {
         ref={carouselRef}
         className="flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${currentIndex * 100}%)`, // Mueve los textos
+          transform: `translateX(-${currentIndex * 100}%)`, // Mueve las imágenes
         }}
       >
-        {texts.map((text, index) => (
-          <div key={index} className="flex-shrink-0 min-w-full px-4 py-2 text-center">
-            {text}
+        {images.map((src, index) => (
+          <div key={index} className="flex-shrink-0 min-w-full px-4 py-2">
+            <Image
+              src={src}
+              alt={`Image ${index + 1}`}
+              width={126} // Ajusta el tamaño deseado
+              height={102} // Ajusta el tamaño deseado
+              className="object-cover rounded-lg" // Para asegurar que las imágenes se ajusten bien
+            />
           </div>
         ))}
       </div>
@@ -97,7 +109,7 @@ const Contact: React.FC = (): ReactElement => {
           {/* 𝕽♛ */}
         </div>
         
-        <TextCarousel />
+        <ImageCarousel />
 
         <div className="flex text-xs border-2 border-gray-300 border-solid rounded-md justify-evenly dark:border-white">
           <p className="font-bold text-yellow-500">
