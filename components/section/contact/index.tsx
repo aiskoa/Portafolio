@@ -5,55 +5,12 @@ import { SiDiscord, SiHackthebox } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
 import { SkillsIcon } from "../..";
-import React, { useEffect, useRef, useState } from "react";
 
 /**
  * @description Contac section
  * @returns { ReactElement } A preview of the skills section
  */
 
-const ImageCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const images = [
-    "./public/icon.png",
-    "/clients/1.png",
-    "/public/icon.png",
-    // "/path/to/image5.jpg",
-  ]; // Rutas de tus imágenes
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  return (
-    <div className="flex items-center justify-center w-full overflow-hidden">
-      <div
-        ref={carouselRef}
-        className="flex transition-transform duration-1000 ease-in-out"
-        style={{
-          transform: `translateX(-${currentIndex * 100}%)`, // Mueve las imágenes
-        }}
-      >
-        {images.map((src, index) => (
-          <div key={index} className="flex-shrink-0 min-w-full px-4 py-2">
-            <Image
-              src={src}
-              alt={`Image ${index + 1}`}
-              width={126}
-              height={102}
-              className="object-cover rounded-lg"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 const Contact: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
@@ -108,8 +65,6 @@ const Contact: React.FC = (): ReactElement => {
           {/* 𝕽♛ */}
         </div>
         
-        <ImageCarousel />
-
         <div className="flex text-xs border-2 border-gray-300 border-solid rounded-md justify-evenly dark:border-white">
           <p className="font-bold text-yellow-500">
             BTC
