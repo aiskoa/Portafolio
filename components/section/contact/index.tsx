@@ -16,15 +16,16 @@ const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const images = [
-    "../rawier-modern-logo.png",
-    "https://i.ibb.co/8MYVLSH/omg.png",
+    "./public/icon.png",
+    "/clients/1.png",
+    "/public/icon.png",
     // "/path/to/image5.jpg",
   ]; // Rutas de tus imágenes
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Cambiar de imagen
-    }, 3000); // Cambiar cada 3 segundos
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -43,9 +44,9 @@ const ImageCarousel: React.FC = () => {
             <Image
               src={src}
               alt={`Image ${index + 1}`}
-              width={126} // Ajusta el tamaño deseado
-              height={102} // Ajusta el tamaño deseado
-              className="object-cover rounded-lg" // Para asegurar que las imágenes se ajusten bien
+              width={126}
+              height={102}
+              className="object-cover rounded-lg"
             />
           </div>
         ))}
