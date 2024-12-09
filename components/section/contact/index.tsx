@@ -28,8 +28,8 @@ const Contact: React.FC = (): ReactElement => {
             loading="lazy"
             className="rounded-full"
             draggable="false"
-            width={250}  // Cambia de "250" (string) a 250 (número)
-            height={250} // Cambia de "250" (string) a 250 (número)
+            width={250}
+            height={250}
           />
         </div>
       </div>

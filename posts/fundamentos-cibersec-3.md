@@ -137,8 +137,110 @@ Esto descifra el contenido del anterior codigo.
 ### Código de Ejemplo de Criptografía Asimétrica
 
 ```jsx
+// Importa módulos necesarios
+import * as crypto from "crypto";
+import { PathLike, mkdirSync, writeFileSync } from "fs";
+import { join } from "path";
+
+// Función para generar un par de claves RSA o RSA-PSS
+const keygen = (
+  // Tipo de clave a generar ("rsa" o "rsa-pss")
+  type: "rsa" | "rsa-pss",
+  // Tamaño de cifrado para la clave privada (128, 192 o 256 bits)
+  size: 128 | 192 | 256,
+  // Frase de contraseña para proteger la clave privada
+  passphrase: string,
+  // Formato de salida de las claves ("pem" o "der")
+  format: "pem" | "der",
+  // Longitud del módulo para la clave (2048, 3072 o 4096 bits)
+  modulusLength: 2048 | 3072 | 4096
+  // Define las opciones de generación de claves según el tipo
+) => {
+  switch (type) {
+    case "rsa": {
+      // Opciones para claves RSA
+      const options: crypto.RSAKeyPairOptions<
+        crypto.KeyFormat,
+        crypto.KeyFormat
+      > = {
+        modulusLength, // Longitud del módulo
+        publicKeyEncoding: {
+          type: "spki", // Formato estándar para clave pública
+          format, // Formato de salida
+        },
+        privateKeyEncoding: {
+          type: "pkcs8", // Formato estándar para clave privada
+          format, // Formato de salida
+          cipher: `aes-${size}-cbc`, // Algoritmo de cifrado para la clave privada
+          passphrase, // Frase de contraseña
+        },
+      };
+      return crypto.generateKeyPairSync("rsa", options); // Genera el par de claves
+    }
+    case "rsa-pss": {
+      // Opciones para claves RSA-PSS (similar a RSA pero con firma PSS)
+      const options: crypto.RSAPSSKeyPairOptions<
+        crypto.KeyFormat,
+        crypto.KeyFormat
+      > = {
+        modulusLength, // Longitud del módulo
+        publicKeyEncoding: {
+          type: "spki", // Formato estándar para clave pública
+          format, // Formato de salida
+        },
+        privateKeyEncoding: {
+          type: "pkcs8", // Formato estándar para clave privada
+          format, // Formato de salida
+          cipher: `aes-${size}-cbc`, // Algoritmo de cifrado para la clave privada
+          passphrase, // Frase de contraseña
+        },
+      };
+      return crypto.generateKeyPairSync("rsa-pss", options);  // Genera el par de claves
+    }
+  }
+};
+
+// Función para crear un par de claves y guardarlas en archivos
+const keypair = (
+  type: "rsa" | "rsa-pss",
+  size: 128 | 192 | 256,
+  passphrase: string,
+  outDir: string,
+  outFormat: "pem" | "der",
+  modulusLength: 2048 | 3072 | 4096
+) => {
+  // Genera el par de claves usando la función keygen
+  const { publicKey, privateKey } = keygen(
+    type,
+    size,
+    passphrase,
+    outFormat,
+    modulusLength
+  );
+  // Crea la carpeta de salida si no existe
+  mkdirSync(outDir, { recursive: true });
+  // Guarda la clave pública en un archivo
+  writeFileSync(join(outDir, `public.${outFormat}`), publicKey.toString());
+  // Guarda la clave privada en un archivo (cifrada con la frase de contraseña)
+  writeFileSync(join(outDir, `private.${outFormat}`), privateKey.toString());
+};
+
+// Exporta la función keypair para usarla en otros módulos
+export default keypair;
 
 ```
+
+El código anterior es una función TypeScript llamada `keygen` que genera un par de claves RSA o RSA-PSS. Toma cinco parámetros:
+
+- `type`: el tipo de clave a generar, ya sea «rsa» o «rsa-pss».
+- `size`: el tamaño de cifrado de la clave privada (128, 192 o 256 bits)
+- Frase de contraseña: contraseña para proteger la clave privada.
+- `format`: el formato de salida de las claves («pem» o «der»)
+- `modulusLength`: la longitud del módulo de la clave (2048, 3072 o 4096 bits)
+
+La función utiliza una sentencia `switch` para determinar qué tipo de clave generar, y luego crea un objeto options con los parámetros especificados. Luego llama a la función `crypto.generateKeyPairSync` para generar el par de claves, pasando el objeto options.
+
+En resumen, esta función genera un par de claves RSA o RSA-PSS con tamaño de cifrado, protección por contraseña, formato de salida y longitud de módulo personalizables.
 
 &nbsp;
 
@@ -159,9 +261,25 @@ Esto descifra el contenido del anterior codigo.
 
 ### Código de Ejemplo de Hash Criptográfico
 
-```jsx
+```typescript
+import * as crypto from 'crypto';
+import { PathLike, readFileSync } from 'fs';
+
+const hash = (algorithm: string, encoding: crypto.BinaryToTextEncoding, input: PathLike) => {
+  return crypto.createHash(algorithm).update(readFileSync(input)).digest(encoding); 
+};
+
+export default hash;
 
 ```
+
+Esta es una función TypeScript llamada `hash` que genera un valor hash para un archivo dado. Toma tres parámetros:
+
+- `algorithm`: el algoritmo hash a utilizar (por ejemplo «sha256», «md5», etc.)
+- `encoding`: la codificación a utilizar para el valor hash resultante (p.ej. «hex», «base64», etc.)
+- `input`: el archivo para el que se generará el hash
+
+La función utiliza el módulo `crypto` para crear un objeto hash, lo actualiza con el contenido del fichero de entrada y devuelve el valor hash en la codificación especificada.
 
 &nbsp;
 
@@ -193,20 +311,20 @@ import math
 
 
 def generate_key_pair():
-    """Generate an ECDH key pair."""
+    # Genera un par de claves ECDH.
     private_key = X25519PrivateKey.generate()
     public_key = private_key.public_key()
     return private_key, public_key
 
 
 def derive_key(private_key, public_key):
-    """Derive a shared key using ECDH."""
+    # Obtención de una clave compartida mediante ECDH
     shared_key = private_key.exchange(public_key)
     return shared_key
 
 
 def fibonacci_sequence(n):
-    """Generate a Fibonacci sequence up to the nth term."""
+    # Generar una sucesión de Fibonacci hasta el enésimo término.
     sequence = [0, 1]
     while len(sequence) < n:
         sequence.append(sequence[-1] + sequence[-2])
@@ -214,55 +332,56 @@ def fibonacci_sequence(n):
 
 
 def xor_encrypt(data, key):
-    """XOR the data with the key."""
+    # XOR a los datos con la llave.
     return bytes([b ^ key[i % len(key)] for i, b in enumerate(data)])
 
 
 def encrypt(plaintext, public_key):
-    """Encrypt the plaintext using the public key and a Fibonacci sequence."""
-    # Generate a random symmetric key
+    # Cifrar el texto plano utilizando la clave pública y una secuencia de Fibonacci.
+    # Genera una llave asimetrica de manera aletoeria
     symmetric_key = os.urandom(32)
 
-    # Derive the shared key using ECDH
-    private_key, _ = generate_key_pair()  # Generate temporary private key
+    # Se Obtiene la clave compartida mediante ECDH
+    private_key, _ = generate_key_pair()  # Genera una clave privada temporal
     shared_key = derive_key(private_key, public_key)
 
-    # Generate a Fibonacci sequence based on the length of the plaintext
+    # Genera una clave fibonacci basada en la longitud del texto plano
     fib_sequence = fibonacci_sequence(len(plaintext))
 
-    # Adjust the length of the combined key to match the plaintext
+    # Ajusta la longitud de la clave combinada para coincidir con el texto plano
     combined_key = bytes(
         [shared_key[i % len(shared_key)] ^ fib_sequence[i % len(fib_sequence)] for i in range(len(plaintext))])
 
-    # Encrypt the plaintext with the combined key
+    # Encripta el texto plano con la clave combinada
     encrypted_text = xor_encrypt(plaintext.encode(), combined_key)
 
-    return encrypted_text, private_key  # Return the temporary private key
+    return encrypted_text, private_key  # Retorna temporalmente la clave privada
 
 
 def decrypt(encrypted_text, private_key, public_key):
-    """Decrypt the encrypted text using the private key and public key."""
-    # Derive the shared key using ECDH
+    """Descifra el texto cifrado utilizando la clave privada y la clave pública."""
+    # Se Obtiene la clave compartida mediante ECDH
     shared_key = derive_key(private_key, public_key)
 
-    # Generate a Fibonacci sequence based on the length of the encrypted text
+    # Generar una secuencia de Fibonacci basada en la longitud del texto cifrado
     fib_sequence = fibonacci_sequence(len(encrypted_text))
 
-    # Adjust the length of the combined key to match the encrypted text
+    # Ajusta la longitud de la clave combinada para que coincida con el texto cifrado
     combined_key = bytes(
         [shared_key[i % len(shared_key)] ^ fib_sequence[i % len(fib_sequence)] for i in range(len(encrypted_text))])
 
-    # Decrypt the encrypted text with the combined key
+    # Descifra el texto cifrado con la clave combinada
     decrypted_text = xor_encrypt(encrypted_text, combined_key)
 
-    return decrypted_text.decode(errors='ignore')  # Ignore errors during decoding
+    return decrypted_text.decode(errors='ignore')  # Ignora los errores durante la decodificación
 
 
 print("Enter a password to encrypt")
 
 passwd = input(": ")
 
-# Example usage
+# Ejemplo de uso
+# Frase: --
 plaintext = passwd
 private_key, public_key = generate_key_pair()
 encrypted_text, temp_private_key = encrypt(plaintext, public_key)
@@ -272,6 +391,34 @@ decrypted_text = decrypt(encrypted_text, temp_private_key, public_key)
 print(f"Decrypted: {decrypted_text}")
 
 ```
+
+El código anterior fue escrito en Python usando tecnicas de calculo utilizando la criptografía de curva elíptica (concretamente, la curva X25519).
+
+Instala las dependencias y asegurate de instalar la libreria cryptography correctamente.
+
+Ejemplo: **Ingresamos la palabra** : **Hello**
+
+### Proceso de generación de claves
+
+1. **Clave privada**: Es un valor generado aleatoriamente que se mantiene en secreto. Se genera utilizando el método `X25519PrivateKey.generate()`.
+2. **Clave pública**: Se deriva de la clave privada y puede compartirse abiertamente. Se calcula como parte del proceso de generación del par de claves.
+
+### Ejemplo de generación de claves
+
+1. **Ejecute la función `generate_key_pair()`** para crear una clave privada y una clave pública.
+2. La clave privada es un valor binario que no está destinado a ser compartido.
+3. La clave pública se deriva de la clave privada y puede ser compartida con otros.
+
+### Ejemplo de salida
+
+Si ejecutara el programa, podría ver un resultado similar a éste *(los valores reales serán diferentes cada vez debido a la aleatoriedad)*:
+
+- **Private Key (Clave privada)**: `b'\x1a\x2b\x3c\x4d\x5e\x6f\x70\x81\x92\x03\x14\x25\x36\x47\x58\x69\x7a\x8b\x9c\xad\xbe\xcf\xd0\xe1\xf2\x03\x14\x25\x36\x47\x58\x69'`
+- **Public Key (Clave pública)**: `b'\x9a\x8b\x7c\x6d\x5e\x4f\x3a\x2b\x1a\x0b\xfc\xed\xde\xcf\xbe\xaf\x9e\x8d\x7c\x6b\x5a\x49\x38\x27\x16\x05\xf4\xe3\xd2\xc1'`
+
+### Nota importante
+
+Las claves pública y privada no se derivan de la entrada «Hola», sino que se generan de forma independiente. La entrada sólo se utiliza para los procesos de cifrado y descifrado después de que se hayan generado las claves.
 
 &nbsp;
 
@@ -346,17 +493,19 @@ print("Shared secure key:", secure_key)
 
 &nbsp;
 
-> A continuación mostraré algunas formas de romper ciertos tipos de cifrado o hashing, cabe aclarar que esto es con fines educativos.
+> Mas adelante mostraré como se rompen estos cifrados y porque mmd5 es muy malo para usar.
 > En otra entrada revisaremos como funciona el cifrado AES.
 
 &nbsp;
 
 - 💜 Acceso al [--> Blog](https://rawier.vercel.app/es/blog/)
 
-### Gracias por leer la parte 2
+### Gracias por leer
 
 &nbsp;
 
 ### Fuentes de consulta
 
-- 🔖 [Pentesting, qué es y para qué sirve By Josué López 07/03/2024](https://auditech.es/blog/pentesting-que-es-y-para-que-sirve/)
+- 🔖 [Ko±cielny, C. (2005). AES with the increased confidentiality. Quasigroups and Related Systems, 13, 265-268.](http://www.quasigroups.eu/contents/download/2005/13_20.pdf)
+- 🔖 [Escobar Benet, M. (2015). Criptografía en clave pública y privada. RSA.](https://core.ac.uk/download/pdf/61462589.pdf)
+- 🔖 [Dasso, A. (2017). Longitud de la clave RSA vs poder computacional. In XIX Workshop de Investigadores en Ciencias de la Computación WICC 2017, ITBA, Buenos Aires](https://sedici.unlp.edu.ar/handle/10915/62720)
