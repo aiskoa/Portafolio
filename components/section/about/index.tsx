@@ -9,7 +9,7 @@ const TypewriterEffect = () => {
   return (
     <Typewriter
       options={{
-        strings: ['¡Hola, mundo!'],
+        strings: ['¡Hola, mundo!', 'cat low_performance.txt > /dev/null', 'sudo rm -rf bad_results', 'здравствую'],
         autoStart: true,
         loop: true,
       }}
@@ -17,7 +17,7 @@ const TypewriterEffect = () => {
         typewriter.callFunction(() => {
           const element = document.querySelector('.Typewriter__wrapper');
           if (element) {
-            element.classList.add('text-red-500', 'font-bold', 'text-xl'); // Clases de Tailwind CSS
+            element.classList.add('font-bold', 'text-xl'); // Clases de Tailwind CSS
           }
         });
       }}
