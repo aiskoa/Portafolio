@@ -42,15 +42,15 @@ const ImageCarousel: React.FC = () => {
         ref={carouselRef}
         className="flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${currentIndex * 40}%)`,
+          transform: `translateX(-${currentIndex * 100}%)`,
         }}
       >
         {images.map((src, index) => (
-          <div key={index} className="flex-shrink-0 h-full min-w-full">
+          <div key={index} className="flex-shrink-0 h-full min-w-full px-2">
             <img
               src={src}
               alt={`Image ${index + 1}`}
-              className="object-cover w-full h-full rounded-lg"
+              className="object-contain w-full h-full rounded-lg"
               loading="lazy"
             />
           </div>
