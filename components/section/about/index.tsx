@@ -3,6 +3,27 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import { config } from "../../../config/index";
 import Link from "next/link";
+import Typewriter from 'typewriter-effect';
+
+const TypewriterEffect = () => {
+  return (
+    <Typewriter
+      options={{
+        strings: ['¡Hola, mundo!'],
+        autoStart: true,
+        loop: true,
+      }}
+      onInit={(typewriter) => {
+        typewriter.callFunction(() => {
+          const element = document.querySelector('.Typewriter__wrapper');
+          if (element) {
+            element.classList.add('text-red-500', 'font-bold', 'text-xl'); // Clases de Tailwind CSS
+          }
+        });
+      }}
+    />
+  );
+};
 
 const About: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
@@ -50,6 +71,9 @@ const About: React.FC = (): ReactElement => {
             </div>
             <div className="mt-6 text-gray-800 dark:text-white">
               <p className="mb-4 select-none">{t("about-me")}</p>
+
+              <TypewriterEffect/>
+              
             </div>
           </div>
           <div className="flex-shrink-0 mx-auto mb-10 pointer-events-none focus:pointer-events-auto lg:mt-12 lg:px-4" draggable="false">

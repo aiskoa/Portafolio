@@ -33,7 +33,7 @@ const Contact: React.FC = (): ReactElement => {
       <div>
         <noscript>
           <h1>
-          𝕽♛ You need to enable JavaScript to run this app.
+            𝕽♛ You need to enable JavaScript to run this app.
           </h1>
         </noscript>
         <div className="p-2 m-5 font-thin border-2 border-gray-900 flex-column rounded-2xl dark:hover:border-purple-700 hover:border-blue-700 dark:border-white">
