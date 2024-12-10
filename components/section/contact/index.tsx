@@ -16,7 +16,11 @@ const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const images = [
+    "./providers/ipn.webp",
     "./providers/aiep.webp",
+    "./providers/humble.webp",
+    "./providers/soundraw.webp",
+    "./providers/plug-patches.webp",
     "./providers/carnes-domicilio.webp"
   ];
 
@@ -38,7 +42,7 @@ const ImageCarousel: React.FC = () => {
         ref={carouselRef}
         className="flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${currentIndex * 30}%)`,
+          transform: `translateX(-${currentIndex * 10}%)`,
         }}
       >
         {images.map((src, index) => (
