@@ -3,7 +3,7 @@ import Image from "next/image";
 import Box from "../../common/box";
 import { SiDiscord, SiHackthebox } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
-import { ReactElement, useState, useEffect, useRef } from 'react';
+import { ReactElement, useState, useRef } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { SkillsIcon } from "../..";
 
@@ -18,7 +18,7 @@ const ImageCarousel: React.FC = () => {
   const images = [
     "https://raw.githubusercontent.com/Rawierdt/Portafolio/refs/heads/main/public/icon.png",
     "https://i.ibb.co/NCd7TXD/Aiep.webp"
-  ]; // URLs de tus imágenes
+  ];
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -32,27 +32,22 @@ const ImageCarousel: React.FC = () => {
     setCurrentIndex(newIndex);
   };
 
-  useEffect(() => {
-    // Código que depende de window o document
-  }, []);
-
   return (
     <div className="relative flex items-center justify-center w-full h-64 overflow-hidden">
       <div
         ref={carouselRef}
         className="flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${currentIndex * 100}%)`, // Mueve las imágenes
+          transform: `translateX(-${currentIndex * 100}%)`,
         }}
       >
         {images.map((src, index) => (
           <div key={index} className="flex-shrink-0 h-full min-w-full">
-            <Image
+            <img
               src={src}
               alt={`Image ${index + 1}`}
-              layout="fill" // Hace que la imagen ocupe todo el contenedor
-              objectFit="contain" // Ajusta la imagen dentro del contenedor
-              className="object-contain" // Asegura que las imágenes se ajusten bien
+              className="object-cover w-full h-full rounded-lg"
+              loading="lazy"
             />
           </div>
         ))}
