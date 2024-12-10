@@ -132,6 +132,7 @@ const Contact: React.FC = (): ReactElement => {
             BTC
           </p>
           1sPVqrtZNvAF8NawLHvVSGCP4aNWvUuTf
+          <br />
           <p className="font-bold text-sky-500">
             ETH/BSC
           </p>
