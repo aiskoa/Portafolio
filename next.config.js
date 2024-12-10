@@ -27,7 +27,7 @@ module.exports = withPlugins([
     },
     reactStrictMode: true,
     images: {
-      domains: ["avatars.githubusercontent.com"]
+      domains: ['avatars.githubusercontent.com', 'raw.githubusercontent.com', 'i.ibb.co']
     }
   }],
 ]);
