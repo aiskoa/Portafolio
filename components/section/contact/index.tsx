@@ -18,9 +18,7 @@ const ImageCarousel: React.FC = () => {
   const images = [
     "https://i.ibb.co/NCd7TXD/Aiep.webp",
     "https://i.ibb.co/NCd7TXD/Aiep.webp",
-    "https://openstore.zya.me/icons/380010563-44f9d391-2615-4c43-87e6-59702586e0fd.png",
-    "https://openstore.zya.me/icons/380010563-44f9d391-2615-4c43-87e6-59702586e0fd.png",
-    "https://i.imgur.com/yourImage5.jpg"
+    "https://raw.githubusercontent.com/Rawierdt/Portafolio/refs/heads/main/public/icon.png"
   ]; // URLs de tus imágenes
 
   const prevSlide = () => {
@@ -36,7 +34,7 @@ const ImageCarousel: React.FC = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center w-full">
+    <div className="relative flex items-center justify-center w-full h-64 overflow-hidden">
       <div
         ref={carouselRef}
         className="flex transition-transform duration-1000 ease-in-out"
@@ -45,13 +43,13 @@ const ImageCarousel: React.FC = () => {
         }}
       >
         {images.map((src, index) => (
-          <div key={index} className="flex-shrink-0 min-w-full px-4 py-2">
+          <div key={index} className="flex-shrink-0 h-full min-w-full">
             <Image
               src={src}
               alt={`Image ${index + 1}`}
-              width={500} // Ajusta el tamaño deseado
-              height={300} // Ajusta el tamaño deseado
-              className="object-cover rounded-lg" // Para asegurar que las imágenes se ajusten bien
+              layout="fill" // Hace que la imagen ocupe todo el contenedor
+              objectFit="contain" // Ajusta la imagen dentro del contenedor
+              className="object-contain" // Asegura que las imágenes se ajusten bien
             />
           </div>
         ))}
@@ -126,7 +124,7 @@ const Contact: React.FC = (): ReactElement => {
 
           <ImageCarousel/>
           <br />
-          
+
           <div className="flex text-xs border-2 border-gray-300 border-solid rounded-md justify-evenly dark:border-white">
           <p className="font-bold text-yellow-500">
             BTC
