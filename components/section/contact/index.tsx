@@ -3,7 +3,7 @@ import Image from "next/image";
 import Box from "../../common/box";
 import { SiDiscord, SiHackthebox } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
-import { ReactElement, useState, useRef } from 'react';
+import { ReactElement, useState, useEffect, useRef } from 'react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { SkillsIcon } from "../..";
 
@@ -16,9 +16,8 @@ const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const images = [
-    "https://i.ibb.co/NCd7TXD/Aiep.webp",
-    "https://i.ibb.co/NCd7TXD/Aiep.webp",
-    "https://raw.githubusercontent.com/Rawierdt/Portafolio/refs/heads/main/public/icon.png"
+    "https://raw.githubusercontent.com/Rawierdt/Portafolio/refs/heads/main/public/icon.png",
+    "https://i.ibb.co/NCd7TXD/Aiep.webp"
   ]; // URLs de tus imágenes
 
   const prevSlide = () => {
@@ -32,6 +31,10 @@ const ImageCarousel: React.FC = () => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
+  useEffect(() => {
+    // Código que depende de window o document
+  }, []);
 
   return (
     <div className="relative flex items-center justify-center w-full h-64 overflow-hidden">
