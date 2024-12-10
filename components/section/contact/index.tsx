@@ -42,7 +42,7 @@ const ImageCarousel: React.FC = () => {
         ref={carouselRef}
         className="flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${currentIndex * 10}%)`,
+          transform: `translateX(-${currentIndex * 40}%)`,
         }}
       >
         {images.map((src, index) => (
