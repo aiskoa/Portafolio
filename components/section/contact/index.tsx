@@ -3,7 +3,8 @@ import Image from "next/image";
 import Box from "../../common/box";
 import { SiDiscord, SiHackthebox } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
-import { ReactElement } from "react";
+import { ReactElement, useState, useRef } from 'react';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { SkillsIcon } from "../..";
 
 /**
@@ -11,6 +12,65 @@ import { SkillsIcon } from "../..";
  * @returns { ReactElement } A preview of the skills section
  */
 
+const ImageCarousel: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const images = [
+    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    "https://openstore.zya.me/icons/380010563-44f9d391-2615-4c43-87e6-59702586e0fd.png",
+    "https://openstore.zya.me/icons/380010563-44f9d391-2615-4c43-87e6-59702586e0fd.png",
+    "https://i.imgur.com/yourImage5.jpg"
+  ]; // URLs de tus imágenes
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === images.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  return (
+    <div className="relative flex items-center justify-center w-full">
+      <div
+        ref={carouselRef}
+        className="flex transition-transform duration-1000 ease-in-out"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`, // Mueve las imágenes
+        }}
+      >
+        {images.map((src, index) => (
+          <div key={index} className="flex-shrink-0 min-w-full px-4 py-2">
+            <Image
+              src={src}
+              alt={`Image ${index + 1}`}
+              width={500} // Ajusta el tamaño deseado
+              height={300} // Ajusta el tamaño deseado
+              className="object-cover rounded-lg" // Para asegurar que las imágenes se ajusten bien
+            />
+          </div>
+        ))}
+      </div>
+      <button
+        onClick={prevSlide}
+        className="absolute left-0 p-2 text-white transform -translate-y-1/2 bg-black rounded-full top-1/2"
+      >
+        <FiArrowLeft size={24} />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-0 p-2 text-white transform -translate-y-1/2 bg-black rounded-full top-1/2"
+      >
+        <FiArrowRight size={24} />
+      </button>
+    </div>
+  );
+};
 
 const Contact: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
@@ -63,9 +123,11 @@ const Contact: React.FC = (): ReactElement => {
           <p className="text-2xl text-center">FAQ</p>
           <p className="flex select-none justify-evenly">{t("faq")}</p>
           {/* 𝕽♛ */}
-        </div>
-        
-        <div className="flex text-xs border-2 border-gray-300 border-solid rounded-md justify-evenly dark:border-white">
+
+          <ImageCarousel/>
+          <br />
+          
+          <div className="flex text-xs border-2 border-gray-300 border-solid rounded-md justify-evenly dark:border-white">
           <p className="font-bold text-yellow-500">
             BTC
           </p>
@@ -74,6 +136,7 @@ const Contact: React.FC = (): ReactElement => {
             ETH/BSC
           </p>
           0xcdf8d202be9876afcdb727d36a10d1ac1d0df52b    
+        </div>
         </div>
       </div>
     </>
