@@ -17,7 +17,11 @@ const ImageCarousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const images = [
     "https://raw.githubusercontent.com/Rawierdt/Portafolio/refs/heads/main/public/icon.png",
-    "https://i.ibb.co/NCd7TXD/Aiep.webp"
+    "https://i.ibb.co/NCd7TXD/Aiep.webp",
+    "./clients/1.png",
+    "../rawier-modern-logo.png",
+    "/clients/1.png",
+    "./rawier-modern-logo.png"
   ];
 
   const prevSlide = () => {
@@ -80,8 +84,8 @@ const Contact: React.FC = (): ReactElement => {
             loading="lazy"
             className="rounded-full"
             draggable="false"
-            width={250}
-            height={250}
+            // width={250}
+            // height={250}
           />
         </div>
       </div>
