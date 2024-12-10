@@ -16,12 +16,8 @@ const ImageCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const images = [
-    "https://raw.githubusercontent.com/Rawierdt/Portafolio/refs/heads/main/public/icon.png",
-    "https://i.ibb.co/NCd7TXD/Aiep.webp",
-    "./clients/1.png",
-    "../rawier-modern-logo.png",
-    "/clients/1.png",
-    "./rawier-modern-logo.png"
+    "./providers/aiep.webp",
+    "./providers/carnes-domicilio.webp"
   ];
 
   const prevSlide = () => {
@@ -42,7 +38,7 @@ const ImageCarousel: React.FC = () => {
         ref={carouselRef}
         className="flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${currentIndex * 100}%)`,
+          transform: `translateX(-${currentIndex * 30}%)`,
         }}
       >
         {images.map((src, index) => (
@@ -84,8 +80,8 @@ const Contact: React.FC = (): ReactElement => {
             loading="lazy"
             className="rounded-full"
             draggable="false"
-            // width={250}
-            // height={250}
+            width={250}
+            height={250}
           />
         </div>
       </div>
