@@ -50,7 +50,7 @@ const ImageCarousel: React.FC = () => {
             <img
               src={src}
               alt={`Image ${index + 1}`}
-              className="object-contain w-full h-full rounded-lg"
+              className="object-contain w-auto h-full mx-auto"
               loading="lazy"
             />
           </div>
