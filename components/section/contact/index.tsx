@@ -128,16 +128,21 @@ const Contact: React.FC = (): ReactElement => {
           <br />
 
           <div className="flex text-xs border-2 border-gray-300 border-solid rounded-md justify-evenly dark:border-white">
-          <p className="font-bold text-yellow-500">
-            BTC
-          </p>
-          1sPVqrtZNvAF8NawLHvVSGCP4aNWvUuTf
-          <br />
-          <p className="font-bold text-sky-500">
-            ETH/BSC
-          </p>
-          0xcdf8d202be9876afcdb727d36a10d1ac1d0df52b    
-        </div>
+            <p className="font-bold text-yellow-500">
+              BTC
+            </p>
+            <p className="truncate text-ellipsis">
+              1sPVqrtZNvAF8NawLHvVSGCP4aNWvUuTf
+            </p>
+            <br />
+            <p className="font-bold text-sky-500">
+              ETH/BSC
+            </p>
+            <p className="break-all truncate text-ellipsis">
+              0xcdf8d202be9876afcdb727d36a10d1ac1d0df52b
+            </p>
+          </div>
+
         </div>
       </div>
     </>
