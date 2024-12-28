@@ -9,7 +9,7 @@ const TypewriterEffect = () => {
   return (
     <Typewriter
       options={{
-        strings: ['¡Hola, mundo!', 'cat low_performance.txt > /dev/null', 'sudo rm -rf bad_results', 'здравствую'],
+        strings: ['¡Hola, mundo!', 'cat low_performance.txt > /dev/null', 'Hello World!','sudo rm -rf bad_results', 'здравствую'],
         autoStart: true,
         loop: true,
       }}
