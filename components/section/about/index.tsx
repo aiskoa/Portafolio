@@ -3,27 +3,27 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import { config } from "../../../config/index";
 import Link from "next/link";
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 
-const TypewriterEffect = () => {
-  return (
-    <Typewriter
-      options={{
-        strings: ['¡Hola, mundo!', 'cat low_performance.txt > /dev/null', 'Hello World!','sudo rm -rf bad_results', 'здравствую'],
-        autoStart: true,
-        loop: true,
-      }}
-      onInit={(typewriter) => {
-        typewriter.callFunction(() => {
-          const element = document.querySelector('.Typewriter__wrapper');
-          if (element) {
-            element.classList.add('font-bold', 'text-xl'); // Clases de Tailwind CSS
-          }
-        });
-      }}
-    />
-  );
-};
+// const TypewriterEffect = () => {
+//   return (
+//     <Typewriter
+//       options={{
+//         strings: ['¡Hola, mundo!', 'cat low_performance.txt > /dev/null', 'Hello World!','sudo rm -rf bad_results', 'здравствую'],
+//         autoStart: true,
+//         loop: true,
+//       }}
+//       onInit={(typewriter) => {
+//         typewriter.callFunction(() => {
+//           const element = document.querySelector('.Typewriter__wrapper');
+//           if (element) {
+//             element.classList.add('font-bold', 'text-xl'); // Clases de Tailwind CSS
+//           }
+//         });
+//       }}
+//     />
+//   );
+// };
 
 const About: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
@@ -72,7 +72,7 @@ const About: React.FC = (): ReactElement => {
             <div className="mt-6 text-gray-800 dark:text-white">
               <p className="mb-4 select-none">{t("about-me")}</p>
 
-              <TypewriterEffect/>
+              {/* <TypewriterEffect/> */}
               
             </div>
           </div>
