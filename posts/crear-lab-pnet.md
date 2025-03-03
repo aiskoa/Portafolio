@@ -17,15 +17,20 @@ tags2: "Hacking"
 &nbsp;
 
 Te mostraré como montar un laboratorio para pruebas en redes con PNET Lab desde Windows, usando VMware.
-**IMPORTANTE** tener instalado VMware Workstation o VMware Player, SSH (Si aún lo tienes), FTP (Filezilla o WinSCP), Firefox o Navegador Web que soporte HTML5, suficiente espacio en el disco duro conexión a interne y memoria ram de al menos 8GB.
+**IMPORTANTE** tener instalado VMware Workstation o VMware Player, SSH (Si aún lo tienes), FTP (Filezilla o WinSCP), 
+Firefox o Navegador Web que soporte HTML5, suficiente espacio en el disco duro conexión a interne y memoria ram de al menos 8GB.
 
 ## ¿Qué es PNET?
 
-Es una plataforma diseñada para crear y gestionar entornos de simulación de redes. PNET Lab se diferencia de otros emuladores en que permite la instalación y configuración de software de red real en las MV creadas, ofreciendo una experiencia más realista y cercana a un entorno de red real.
+Es una plataforma diseñada para crear y gestionar entornos de simulación de redes. 
+PNET Lab se diferencia de otros emuladores en que permite la instalación y configuración de software de red real en las MV creadas, 
+ofreciendo una experiencia más realista y cercana a un entorno de red real.
 
 ## ¿Qué es Eve-ng?
 
-Es un emulador que permite a los usuarios crear y simular entornos de red complejos. Es una herramienta ideal para la enseñanza y el aprendizaje de redes, ya que permite a los estudiantes experimentar con diferentes configuraciones de red y protocolos sin necesidad de hardware físico.
+Es un emulador que permite a los usuarios crear y simular entornos de red complejos. Es una herramienta ideal para la enseñanza y 
+el aprendizaje de redes, ya que permite a los estudiantes experimentar con diferentes 
+configuraciones de red y protocolos sin necesidad de hardware físico.
 
 &nbsp;
 
@@ -94,7 +99,8 @@ Una vez descargado y montado en  deberás activar la virtualizacion anidada como
 ![VMWARE](https://pnetlab.com/api/uploader/public/read?file=https://pnetlab.com/Local/pages/page_content/1/image_7.png)
 
 Una vez hecho eso enciende la maquina, en ella verás solo la terminal, coloca el usuario **root** y la contraseña **pnet**.
-Esto te llevará a la pantalla de configuración, coloca un password que desees, en dominio no importa (a menos que tengas uno y quieras usarlo), seleccionas IP Estatica, y finalmente el servidor horario, esto reiniciará la maquina.
+Esto te llevará a la pantalla de configuración, coloca un password que desees, en dominio 
+no importa (a menos que tengas uno y quieras usarlo), seleccionas IP Estatica, y finalmente el servidor horario, esto reiniciará la maquina.
 
 Ahora en la IP que se muestra en la pantalla de PNET colocala en tu navegador de Windows:
 Selecciona la opción ONline.
@@ -158,7 +164,8 @@ Para descargar las imagenes se usa el siguiente comando <number> es el ID que ap
 ```
 
 y LISTO! la imagen se descarga se formatea según los **DOCS** de Eve-ng y se asignan los permisos automaticamente, super sencillo no es asi?.
-Otra alternativa es usar el Drive de UNET LAB, ahi estan las carpetas y los discos listos para descargarse y usar. las imagenes o discos deberan corresponder con su formato según la documentación de Eve-ng en **/opt/unetlab/addons/qemu/**
+Otra alternativa es usar el Drive de UNET LAB, ahi estan las carpetas y los discos listos para descargarse y usar. 
+las imagenes o discos deberan corresponder con su formato según la documentación de Eve-ng en **/opt/unetlab/addons/qemu/**
 
 Lo unico importante es revisar el estado de la maquina PNET y el espacio restante.
 
@@ -178,14 +185,16 @@ Esto creará un nodo, y deberás ver los sistemas o dispositivos que descargaste
 
 Se desplagará un panel con configuraciones para el router, se asignan memoria ram, etc y listo ya esta ahi.
 
-Añadiremos un Kali, si descargaste una imagen de Kali desde ishare2 ya deberias tenerlo, si lo descargaste en qemu desde la pagina deberias solo arrastarlo a /addons/qemu, pero si descargaste la iso deberás instalar el sistema con su disco (algo que mostraré mas tarde).
+Añadiremos un Kali, si descargaste una imagen de Kali desde ishare2 ya deberias tenerlo, 
+si lo descargaste en qemu desde la pagina deberias solo arrastarlo a /addons/qemu, pero si descargaste la iso deberás instalar el sistema con su disco (algo que mostraré mas tarde).
 
 Una ve ya montados solo se encienden en botón y esperamos.
 hacemos doble clic y veremos sus interfaces QEMU sto es posible gracias a las herramientas de Eve-ng de Client Side.
 
 ![PLA6](https://i.ibb.co/bMD7194Q/pl6.png)
 
-Como puedes notar en la imagen en este ejemplo ya monte un kali, un extremeos y un mikrotik, pero el kali no tiene conexion a internet, ya que el ping a google no sale, bueno esto se debe a que se debe crear una salida a red.
+Como puedes notar en la imagen en este ejemplo ya monte un kali, un extremeos y un mikrotik, 
+pero el kali no tiene conexion a internet, ya que el ping a google no sale, bueno esto se debe a que se debe crear una salida a red.
 
 ## Paso 6: Creación de Salida a Red
 
@@ -201,7 +210,9 @@ Ahora seleccionaras la opción de Network
 
 Propósito: Permite que varios dispositivos en una red local (LAN) usen una sola dirección IP pública para conectarse a internet.
 
-Cómo funciona: Transforma las direcciones IP internas privadas en una dirección IP pública. Cuando un dispositivo de la red local envía datos a internet, el enrutador cambia la dirección IP privada del dispositivo a su dirección IP pública. Cuando los datos vuelven, el enrutador realiza la traducción inversa.
+Cómo funciona: Transforma las direcciones IP internas privadas en una dirección IP pública. Cuando un dispositivo de la red local 
+envía datos a internet, el enrutador cambia la dirección IP privada del dispositivo a su dirección IP pública. 
+Cuando los datos vuelven, el enrutador realiza la traducción inversa.
 
 Ventajas: Mejora la seguridad al ocultar las direcciones IP privadas y permite la conservación de direcciones IP públicas.
 
@@ -213,11 +224,13 @@ Propósito: Conecta dos redes locales (LAN) diferentes, permitiendo que actúen 
 
 Cómo funciona: Un puente recibe las tramas de datos de una red y las envía a la otra red. No cambia las direcciones IP de las tramas, simplemente las retransmite.
 
-Ventajas: Amplía el alcance de una red sin necesidad de cambiar la configuración de los dispositivos. Permite la comunicación directa entre dispositivos en diferentes redes locales.
+Ventajas: Amplía el alcance de una red sin necesidad de cambiar la configuración de los dispositivos. 
+Permite la comunicación directa entre dispositivos en diferentes redes locales.
 
 Uso común: Se usa en redes locales más grandes para conectar diferentes segmentos de red, como en una oficina que tiene múltiples pisos o áreas.
 
-Y por ultimo la opción **Management** te permitira situarte en la red de PNET osea que podras hacer ping desde el host a la maquina o conectarte por ssh a la maquina de PNET estando dentro de PNET (que loco no).
+Y por ultimo la opción **Management** te permitira situarte en la red de PNET osea que podras hacer ping desde el host a la 
+maquina o conectarte por ssh a la maquina de PNET estando dentro de PNET (que loco no).
 
 Para conectarte solo tienes que arrastrar el cable realizar la conexion al puerto y listo.
 Como podrás notar en la imagen estoy conectado a la red de administración en esta maquina.
