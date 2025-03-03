@@ -1,6 +1,11 @@
 {
     "version": "0.2",
-    "ignorePaths": ["**/node_modules/**", "**/dist/**", "**/lib/**", "**/build/**"],
+    "ignorePaths": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/lib/**",
+        "**/build/**"
+    ],
     "dictionaryDefinitions": [],
     "dictionaries": [
         "es-es",
@@ -31,7 +36,9 @@
         "python"
     ],
     "words": [
+        "Escalabilidad",
         "Pentesting",
+        "PNET",
         "Rawier"
     ],
     "ignoreWords": [],

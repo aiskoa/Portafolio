@@ -111,14 +111,14 @@ const Contact: React.FC = (): ReactElement => {
           </div>
           <br /> */}
           <p className="flex select-none justify-evenly cursor-no-drop">{t("text_mail")}</p>
-          <a className="flex justify-evenly" href="mailto:rawierdt@gmail.com?Subject=DUDA%20_%20GENERAL"><strong>rawierdt@gmail.com</strong></a>
+          {/* <a className="flex justify-evenly" href="mailto:rawierdt@gmail.com?Subject=DUDA%20_%20GENERAL"><strong>rawierdt@gmail.com</strong></a> */}
           <br />
-          <p className="text-2xl text-center">Freelance</p>
-          <p className="flex select-none justify-evenly cursor-no-drop">{t("freelance")}</p>
+          {/* <p className="text-2xl text-center">Freelance</p> */}
+          {/* <p className="flex select-none justify-evenly cursor-no-drop">{t("freelance")}</p> */}
           <br />
-          <p className="flex select-all justify-evenly">{t("pdfdoc")}</p>
+          {/* <p className="flex select-all justify-evenly">{t("pdfdoc")}</p>
           <br />
-          <p className="flex justify-evenly">{t("pdfdoc2")}</p>
+          <p className="flex justify-evenly">{t("pdfdoc2")}</p> */}
           <br />
           <p className="text-2xl text-center">FAQ</p>
           <p className="flex select-none justify-evenly">{t("faq")}</p>
