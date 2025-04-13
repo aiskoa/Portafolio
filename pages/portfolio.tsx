@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head'
 import useTranslation from "next-translate/useTranslation";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface Item {
   title: string;
@@ -80,16 +81,16 @@ const Portfolio: NextPage = () => {
         <title>AISKOA - Portfolio</title>
         <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
         <meta name="description"
-          content="Rawier's Portfolio."></meta>
+          content="Aiskoa's Portfolio."></meta>
         <meta property="og:description"
-          content="Rawier's Projects and portfolio." />
-        <meta property="og:title" content="Rawier - Portfolio" />
+          content="Aiskoa's Projects and portfolio." />
+        <meta property="og:title" content="AISKOA - Portfolio" />
         <meta name="theme-color:" content="#8e52f5"></meta>
         <meta
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: *; font-src 'self'; connect-src 'self' https://vitals.vercel-insights.com;"
         />
-        <meta property="og:url" content="https://Rawier.vercel.app/portfolio" />
+        <meta property="og:url" content="https://aiskoa.vercel.app/portfolio" />
       </Head>
       <div className='portfolio'>
         <br />

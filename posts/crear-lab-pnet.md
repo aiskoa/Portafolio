@@ -265,8 +265,7 @@ Como podrás notar en la imagen estoy conectado a la red de administración en e
 
 !![PLA8](https://i.ibb.co/bjt50vnp/pl8.png)
 
-> Se que todo esto es bastante simple y me explicación no fue la mejor pero intento detallar lo mas claro posible si algo es
-> dificil debido a mi solo hace falta contactarme y veré mis notas jjsk.
+> Se que todo esto es bastante simple y me explicación no fue la mejor pero intento detallar lo mas claro posible..
 
 ---
 

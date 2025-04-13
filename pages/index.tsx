@@ -18,8 +18,8 @@ const Home: NextPage = (): ReactElement => {
         <meta property="og:image" content={config.github.url} />
         <meta name="description" content="IT consultant and web application developer, focused on results." />
         <meta property="og:description" content="IT consultant and web application developer, focused on results." />
-        <meta property="og:title" content="Rawier - Cybersecurity" />
-        <meta property="og:url" content="https://rawier.vercel.app" />
+        <meta property="og:title" content="AISKOA - Cybersecurity" />
+        <meta property="og:url" content="https://aiskoa.vercel.app" />
       </Head>
       <main className="max-w-4xl mx-auto mt-16 antialiased">
         <About />

@@ -3,6 +3,7 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import { config } from "../../../config/index";
 import Link from "next/link";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // import Typewriter from 'typewriter-effect';
 
 // const TypewriterEffect = () => {

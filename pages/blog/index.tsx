@@ -53,8 +53,8 @@ export default function Blog({ posts }: PostsType) {
           property="og:description"
           content="Blog section - Here I have all the blog posts I had written in the past"
         />
-        <meta property="og:title" content="Rawier - Blog" />
-        <meta property="og:url" content="https://rawier.vercel.app" />
+        <meta property="og:title" content="AISKOA - Blog" />
+        <meta property="og:url" content="https://aiskoa.vercel.app" />
       </Head>
       
       <div className="container px-4 mx-auto my-12 md:px-12">
