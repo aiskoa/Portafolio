@@ -37,7 +37,7 @@ const About: React.FC = (): ReactElement => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           filter: "blur(5px)",
-          opacity: 0.3,
+          opacity: 0.5,
           mixBlendMode: "multiply",
         }}
       />

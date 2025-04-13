@@ -34,7 +34,7 @@ const Navigation: React.FC = (): ReactElement => {
           </a>
         </Link>
         <Theme />
-        <Link href="/portfolio">PROJECTS</Link>
+        <Link href="/portfolio">⌘ PROJECTS</Link>
         <Language />
       </div>
     </div>

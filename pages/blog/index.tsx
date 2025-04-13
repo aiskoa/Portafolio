@@ -38,7 +38,7 @@ export default function Blog({ posts }: PostsType) {
   return (
     <div>
       <Head>
-        <title>Rawier - Blog</title>
+        <title>AISKOA - Blog</title>
         <link rel="shortcut icon" type="image/jpg" href="../favicon.ico" />
         <noscript>
           <h1>You need to enable JavaScript to run this app.</h1>

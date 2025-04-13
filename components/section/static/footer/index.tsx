@@ -1,6 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 import React, { ReactElement } from "react";
-import { SiDiscord, SiGithub, SiHackthebox, SiInstagram, SiLinkedin, SiTwitter } from "react-icons/si";
+import { SiDiscord, SiGithub, SiHackthebox, SiInstagram, SiLinkedin, SiTryhackme, SiTwitter } from "react-icons/si";
 import { config } from "../../../../config/index";
 import { SkillsIcon } from "../../../";
 /**
@@ -70,6 +70,15 @@ const Footer: React.FC = (): ReactElement => {
               aria-label="HackTheBox"
             >
               <SkillsIcon text="HackTheBox" children={<SiHackthebox />} />
+            </a>
+            <a
+              href={config.socials.TryHackMe}
+              className={"transition-colors dark:hover:border-violet-800 hover:text-yellow-500 p-1"}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="TryHackMe"
+            >
+              <SkillsIcon text="TryHackMe" children={<SiTryhackme />} />
             </a>
           </div>
         </div>

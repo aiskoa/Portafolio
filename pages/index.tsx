@@ -8,7 +8,7 @@ const Home: NextPage = (): ReactElement => {
   return (
     <div className="space-y-14 lg:space-y-24">
       <Head>
-        <title>Rawier - Cybersecurity</title>
+        <title>AISKOA - Cybersecurity</title>
         <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
         <meta
           httpEquiv="Content-Security-Policy"

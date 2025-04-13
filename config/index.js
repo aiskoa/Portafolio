@@ -14,5 +14,6 @@ export var config = {
         hackerone: "https://hackerone.com/rawier",
         discord: "https://discord.com/users/165598561675771904",
         Hackthebox: "https://app.hackthebox.com/users/1280543",
+        TryHackMe: "https://tryhackme.com/p/AISKOA",
     }
 }

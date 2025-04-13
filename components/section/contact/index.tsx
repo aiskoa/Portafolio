@@ -8,7 +8,7 @@ import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { SkillsIcon } from "../..";
 
 /**
- * @description Contac section
+ * @description Contact section
  * @returns { ReactElement } A preview of the skills section
  */
 

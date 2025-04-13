@@ -8,6 +8,7 @@ import {
   SiDiscord, SiJavascript, SiMicrosoftsqlserver, SiCisco,
   SiFigma, SiPhp, SiMicrosoft, SiGit, SiSqlite, SiCplusplus,
   SiPostgresql,
+  SiCloudflare,
 } from "react-icons/si";
 import useTranslation from "next-translate/useTranslation";
 import { ReactElement } from "react";
@@ -84,7 +85,7 @@ const Skills: React.FC = (): ReactElement => {
             // <SkillsIcon text="Heroku" children={<SiHeroku />} />,
             <SkillsIcon key={"vercel"} text="Vercel" children={<SiVercel />} />,
             <SkillsIcon key={"azure"} text="Azure" children={<SiMicrosoftazure />} />,
-            <SkillsIcon key={"cisco"} text="Cisco" children={<SiCisco />} />,
+            <SkillsIcon key={"cisco"} text="Cisco" children={<SiCloudflare />} />,
           ]}
         />
         <Box

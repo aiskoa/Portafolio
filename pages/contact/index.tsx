@@ -8,7 +8,7 @@ const ContactSection: NextPage = (): ReactElement => {
   return (
     <div className="space-y-14 lg:space-y-24">
       <Head>
-        <title>Rawier - Contact</title>
+        <title>AISKOA - Contact</title>
         <link rel="shortcut icon" type="image/jpg" href="../favicon.ico" />
         <meta property="og:image"
           content={config.github.url} />
