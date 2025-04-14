@@ -68,3 +68,11 @@
   margin: 1em 0;
   color: #555;
 }
+
+.blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #555;
+  font-style: italic;
+}

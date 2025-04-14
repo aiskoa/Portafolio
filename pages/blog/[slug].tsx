@@ -164,7 +164,7 @@ export default function PostPage({ frontmatter, content }: Props) {
               />
             </div>
             {/* Usamos Tailwind Typography para darle estilos al Markdown */}
-            <div className="max-w-full py-3 mt-3 prose dark:prose-invert">
+            <div className="max-w-4xl p-6 mx-auto my-8 border border-gray-300 rounded-lg">
               <ReactMarkdown
                 remarkPlugins={[gfm]}
                 rehypePlugins={[rehypeSlug]}
