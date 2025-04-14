@@ -2,46 +2,45 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import gfm from 'remark-gfm';
+import gfm from "remark-gfm";
 import Link from "next/link";
 import Head from "next/head";
 import { config } from "../../config";
-import styles from "./post.module.css";
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-import c from 'react-syntax-highlighter/dist/cjs/languages/prism/c';
-import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql';
-import { okaidia } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import php from 'react-syntax-highlighter/dist/cjs/languages/prism/php';
-import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
-import cpp from 'react-syntax-highlighter/dist/cjs/languages/prism/cpp';
-import java from 'react-syntax-highlighter/dist/cjs/languages/prism/java';
-import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml';
-import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
-import batch from 'react-syntax-highlighter/dist/cjs/languages/prism/batch';
-import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
-import ignore from 'react-syntax-highlighter/dist/cjs/languages/prism/ignore';
-import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell';
-import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import c from "react-syntax-highlighter/dist/cjs/languages/prism/c";
+import sql from "react-syntax-highlighter/dist/cjs/languages/prism/sql";
+import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import php from "react-syntax-highlighter/dist/cjs/languages/prism/php";
+import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
+import cpp from "react-syntax-highlighter/dist/cjs/languages/prism/cpp";
+import java from "react-syntax-highlighter/dist/cjs/languages/prism/java";
+import yaml from "react-syntax-highlighter/dist/cjs/languages/prism/yaml";
+import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
+import batch from "react-syntax-highlighter/dist/cjs/languages/prism/batch";
+import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
+import ignore from "react-syntax-highlighter/dist/cjs/languages/prism/ignore";
+import powershell from "react-syntax-highlighter/dist/cjs/languages/prism/powershell";
+import javascript from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { scroller } from "react-scroll";
-import rehypeSlug from 'rehype-slug';
+import rehypeSlug from "rehype-slug";
 
-// Registra el lenguaje Python
-SyntaxHighlighter.registerLanguage('c', c);
-SyntaxHighlighter.registerLanguage('sql', sql);
-SyntaxHighlighter.registerLanguage('php', php);
-SyntaxHighlighter.registerLanguage('jsx', jsx);
-SyntaxHighlighter.registerLanguage('cpp', cpp);
-SyntaxHighlighter.registerLanguage('nx', ignore);
-SyntaxHighlighter.registerLanguage('java', java);
-SyntaxHighlighter.registerLanguage('yaml', yaml);
-SyntaxHighlighter.registerLanguage('bash', bash);
-SyntaxHighlighter.registerLanguage('batch', batch);
-SyntaxHighlighter.registerLanguage('python', python);
-SyntaxHighlighter.registerLanguage('powershell', powershell);
-SyntaxHighlighter.registerLanguage('javascript', javascript);
+// Registra los lenguajes para el resaltado de sintaxis
+SyntaxHighlighter.registerLanguage("c", c);
+SyntaxHighlighter.registerLanguage("sql", sql);
+SyntaxHighlighter.registerLanguage("php", php);
+SyntaxHighlighter.registerLanguage("jsx", jsx);
+SyntaxHighlighter.registerLanguage("cpp", cpp);
+SyntaxHighlighter.registerLanguage("nx", ignore);
+SyntaxHighlighter.registerLanguage("java", java);
+SyntaxHighlighter.registerLanguage("yaml", yaml);
+SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("batch", batch);
+SyntaxHighlighter.registerLanguage("python", python);
+SyntaxHighlighter.registerLanguage("powershell", powershell);
+SyntaxHighlighter.registerLanguage("javascript", javascript);
 
 // Definir el tipo Frontmatter
 interface Frontmatter {
@@ -100,7 +99,7 @@ export default function PostPage({ frontmatter, content }: Props) {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://rawier.vercel.app" />
         <meta property="og:image" content={cover_image} />
-        <meta name="theme-color:" content="#8e52f5"></meta>
+        <meta name="theme-color" content="#8e52f5" />
       </Head>
       <div className="container mx-auto">
         <div className="flex justify-start ml-5 text-center">
@@ -109,68 +108,92 @@ export default function PostPage({ frontmatter, content }: Props) {
               type="button"
               className="me-5 mt-3 inline-block px-6 py-2.5 bg-purple-600 text-white dark:text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-700 hover:shadow-lg focus:bg-yellow-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-800 active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
             >
-              <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m15 19-7-7 7-7"/>
+              <svg
+                className="w-6 h-6 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m15 19-7-7 7-7"
+                />
               </svg>
             </button>
           </Link>
         </div>
-      {/* Contenedor principal */}
-      <div className="container flex flex-col px-4 mx-auto md:px-0 md:flex-row">
-        {/* Índice flotante, oculto en pantallas pequeñas */}
-        <aside className="z-10 hidden w-full p-4 bg-white rounded-lg shadow-lg dark:bg-slate-800 md:block md:fixed md:w-1/4 top-20 right-10">
-          <h3 className="mb-2 font-bold text-center">- - - ÍNDICE - - -</h3>
-          <ul>
-            {headings.map((heading) => (
-              <li key={heading.id}>
-                <button
-                  onClick={() => scrollTo(heading.id)} disabled={heading.id === ""}
-                  className="font-semibold text-blue-500 dark:text-violet-300 hover:underline"
-                >
-                  {heading.text}
-                </button>
-              </li>
-            ))}
-          </ul>
-          <h3 className="mb-2 font-bold text-center">- - - - - - - - - -</h3>
-        </aside>
-        {/* Contenido del post */}
-        <div className={`flex-1 mt-5 md:mt-0 post-content ${styles.markdownContent}`}>
-          <div className="px-2 text-center md:px-0">
-            <h1 className="text-2xl md:text-3xl">{title}</h1>
-            <div className="text-lg md:text-xl">{excerpt}</div>
-            <div className="text-base md:text-xl">{date}</div>
-            <div className="mb-4 text-xs md:text-sm">
-              {tags1}, {tags2}
+        {/* Contenedor principal */}
+        <div className="container flex flex-col px-4 mx-auto md:px-0 md:flex-row">
+          {/* Índice flotante, oculto en pantallas pequeñas */}
+          <aside className="z-10 hidden w-full p-4 bg-white rounded-lg shadow-lg dark:bg-slate-800 md:block md:fixed md:w-1/4 top-20 right-10">
+            <h3 className="mb-2 font-bold text-center">- - - ÍNDICE - - -</h3>
+            <ul>
+              {headings.map((heading) => (
+                <li key={heading.id}>
+                  <button
+                    onClick={() => scrollTo(heading.id)}
+                    disabled={heading.id === ""}
+                    className="font-semibold text-blue-500 dark:text-violet-300 hover:underline"
+                  >
+                    {heading.text}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mb-2 font-bold text-center">- - - - - - - - - -</h3>
+          </aside>
+          {/* Contenido del post */}
+          <div className="flex-1 mt-5 md:mt-0">
+            <div className="px-2 text-center md:px-0">
+              <h1 className="text-2xl md:text-3xl">{title}</h1>
+              <div className="text-lg md:text-xl">{excerpt}</div>
+              <div className="text-base md:text-xl">{date}</div>
+              <div className="mb-4 text-xs md:text-sm">
+                {tags1}, {tags2}
+              </div>
+              <img
+                src={cover_image}
+                alt={alt}
+                className="w-full mx-auto mb-4 md:w-auto"
+              />
             </div>
-            <img src={cover_image} alt={alt} className="w-full mx-auto mb-4 md:w-auto" />
+            {/* Usamos Tailwind Typography para darle estilos al Markdown */}
+            <div className="max-w-full py-3 mt-3 prose dark:prose-invert">
+              <ReactMarkdown
+                remarkPlugins={[gfm]}
+                rehypePlugins={[rehypeSlug]}
+                components={{
+                  blockquote: BlockquoteComponent,
+                  code: CodeComponent,
+                }}
+              >
+                {content}
+              </ReactMarkdown>
+            </div>
           </div>
-          <div className="py-3 mt-3 text-sm md:text-base">
-            <ReactMarkdown
-              remarkPlugins={[gfm]}
-              rehypePlugins={[rehypeSlug]}
-              components={{
-                blockquote: BlockquoteComponent,
-                code: CodeComponent,
-              }}
-            >
-              {content}
-            </ReactMarkdown>
-          </div>
-        </div>
         </div>
       </div>
     </>
   );
 }
 
-// Componente de blockquote
+// Componente de blockquote, utilizando clases de Tailwind
 interface BlockquoteProps {
   children?: React.ReactNode;
 }
 
 const BlockquoteComponent: React.FC<BlockquoteProps> = ({ children }) => {
-  return <blockquote className={styles.blockquote}>{children}</blockquote>;
+  return (
+    <blockquote className="pl-4 my-4 italic text-gray-600 border-l-4 border-gray-300">
+      {children}
+    </blockquote>
+  );
 };
 
 // Define las props para el componente CodeComponent
@@ -202,7 +225,7 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
 
   return !inline && match ? (
     <div style={{ position: "relative" }}>
-      {/* Indicar el lenguaje de programación en la esquina superior izquierda */}
+      {/* Indica el lenguaje en la esquina superior izquierda */}
       <div
         style={{
           position: "absolute",
@@ -234,7 +257,10 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
           {copied ? (
             <span style={{ color: "violet" }}>Copied!</span>
           ) : (
-            <CopyToClipboard text={String(children)} onCopy={() => setCopied(true)}>
+            <CopyToClipboard
+              text={String(children)}
+              onCopy={() => setCopied(true)}
+            >
               <button style={{ cursor: "pointer" }}>Copy</button>
             </CopyToClipboard>
           )}
