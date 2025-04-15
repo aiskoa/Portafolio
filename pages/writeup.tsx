@@ -54,7 +54,7 @@ const WriteUp: NextPage = () => {
   useEffect(() => {
     async function fetchData() {
       // Ajusta la ruta a tu JSON
-      const res = await fetch('/_pr/achines.json');
+      const res = await fetch('/_pr/machines.json');
       const json: Item[] = await res.json();
       setData(json);
     }
@@ -114,8 +114,8 @@ const WriteUp: NextPage = () => {
             draggable="false"
             loading="lazy"
             src="../logo.png"
-            width="90"
-            height="90"
+            width="120"
+            height="120"
             alt="Logo"
           />
         </div>
