@@ -20,6 +20,13 @@ const NotFound: NextPage = (): ReactElement => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const [text, setText] = useState(TARGET_TEXT);
 
+  /**
+   * Función que se encarga de generar un efecto de scramble en el texto que se muestra en pantalla.
+   * La función se encarga de generar un intervalo que se encarga de cambiar el texto cada cierto tiempo.
+   * El texto se va a ir mostrando de forma parcial, es decir, se va a ir mostrando caracter por caracter.
+   * La función se encarga de parar el intervalo cuando se ha mostrado todo el texto.
+   */
+
   const scramble = () => {
     let pos = 0;
 
@@ -94,7 +101,7 @@ const NotFound: NextPage = (): ReactElement => {
                 {t("error_notfound_one")} 
             </h1>
             <p className="mt-4 text-gray-500">
-              Rewind your search, or journey back home to the beginning.
+              {t("error_notfound_two")}
             </p>
             <br />
             <Link href="/" passHref>

@@ -24,5 +24,7 @@
   "faq": "¿Por qué el correo debe tener todo eso? R: Debido al spam y el marketing dirigido, tengo una regla que filtra los correos por lo que puede que se pierda si no cumple con esos requisitos, el asunto es para darle prioridad al correo de lo contrario puede que demore en contestar.",
   "posted_on": "Publicado el",
   "error_notfound_one": "El tiempo se curva, pero esta página sigue perdida.",
-  "projects": "Proyectos"
+  "error_notfound_two": "Rebobina tu búsqueda o viaja de regreso a casa.",
+  "projects": "PROYECTOS",
+  "projectsDesc": "Aquí se muestran algunos de mis proyectos y contribuciones más recientes."
 }

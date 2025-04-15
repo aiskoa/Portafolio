@@ -98,11 +98,11 @@ export default function PostPage({ frontmatter, content }: Props) {
         <title>AISKOA - Blog</title>
         <link rel="shortcut icon" type="image/jpg" href="../favicon.ico" />
         <meta name="description" content={excerpt} />
-        <meta property="og:site_name" content="Rawier Cybersecurity" />
+        <meta property="og:site_name" content="AISKOA Cybersecurity" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content={excerpt} />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="https://rawier.vercel.app" />
+        <meta property="og:url" content="https://aiskoa.vercel.app" />
         <meta property="og:image" content={cover_image} />
         <meta name="theme-color" content="#8e52f5" />
       </Head>

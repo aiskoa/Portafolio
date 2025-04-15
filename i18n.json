@@ -8,6 +8,7 @@
       "/blog": ["index"],
       "/contact": ["index"],
       "/portfolio": ["index"],
+      "/writeup": ["index"],
       "/404": ["index"],
       "/blog/[slug]": ["index"]
     }

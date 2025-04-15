@@ -185,12 +185,12 @@ const About: React.FC = (): ReactElement => {
               <span>{t("button_blog")}</span>
             </button>
           </Link>
-          <Link href="/skills" passHref>
+          <Link href="/writeup" passHref>
             <button
               type="button"
               className="mt-2 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-black active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
             >
-              <span>{t("button_skills")}</span>
+              <span>MACHINES</span>
             </button>
           </Link>
         </div>

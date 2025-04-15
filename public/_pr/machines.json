@@ -1,0 +1,13 @@
+[
+    {
+        "title": "Write Up - Blue",
+        "platform": "TruHackMe",
+        "os": "Windows",
+        "difficulty": "Easy",
+        "image": "https://i.ibb.co/G26jRx3/blue.png",
+        "altText": "EternalBlue, MS17-010",
+        "githubLink": "https://github.com/aiskoa/Cler",
+        "description": "Blue is a machine with a vulnerability in the 445 protocol SMB. EternalBlue allows remote code execution that was discovered in [MS17-010].",
+        "GoToLink": "https://aiskoa.vercel.app/blog/blue/"
+    }
+]
