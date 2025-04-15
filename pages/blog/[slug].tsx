@@ -3,6 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
+import remarkMath from "remark-math"; // Nuevo: Soporte para fórmulas matemáticas
+import rehypeKatex from "rehype-katex"; // Nuevo: Renderizado de las fórmulas con KaTeX
+import rehypeSlug from "rehype-slug";
 import Link from "next/link";
 import Head from "next/head";
 import { config } from "../../config";
@@ -25,7 +28,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { scroller } from "react-scroll";
-import rehypeSlug from "rehype-slug";
 
 // Registra los lenguajes para el resaltado de sintaxis
 SyntaxHighlighter.registerLanguage("c", c);
@@ -67,7 +69,7 @@ interface Heading {
 
 export default function PostPage({ frontmatter, content }: Props) {
   const { title, date, cover_image, alt, excerpt, tags1, tags2 } = frontmatter;
-  const router = useRouter(); // Inicializar el hook useRouter
+  const router = useRouter();
 
   const [headings, setHeadings] = useState<Heading[]>([]);
 
@@ -130,7 +132,7 @@ export default function PostPage({ frontmatter, content }: Props) {
         </div>
         {/* Contenedor principal */}
         <div className="container flex flex-col px-4 mx-auto md:px-0 md:flex-row">
-          {/* Índice flotante, oculto en pantallas pequeñas */}
+          {/* Índice flotante */}
           <aside className="z-10 hidden w-full p-4 bg-white rounded-lg shadow-lg dark:bg-slate-800 md:block md:fixed md:w-1/4 top-20 right-10">
             <h3 className="mb-2 font-bold text-center">- - - ÍNDICE - - -</h3>
             <ul>
@@ -163,12 +165,12 @@ export default function PostPage({ frontmatter, content }: Props) {
                 className="w-full mx-auto mb-4 md:w-auto"
               />
             </div>
-            {/* Usamos Tailwind Typography para darle estilos al Markdown */}
+            {/* Contenedor con borde y estilos para mostrar el contenido Markdown */}
             <div className="max-w-4xl p-6 mx-auto my-8 border border-gray-300 rounded-lg">
               <div className="prose prose-lg dark:prose-invert">
                 <ReactMarkdown
-                  remarkPlugins={[gfm]}
-                  rehypePlugins={[rehypeSlug]}
+                  remarkPlugins={[gfm, remarkMath]} // Se añade remarkMath para fórmulas
+                  rehypePlugins={[rehypeSlug, rehypeKatex]} // Se añade rehypeKatex para renderizado de fórmulas
                   components={{
                     blockquote: BlockquoteComponent,
                     code: CodeComponent,
@@ -185,7 +187,7 @@ export default function PostPage({ frontmatter, content }: Props) {
   );
 }
 
-// Componente de blockquote, utilizando clases de Tailwind
+// Componente de blockquote con Tailwind
 interface BlockquoteProps {
   children?: React.ReactNode;
 }
@@ -198,7 +200,7 @@ const BlockquoteComponent: React.FC<BlockquoteProps> = ({ children }) => {
   );
 };
 
-// Define las props para el componente CodeComponent
+// Componente para el resaltado de código
 interface CodeComponentProps {
   inline?: boolean;
   className?: string;
@@ -227,7 +229,6 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
 
   return !inline && match ? (
     <div style={{ position: "relative" }}>
-      {/* Indica el lenguaje en la esquina superior izquierda */}
       <div
         style={{
           position: "absolute",
@@ -244,7 +245,6 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
         #{language.toUpperCase()}
       </div>
       <div style={{ position: "relative" }}>
-        {/* Botón de copiar en la esquina superior derecha */}
         <div
           style={{
             position: "absolute",
@@ -267,7 +267,6 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
             </CopyToClipboard>
           )}
         </div>
-        {/* Componente de resaltado de sintaxis */}
         <SyntaxHighlighter language={language} style={okaidia}>
           {String(children)}
         </SyntaxHighlighter>
@@ -280,7 +279,6 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
   );
 };
 
-// Definir el tipo para los parámetros en getStaticPaths y getStaticProps
 interface Params {
   slug: string;
 }
