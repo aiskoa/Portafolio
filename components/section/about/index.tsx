@@ -86,7 +86,7 @@ const About: React.FC = (): ReactElement => {
         { key: "nginx", text: "Nginx", icon: <SiNginx size={16} className="text-gray-800 dark:text-gray-100"/> },
         { key: "notion", text: "Notion", icon: <SiNotion size={16} className="text-gray-800 dark:text-gray-100"/> },
         { key: "ubuntu", text: "Ubuntu", icon: <SiUbuntu size={16} className="text-gray-800 dark:text-gray-100"/> },
-        { key: "vscode", text: "Visual Studio Code", icon: <SiVisualstudiocode size={16} className="text-gray-800 dark:text-gray-100"/> },
+        { key: "vscode", text: "VSCode", icon: <SiVisualstudiocode size={16} className="text-gray-800 dark:text-gray-100"/> },
         { key: "kalilinux", text: "Kali Linux", icon: <SiKalilinux size={16} className="text-gray-800 dark:text-gray-100"/> },
         { key: "vmware", text: "VMware", icon: <SiVmware size={16} className="text-gray-800 dark:text-gray-100"/> },
       ],
@@ -173,12 +173,12 @@ const About: React.FC = (): ReactElement => {
           </div>
         </div>
         <div className="flex flex-row justify-center space-x-2 md:justify-center lg:justify-start xsm:justify-center sm:justify-center">
-          <Link href="/skills" passHref>
+          <Link href="/contact" passHref>
             <button
               type="button"
-              className="mt-2 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-black active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
+              className="mt-2 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-700 active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
             >
-              <span>{t("button_skills")}</span>
+              <span>{t("me")}</span>
             </button>
           </Link>
           <Link href="/blog" passHref>
@@ -189,12 +189,12 @@ const About: React.FC = (): ReactElement => {
               <span>{t("button_blog")}</span>
             </button>
           </Link>
-          <Link href="/contact" passHref>
+          <Link href="/skills" passHref>
             <button
               type="button"
-              className="mt-2 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-700 active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
+              className="mt-2 inline-block px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-black active:shadow-lg transition duration-150 ease-in-out dark:bg-purple-600 dark:hover:bg-purple-700 dark:active:bg-purple-800 dark:focus:bg-purple-700"
             >
-              <span>{t("me")}</span>
+              <span>{t("button_skills")}</span>
             </button>
           </Link>
         </div>
