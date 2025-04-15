@@ -12,7 +12,7 @@ import { config } from "../../config";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import c from "react-syntax-highlighter/dist/cjs/languages/prism/c";
 import sql from "react-syntax-highlighter/dist/cjs/languages/prism/sql";
-import { okaidia } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import php from "react-syntax-highlighter/dist/cjs/languages/prism/php";
 import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
 import cpp from "react-syntax-highlighter/dist/cjs/languages/prism/cpp";
@@ -280,7 +280,7 @@ const CodeComponent: React.FC<CodeComponentProps> = ({
             </CopyToClipboard>
           )}
         </div>
-        <SyntaxHighlighter language={language} style={okaidia}>
+        <SyntaxHighlighter showLineNumbers={true} language={language} style={oneDark}>
           {String(children)}
         </SyntaxHighlighter>
       </div>

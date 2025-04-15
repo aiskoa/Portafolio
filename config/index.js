@@ -4,8 +4,8 @@ export var config = {
     },
     socials: {
         twitter: "https://twitter.com/Rawierdt",
-        linkedin: "https://www.linkedin.com/in/rawier/",
-        github: "https://github.com/Rawierdt",
+        linkedin: "https://www.linkedin.com/in/aiskoa/",
+        github: "https://github.com/aiskoa",
         codewars: "https://www.codewars.com/users/Rawier",
         platzi: "https://platzi.com/p/alejandro-aguilar74/",
         steam: "https://steamcommunity.com/id/NexDrak",
