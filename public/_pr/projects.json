@@ -6,11 +6,11 @@
         "date": "Oct 12, 2024",
         "image": "https://i.ibb.co/G26jRx3/cler4.png",
         "altText": "Cler Version 4",
-        "githubLink": "https://github.com/Rawierdt/Cler",
+        "githubLink": "https://github.com/aiskoa/Cler",
         "description1": "Discord bot, using PostgreSQL and API.",
         "description2": "Most powerful open source discord bot, PostgreSQL, MegaDB and Endpoints, AI GPT, API's, Birthdays, Context, and more, using for moderation, utility and fun.",
-        "readMoreLink": "https://rawier.vercel.app/es/blog/cler40",
-        "GoToLink": "https://rawierdt.github.io/Cler-page/"
+        "readMoreLink": "https://aiskoa.vercel.app/es/blog/cler40",
+        "GoToLink": "https://aiskoa.github.io/Cler-page/"
     },
     {
         "title": "PassPai",
@@ -19,11 +19,11 @@
         "date": "Sep 08, 2024",
         "image": "https://i.ibb.co/ww4KC6D/pasppai-image.png",
         "altText": "Passpai Tool",
-        "githubLink": "https://github.com/Rawierdt/PassPai",
+        "githubLink": "https://github.com/aiskoa/PassPai",
         "description1": "Password Generator and Manager Local Files.",
         "description2": "Open source password generation and management tool that allows the generation of secure passwords thanks to AES-256 encryption, only remeber one password, no more.",
-        "readMoreLink": "https://rawier.vercel.app/es/blog/passpai",
-        "GoToLink": "https://rawierdt.github.io/PassPai/"
+        "readMoreLink": "https://aiskoa.vercel.app/es/blog/passpai",
+        "GoToLink": "https://aiskoa.github.io/PassPai/"
     },
     {
         "title": "GIE-UI",
@@ -32,11 +32,11 @@
         "date": "Apr 29, 2024",
         "image": "https://i.ibb.co/pftNQN9/gui-image.jpg",
         "altText": "Gie Tool",
-        "githubLink": "https://github.com/Rawierdt/GIE-UI",
+        "githubLink": "https://github.com/aiskoa/GIE-UI",
         "description1": "An Encryption and Decryption Tool with UI.",
         "description2": "Encrypt and Decrypt for any files and folders for Windows, written in Python using AES, for any file, jpg, png, mp4, mp3, docx, pdf, etc, and folders or subfolders.",
-        "readMoreLink": "https://rawier.vercel.app/es/blog/gieui",
-        "GoToLink": "https://rawierdt.github.io/scripts/GIE/"
+        "readMoreLink": "https://aiskoa.vercel.app/es/blog/gieui",
+        "GoToLink": "https://aiskoa.github.io/scripts/GIE/"
     },
     {
         "title": "GIE",
