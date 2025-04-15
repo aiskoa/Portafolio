@@ -169,7 +169,7 @@ export default function PostPage({ frontmatter, content }: Props) {
               />
             </div>
             {/* Contenedor con borde y estilos para mostrar el contenido Markdown */}
-            <div className="max-w-4xl p-6 mx-auto my-8 border-gray-900 flex-column rounded-2xl dark:hover:border-purple-700 hover:border-blue-700 dark:border-white">
+            <div className="max-w-4xl p-6 mx-auto my-8 border-2 border-gray-900 flex-column rounded-2xl dark:hover:border-purple-700 hover:border-blue-700 dark:border-white">
             <div className="prose prose-lg dark:prose-invert">
               <ReactMarkdown
                 remarkPlugins={[gfm, remarkMath]}

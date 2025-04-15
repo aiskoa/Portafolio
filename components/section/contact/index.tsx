@@ -91,7 +91,7 @@ import { config } from "../../../config";
             />
           </div>
         </div>
-        {/* <h2 className="ml-5 text-2xl">{t("contact")}</h2> */}
+        <h2 className="ml-5 text-2xl">{t("contact")}</h2>
         <div>
           <noscript>
             <h1>
@@ -109,12 +109,6 @@ import { config } from "../../../config";
               {/* Aquí puedes añadir un icono SI debajo de la imagen */}
               <SiHackthebox size={24} className="mt-1" />
               <p className="text-sm text-center">Descripción opcional</p>
-            </div>
-            <br />
-            <div className="flex flex-col items-center justify-around hover:justify-evenly">
-              <img className="mb-1 pointer-events-none focus:pointer-events-auto" draggable="false" loading="lazy" src="https://avatarfiles.alphacoders.com/336/336559.png" width="300"></img>
-              <SiCisco size={24} className="mt-1" />
-              <p className="text-sm text-center">Otra descripción</p>
             </div>
             <br />
             <p className="flex select-none justify-evenly cursor-no-drop">{t("text_mail")}</p>
