@@ -28,6 +28,9 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { scroller } from "react-scroll";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+import "katex/dist/katex.min.css";
 
 // Registra los lenguajes para el resaltado de sintaxis
 SyntaxHighlighter.registerLanguage("c", c);
@@ -92,7 +95,7 @@ export default function PostPage({ frontmatter, content }: Props) {
   return (
     <>
       <Head>
-        <title>Rawier - Blog</title>
+        <title>AISKOA - Blog</title>
         <link rel="shortcut icon" type="image/jpg" href="../favicon.ico" />
         <meta name="description" content={excerpt} />
         <meta property="og:site_name" content="Rawier Cybersecurity" />
@@ -167,18 +170,20 @@ export default function PostPage({ frontmatter, content }: Props) {
             </div>
             {/* Contenedor con borde y estilos para mostrar el contenido Markdown */}
             <div className="max-w-4xl p-6 mx-auto my-8 border border-gray-300 rounded-lg">
-              <div className="prose prose-lg dark:prose-invert">
-                <ReactMarkdown
-                  remarkPlugins={[gfm, remarkMath]} // Se añade remarkMath para fórmulas
-                  rehypePlugins={[rehypeSlug, rehypeKatex]} // Se añade rehypeKatex para renderizado de fórmulas
-                  components={{
-                    blockquote: BlockquoteComponent,
-                    code: CodeComponent,
-                  }}
-                >
-                  {content}
-                </ReactMarkdown>
-              </div>
+            <div className="prose prose-lg dark:prose-invert">
+              <ReactMarkdown
+                remarkPlugins={[gfm, remarkMath]}
+                rehypePlugins={[rehypeSlug, rehypeKatex]}
+                components={{
+                  // Cambia el renderizado de las imágenes
+                  img: MarkdownImage,
+                  blockquote: BlockquoteComponent,
+                  code: CodeComponent,
+                }}
+              >
+                {content}
+              </ReactMarkdown>
+            </div>
             </div>
           </div>
         </div>
@@ -186,6 +191,14 @@ export default function PostPage({ frontmatter, content }: Props) {
     </>
   );
 }
+
+const MarkdownImage: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (props) => {
+  return (
+    <Zoom>
+      <img {...props} alt={props.alt || 'Imagen'} />
+    </Zoom>
+  );
+};
 
 // Componente de blockquote con Tailwind
 interface BlockquoteProps {
