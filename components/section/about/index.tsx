@@ -104,19 +104,6 @@ const About: React.FC = (): ReactElement => {
 
         {/* Sección de Skills integrada */}
         <div className="mt-10">
-          <div className="flex justify-center place-items-center">
-            <div className="flex-shrink-0 mb-10 lg:mt-12 lg:px-4" draggable="false">
-              <Image
-                src={config.github.url}
-                alt="Profile"
-                priority={true}
-                className="rounded-full"
-                draggable="false"
-                width={250}
-                height={250}
-              />
-            </div>
-          </div>
           <h2 className="ml-5 text-2xl">{t("skills")}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4">
             <Box
