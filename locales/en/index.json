@@ -23,6 +23,6 @@
   "contact": "About Me",
   "faq": "Why the mail must have all that? A: Because of spam and targeted marketing, I have a rule that filters the mails so it may get lost if it does not meet those requirements, the issue is to prioritize the mail otherwise it may take a long time to reply.",
   "posted_on": "Posted on",
-  "404": "This page doesn't available",
+  "error_notfound_one": "Time bends, but this page remains lost.",
   "projects": "Projects"
 }

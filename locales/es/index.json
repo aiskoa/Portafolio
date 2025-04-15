@@ -23,6 +23,6 @@
   "contact": "Sobre Mi",
   "faq": "¿Por qué el correo debe tener todo eso? R: Debido al spam y el marketing dirigido, tengo una regla que filtra los correos por lo que puede que se pierda si no cumple con esos requisitos, el asunto es para darle prioridad al correo de lo contrario puede que demore en contestar.",
   "posted_on": "Publicado el",
-  "404": "Esta pagina no esta disponible",
+  "error_notfound_one": "El tiempo se curva, pero esta página sigue perdida.",
   "projects": "Proyectos"
 }
