@@ -198,37 +198,40 @@ const About: React.FC = (): ReactElement => {
             </button>
           </Link>
         </div>
-  
-        {/* Sección de Skills como etiquetas */}
-        <div className="mt-10">
-          <h2 className="text-xl text-center">{t("skills")}</h2>
-          <div className="ml-5">
-            {skillsData.map((category) => (
-              <div key={category.title} className="mb-4">
-                <h3 className="font-semibold">{category.title}</h3>
-                <div className="flex flex-wrap gap-2 mt-1">
+      {/* Sección de Skills como etiquetas */}
+      <div className="mt-10">
+        <h2 className="text-xl text-center">{t("skills")}</h2>
+        <div className="ml-5">
+          {skillsData.map((category) => (
+            <div key={category.title} className="mb-4">
+              <h3 className="font-semibold">{category.title}</h3>
+              <div className="flex flex-wrap gap-2 mt-1">
                 {category.icons.map((skill) => (
                   <Tooltip
                     key={skill.key}
                     placement="top"
-                    className="mt-0.3 p-1 bg-gray-800 text-white text-xs rounded animate-fadeIn"
+                    className="mt-0.5 p-1 bg-gray-800 text-white text-xs rounded animate-fadeIn"
                     content={skill.text}
-                    // Añade las propiedades faltantes
                     nonce=""
                     onResize={() => {}}
                     onResizeCapture={() => {}}
                   >
-                    <span className="inline-flex items-center rounded-full bg-gray-200 text-gray-800 text-xs py-0.5 px-2">
+                    <span
+                      className="inline-flex items-center rounded-full
+                                bg-gray-200 text-gray-800
+                                dark:bg-gray-700 dark:text-gray-100
+                                text-xs py-0.5 px-2 transition-colors duration-300"
+                    >
                       {skill.icon}
                       <span className="ml-1">{skill.text}</span>
                     </span>
                   </Tooltip>
                 ))}
-                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+      </div>
       </div>
     </div>
   );
