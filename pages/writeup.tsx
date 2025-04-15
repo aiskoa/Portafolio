@@ -7,11 +7,9 @@ import useTranslation from "next-translate/useTranslation";
  * IMPORTS DE ICONOS
  * Ajusta según los íconos que desees usar:
  */
-import { SiTryhackme, SiHackthebox, SiWindows11 } from "react-icons/si";
+import { SiTryhackme, SiHackthebox, SiWindows11, SiApple, SiRootme, SiAndroid } from "react-icons/si";
 import { FaLinux, FaLink } from "react-icons/fa";
-
-// Si quisieras reutilizar tu componente SkillsIcon (o cualquier otro):
-//import { SkillsIcon } from "../components/skills-icon";
+import { MdSignalCellular0Bar, MdSignalCellular1Bar, MdSignalCellular3Bar, MdSignalCellular4Bar } from "react-icons/md";
 
 interface Item {
   title: string;
@@ -33,7 +31,7 @@ function getPlatformIcon(platform: string) {
   const p = platform.toLowerCase();
   if (p === "tryhackme") return <SiTryhackme className="inline-block w-4 h-4 mr-1" />;
   if (p === "hackthebox") return <SiHackthebox className="inline-block w-4 h-4 mr-1" />;
-  // Si deseas más íconos, añade más condiciones...
+  if (p === "rootme") return <SiRootme className="inline-block w-4 h-4 mr-1" />;
   return null;
 }
 
@@ -41,7 +39,17 @@ function getOsIcon(os: string) {
   const o = os.toLowerCase();
   if (o === "windows") return <SiWindows11 className="inline-block w-4 h-4 mr-1" />;
   if (o === "linux") return <FaLinux className="inline-block w-4 h-4 mr-1" />;
-  // Agrega más íconos para macOS, Android, etc...
+  if (o === "linux") return <SiAndroid className="inline-block w-4 h-4 mr-1" />;
+  if (o === "macos") return <SiApple className="inline-block w-4 h-4 mr-1" />;
+  return null;
+}
+
+function getDifficultyIcon(difficulty: string) {
+  const d = difficulty.toLowerCase();
+  if (d === "none") return <MdSignalCellular0Bar className="inline-block w-4 h-4 mr-1" />;
+  if (d === "easy") return <MdSignalCellular1Bar className="inline-block w-4 h-4 mr-1" />;
+  if (d === "medium") return <MdSignalCellular3Bar className="inline-block w-4 h-4 mr-1" />;
+  if (d === "hard") return <MdSignalCellular4Bar className="inline-block w-4 h-4 mr-1" />;
   return null;
 }
 
@@ -238,7 +246,8 @@ const WriteUp: NextPage = () => {
                       title="Dificultad"
                       className="px-2 py-1 text-xs text-gray-800 border border-gray-400 rounded-md dark:text-gray-200"
                     >
-                      {item.difficulty}
+                      {getDifficultyIcon(item.difficulty)}
+                      <span>{item.difficulty}</span>
                     </button>
                   </div>
 
