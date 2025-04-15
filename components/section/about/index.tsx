@@ -100,20 +100,22 @@ const About: React.FC = (): ReactElement => {
         { key: "azure", text: "Azure", icon: <SiMicrosoftazure size={16}/> }, 
         { key: "aws", text: "AWS", icon: <SiAmazonaws size={16}/> },
         { key: "cloudflare", text: "Cloudflare", icon: <SiCloudflare size={16} /> },
+        { key: "cisco", text: "Cisco", icon: <SiCisco size={16}/> },
         { key: "github", text: "GitHub", icon: <SiGithub size={16}/> },
         { key: "mongodb", text: "MongoDB", icon: <SiMongodb size={16}/> },
         { key: "mysql", text: "MySQL", icon: <SiMysql size={16} /> },
         { key: "postgresql", text: "PostgreSQL", icon: <SiPostgresql size={16}/> },
         { key: "ovh", text: "OVH", icon: <SiOvh size={16}/> },
+        { key: "vercel", text: "Vercel", icon: <SiVercel size={16}/> },
       ],
     },
-    {
-      title: "Hardware",
-      icons: [
-        { key: "bluetooth", text: "Bluetooth", icon: <SiBluetooth size={16}/> },
-        { key: "raspberrypi", text: "Raspberrypi", icon: <SiRaspberrypi size={16}/> },
-      ],
-    },
+    // {
+    //   title: "Hardware",
+    //   icons: [
+    //     { key: "bluetooth", text: "Bluetooth", icon: <SiBluetooth size={16}/> },
+    //     { key: "raspberrypi", text: "Raspberrypi", icon: <SiRaspberrypi size={16}/> },
+    //   ],
+    // },
   ];
 
   return (

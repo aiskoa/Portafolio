@@ -14,6 +14,14 @@ tags2: "Tools"
 
 It is a small tool that displays data from a web site or ip entered.
 
+$$
+\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
+$$
+
+La famosa ecuación es $E=mc^2$ y muestra la equivalencia entre masa y energía.
+
+### Code
+
 ```javascript
 import socket
 import requests
