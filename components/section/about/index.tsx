@@ -3,28 +3,18 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import { config } from "../../../config/index";
 import Link from "next/link";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-// import Typewriter from 'typewriter-effect';
-
-// const TypewriterEffect = () => {
-//   return (
-//     <Typewriter
-//       options={{
-//         strings: ['¡Hola, mundo!', 'cat low_performance.txt > /dev/null', 'Hello World!','sudo rm -rf bad_results', 'здравствую'],
-//         autoStart: true,
-//         loop: true,
-//       }}
-//       onInit={(typewriter) => {
-//         typewriter.callFunction(() => {
-//           const element = document.querySelector('.Typewriter__wrapper');
-//           if (element) {
-//             element.classList.add('font-bold', 'text-xl'); // Clases de Tailwind CSS
-//           }
-//         });
-//       }}
-//     />
-//   );
-// };
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Box from "../../common/box";
+import {
+  SiReact, SiNextdotjs,
+  SiNodedotjs, SiVercel, SiGnubash, SiPython, SiMysql, SiKalilinux,
+  SiMicrosoftazure, SiPlatzi, SiUdemy, SiLinkedin, SiTwitter,
+  SiDiscord, SiJavascript, SiMicrosoftsqlserver, SiCisco,
+  SiFigma, SiPhp, SiMicrosoft, SiGit, SiSqlite, SiCplusplus,
+  SiPostgresql,
+  SiCloudflare,
+} from "react-icons/si";
+import { SkillsIcon } from "../..";
 
 const About: React.FC = (): ReactElement => {
   const { t } = useTranslation("index");
@@ -72,9 +62,6 @@ const About: React.FC = (): ReactElement => {
             </div>
             <div className="mt-6 text-gray-800 dark:text-white">
               <p className="mb-4 select-none">{t("about-me")}</p>
-
-              {/* <TypewriterEffect/> */}
-              
             </div>
           </div>
           <div className="flex-shrink-0 mx-auto mb-10 pointer-events-none focus:pointer-events-auto lg:mt-12 lg:px-4" draggable="false">
@@ -113,6 +100,105 @@ const About: React.FC = (): ReactElement => {
               <span>{t("me")}</span>
             </button>
           </Link>
+        </div>
+
+        {/* Sección de Skills integrada */}
+        <div className="mt-10">
+          <div className="flex justify-center place-items-center">
+            <div className="flex-shrink-0 mb-10 lg:mt-12 lg:px-4" draggable="false">
+              <Image
+                src={config.github.url}
+                alt="Profile"
+                priority={true}
+                className="rounded-full"
+                draggable="false"
+                width={250}
+                height={250}
+              />
+            </div>
+          </div>
+          <h2 className="ml-5 text-2xl">{t("skills")}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            <Box
+              title={t("languages")}
+              icons={[
+                <SkillsIcon key={"javascript"} text="Javascript" children={<SiJavascript />} />,
+                <SkillsIcon key={"python"} text="Python" children={<SiPython />} />,
+                <SkillsIcon key={"cplusplus"} text="C++" children={<SiCplusplus />} />,
+              ]}
+            />
+            <Box
+              title="Frontend"
+              icons={[
+                <SkillsIcon key={"react"} text="React" children={<SiReact />} />,
+                <SkillsIcon key={"next"} text="Nextjs" children={<SiNextdotjs />} />,
+                <SkillsIcon key={"figma"} text="Figma" children={<SiFigma />} />,
+              ]}
+            />
+            <Box
+              title="Backend"
+              icons={[
+                <SkillsIcon key={"node"} text="Nodejs" children={<SiNodedotjs />} />,
+                <SkillsIcon key={"php"} text="PHP" children={<SiPhp />} />,
+                <SkillsIcon key={"sql"} text="SQL" children={<SiSqlite />} />,
+              ]}
+            />
+            <Box
+              title="DBs"
+              icons={[
+                <SkillsIcon key={"postgreSQL"} text="PostgreSQL" children={<SiPostgresql />} />,
+                <SkillsIcon key={"sqlServer"} text="SQL Server" children={<SiMicrosoftsqlserver />} />,
+                <SkillsIcon key={"mysql"} text="MySQL" children={<SiMysql />} />,
+              ]}
+            />
+            <Box
+              title={t("other")}
+              icons={[
+                <SkillsIcon key={"kali"} text="Kali Linux" children={<SiKalilinux />} />,
+                // <SkillsIcon text="Docker" children={<SiDocker />} />,
+                <SkillsIcon key={"git"} text="Git" children={<SiGit />} />,
+                <SkillsIcon key={"bash"} text="Bash" children={<SiGnubash />} />,
+              ]}
+            />
+            <Box
+              title={t("cloud")}
+              icons={[
+                // <SkillsIcon text="Heroku" children={<SiHeroku />} />,
+                <SkillsIcon key={"vercel"} text="Vercel" children={<SiVercel />} />,
+                <SkillsIcon key={"azure"} text="Azure" children={<SiMicrosoftazure />} />,
+                <SkillsIcon key={"cisco"} text="Cisco" children={<SiCloudflare />} />,
+              ]}
+            />
+            <Box
+              title={t("education")}
+              icons={[
+                <a key="microsoft" href="https://www.linkedin.com/groups/14079083/">
+                  <SkillsIcon text="MS Aleph" children={<SiMicrosoft />} />
+                </a>,
+                <a key="platzi" href="https://platzi.com/p/alejandro-aguilar74/">
+                  <SkillsIcon text="PLatzi" children={<SiPlatzi />} />
+                </a>,
+                <a key="udemy" href="https://www.udemy.com/user/alejandro-aguilar-120/">
+                  <SkillsIcon text="Udemy" children={<SiUdemy />} />
+                </a>,
+              ]}
+            />
+            <Box
+              title={t("comunication")}
+              icons={[
+                <a key="discord" href="https://discord.com/users/1035181000872951838">
+                  <SkillsIcon text="Discord" children={<SiDiscord />} />
+                </a>,
+                <a key="twitter" href="https://twitter.com/Rawierdt">
+                  <SkillsIcon text="X" children={<SiTwitter />} />
+                </a>,
+                <a key="linkedin" href="https://www.linkedin.com/in/rawier/">
+                  <SkillsIcon text="Linkedin" children={<SiLinkedin />} />
+                </a>,
+              ]}
+            />
+            {/* 𝕽♛ */}
+          </div>
         </div>
       </div>
     </div>
