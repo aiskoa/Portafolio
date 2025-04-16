@@ -47,7 +47,7 @@ function getProgrammingIcon(p_Language: string) {
     rust: <SiGnubash className="inline-block w-4 h-4 mr-1" />,
     tailwindcss: <SiTailwindcss className="inline-block w-4 h-4 mr-1" />,
     cpp: <SiCplusplus className="inline-block w-4 h-4 mr-1" />,
-    postgresq: <SiPostgresql className="inline-block w-4 h-4 mr-1" />
+    postgresql: <SiPostgresql className="inline-block w-4 h-4 mr-1" />
   };
 
   const l = p_Language.toLowerCase();
@@ -74,7 +74,7 @@ function getProgrammingIcon2(p_Language2: string) {
     rust: <SiGnubash className="inline-block w-4 h-4 mr-1" />,
     tailwindcss: <SiTailwindcss className="inline-block w-4 h-4 mr-1" />,
     cpp: <SiCplusplus className="inline-block w-4 h-4 mr-1" />,
-    postgresq: <SiPostgresql className="inline-block w-4 h-4 mr-1" />
+    postgresql: <SiPostgresql className="inline-block w-4 h-4 mr-1" />
   };
 
   const l = p_Language2.toLowerCase();
