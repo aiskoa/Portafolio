@@ -4,6 +4,9 @@ import Head from 'next/head'
 import useTranslation from "next-translate/useTranslation";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+import { SiAstro, SiElectron, SiGnubash, SiHtml5, SiJavascript, SiLinux, SiPhp, SiPowershell, SiPython, SiReact, SiSqlite, SiTypescript } from "react-icons/si";
+import { FaLinux, FaLink, FaJava } from "react-icons/fa";
+
 interface Item {
   title: string;
   language: string;
@@ -16,6 +19,24 @@ interface Item {
   description2: string;
   readMoreLink: string;
   GoToLink: string;
+}
+
+function getProgrammingIcon(os: string) {
+  const l = os.toLowerCase();
+  if (l === "javascript") return <SiJavascript className="inline-block w-4 h-4 mr-1" />;
+  if (l === "java") return <FaJava className="inline-block w-4 h-4 mr-1" />;
+  if (l === "python") return <SiPython className="inline-block w-4 h-4 mr-1" />;
+  if (l === "html") return <SiHtml5 className="inline-block w-4 h-4 mr-1" />;
+  if (l === "electron") return <SiElectron className="inline-block w-4 h-4 mr-1" />;
+  if (l === "react") return <SiReact className="inline-block w-4 h-4 mr-1" />;
+  if (l === "bash") return <SiGnubash className="inline-block w-4 h-4 mr-1" />;
+  if (l === "typescript") return <SiTypescript className="inline-block w-4 h-4 mr-1" />;
+  if (l === "astro") return <SiAstro className="inline-block w-4 h-4 mr-1" />;
+  if (l === "linux") return <SiLinux className="inline-block w-4 h-4 mr-1" />;
+  if (l === "sql") return <SiSqlite className="inline-block w-4 h-4 mr-1" />;
+  if (l === "powershell") return <SiPowershell className="inline-block w-4 h-4 mr-1" />;
+  if (l === "php") return <SiPhp className="inline-block w-4 h-4 mr-1" />;
+  return null;
 }
 
 const Portfolio: NextPage = () => {
@@ -173,13 +194,24 @@ const Portfolio: NextPage = () => {
                   </div>
                   <span className="block mt-1 text-xs font-bold text-gray-500 dark:text-gray-400">
                     <div className="flex items-center">
-                    <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500 border-l-zinc-400">
+                    {/* <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500 border-l-zinc-400">
                       <span className="flex-grow text-xs">{item.language}</span>
+                    </button> */}
+
+                    <button
+                      title="Sistema Operativo"
+                      className="flex items-center px-2 py-1 text-xs text-gray-800 border border-gray-400 rounded-md dark:text-gray-200"
+                    >
+                      {getProgrammingIcon(item.language)}
+                      <span>{item.language}</span>
                     </button>
+
                     <span className="inline-block mx-1"></span>
+                    
                     <button title="Badge" className="flex items-center p-1 border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500 border-l-zinc-400">
                       <span className="flex-grow text-xs">{item.language2}</span>
                     </button>
+
                   </div>
                   </span>
                   <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
