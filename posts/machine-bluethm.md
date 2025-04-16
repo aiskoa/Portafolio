@@ -2,7 +2,7 @@
 title: "[🇺🇸] [WriteUp] - Blue (TryHackMe)"
 excerpt: "Exploraremos PNET!"
 date: "Mar 1 2025"
-cover_image: "/blog/pnet.webp"
+cover_image: "/blog/bluethm.webp"
 alt: "Cibersec 4"
 tags1: "Helpdesk"
 tags2: "Hacking"
