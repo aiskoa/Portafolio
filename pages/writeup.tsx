@@ -252,7 +252,7 @@ const WriteUp: NextPage = () => {
                   <div className="flex justify-between mt-4">
                     <button
                       type="button"
-                      onClick={() => window.open(item.GoToLink, '_blank')}
+                      onClick={() => window.open(item.GoToLink, "_self")}
                       className="px-4 py-2 text-sm font-medium border rounded-md text-lime-400 bg-lime-900 border-lime-400 hover:brightness-110"
                     >
                       Read More

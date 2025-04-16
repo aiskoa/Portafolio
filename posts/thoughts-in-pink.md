@@ -5,7 +5,7 @@ date: "Mar 21 2024"
 cover_image: "/blog/thoinpink.webp"
 alt: "IRL N1"
 tags1: "IRL"
-tags2: "Mental Health"
+tags2: "Mental"
 ---
 
 # Hi there! 👋, this is the first publish as a life blog.
