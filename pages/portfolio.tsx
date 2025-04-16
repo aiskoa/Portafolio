@@ -53,6 +53,32 @@ function getProgrammingIcon(p_Language: string) {
   return icons[l] || null;
 }
 
+function getProgrammingIcon2(p_Language2: string) {
+  const icons: Record<string, JSX.Element> = {
+    javascript: <SiJavascript className="inline-block w-4 h-4 mr-1" />,
+    java: <FaJava className="inline-block w-4 h-4 mr-1" />,
+    python: <SiPython className="inline-block w-4 h-4 mr-1" />,
+    html: <SiHtml5 className="inline-block w-4 h-4 mr-1" />,
+    electron: <SiElectron className="inline-block w-4 h-4 mr-1" />,
+    react: <SiReact className="inline-block w-4 h-4 mr-1" />,
+    bash: <SiGnubash className="inline-block w-4 h-4 mr-1" />,
+    typescript: <SiTypescript className="inline-block w-4 h-4 mr-1" />,
+    astro: <SiAstro className="inline-block w-4 h-4 mr-1" />,
+    linux: <SiLinux className="inline-block w-4 h-4 mr-1" />,
+    sql: <SiSqlite className="inline-block w-4 h-4 mr-1" />,
+    powershell: <SiPowershell className="inline-block w-4 h-4 mr-1" />,
+    php: <SiPhp className="inline-block w-4 h-4 mr-1" />,
+    wordpress: <SiWordpress className="inline-block w-4 h-4 mr-1" />,
+    go: <SiGnubash className="inline-block w-4 h-4 mr-1" />,
+    rust: <SiGnubash className="inline-block w-4 h-4 mr-1" />,
+    tailwindcss: <SiTailwindcss className="inline-block w-4 h-4 mr-1" />,
+    cpp: <SiCplusplus className="inline-block w-4 h-4 mr-1" />,
+  };
+
+  const l = p_Language2.toLowerCase();
+  return icons[l] || null;
+}
+
 const Portfolio: NextPage = () => {
   const { t } = useTranslation("index");
   const [data, setData] = useState<Item[] | null>(null);
@@ -220,7 +246,7 @@ const Portfolio: NextPage = () => {
                       title="Sistema Operativo"
                       className="flex items-center px-2 py-1 text-xs text-gray-800 border border-gray-400 rounded-md dark:text-gray-200"
                     >
-                      {getProgrammingIcon(item.language2)}
+                      {getProgrammingIcon2(item.language2)}
                       <span>{item.language2}</span>
                     </button>
                   </div>
