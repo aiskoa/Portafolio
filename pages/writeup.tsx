@@ -61,7 +61,6 @@ const WriteUp: NextPage = () => {
 
   useEffect(() => {
     async function fetchData() {
-      // Ajusta la ruta a tu JSON
       const res = await fetch('/_pr/machines.json');
       const json: Item[] = await res.json();
       setData(json);
@@ -135,11 +134,10 @@ const WriteUp: NextPage = () => {
           </span>
         </h1>
         <p className="flex justify-center font-semibold text-center">
-          Machine write-ups de desafíos y vulnerabilidades, usando plataformas como TryHackMe, Hack The Box y más.
+          {t("writeDesc")}
         </p>
         <br />
 
-        {/* BUSCADOR / FILTRO */}
         <div className='flex items-center justify-center max-w-md mx-auto'>
           <div className="relative flex items-center h-12 overflow-hidden border rounded-lg bg-zinc-200 dark:bg-violet-800 focus-within:shadow-lg dark:focus-within:shadow-violet-900 border-zinc-200 dark:border-violet-800">
             <div className="grid w-12 h-full place-items-center">
@@ -193,7 +191,6 @@ const WriteUp: NextPage = () => {
 
         <br />
 
-        {/* MOSTRAR TARJETAS */}
         <div className="flex flex-wrap justify-center gap-6">
           {sortedData.map((item: Item, index: number) => (
             <div
@@ -209,14 +206,12 @@ const WriteUp: NextPage = () => {
                 />
                 <div className="p-4">
                   <div>
-                    {/* ÍCONO SENCILLO PARA REEMPLAZAR GITHUB ICON */}
                     <a
                       href={item.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block"
                     >
-                      {/* Por ejemplo, un ícono de enlace */}
                       <FaLink className="inline-block w-6 h-6 text-gray-800 dark:text-white" />
                       <span className="ml-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:underline">
                         {item.title}
@@ -224,7 +219,6 @@ const WriteUp: NextPage = () => {
                     </a>
                   </div>
 
-                  {/* BOTONES CON ÍCONOS DE PLATAFORMA / OS / DIFICULTAD */}
                   <div className="flex items-center mt-2 space-x-2">
                     <button
                       title="Plataforma"
@@ -251,12 +245,10 @@ const WriteUp: NextPage = () => {
                     </button>
                   </div>
 
-                  {/* DESCRIPCIÓN DEL WRITEUP */}
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                     {item.description}
                   </p>
 
-                  {/* BOTÓN PARA IR AL WRITEUP COMPLETO */}
                   <div className="flex justify-between mt-4">
                     <button
                       type="button"

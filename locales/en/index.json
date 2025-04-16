@@ -27,5 +27,6 @@
   "error_notfound_one": "Time bends, but this page remains lost.",
   "error_notfound_two": "Rewind your search, or journey back home to the beginning.",
   "projects": "PROJECTS",
-  "projectsDesc": "Here are some of my most recent projects and contributions"
+  "projectsDesc": "Here are some of my most recent projects and contributions",
+  "writeDesc": "Write-ups of machines, challenges and vulnerabilities, using platforms such as TryHackMe, Hack The Box and more."
 }
