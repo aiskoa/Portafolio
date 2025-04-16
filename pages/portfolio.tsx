@@ -4,7 +4,7 @@ import Head from 'next/head'
 import useTranslation from "next-translate/useTranslation";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-import { SiAstro, SiCplusplus, SiElectron, SiGnubash, SiHtml5, SiJavascript, SiLinux, SiPhp, SiPowershell, SiPython, SiReact, SiSqlite, SiTailwindcss, SiTypescript, SiWordpress } from "react-icons/si";
+import { SiAstro, SiCplusplus, SiElectron, SiGnubash, SiHtml5, SiJavascript, SiLinux, SiPhp, SiPostgresql, SiPowershell, SiPython, SiReact, SiSqlite, SiTailwindcss, SiTypescript, SiWordpress } from "react-icons/si";
 import { FaLinux, FaLink, FaJava } from "react-icons/fa";
 
 interface Item {
@@ -47,6 +47,7 @@ function getProgrammingIcon(p_Language: string) {
     rust: <SiGnubash className="inline-block w-4 h-4 mr-1" />,
     tailwindcss: <SiTailwindcss className="inline-block w-4 h-4 mr-1" />,
     cpp: <SiCplusplus className="inline-block w-4 h-4 mr-1" />,
+    postgresq: <SiPostgresql className="inline-block w-4 h-4 mr-1" />
   };
 
   const l = p_Language.toLowerCase();
@@ -73,6 +74,7 @@ function getProgrammingIcon2(p_Language2: string) {
     rust: <SiGnubash className="inline-block w-4 h-4 mr-1" />,
     tailwindcss: <SiTailwindcss className="inline-block w-4 h-4 mr-1" />,
     cpp: <SiCplusplus className="inline-block w-4 h-4 mr-1" />,
+    postgresq: <SiPostgresql className="inline-block w-4 h-4 mr-1" />
   };
 
   const l = p_Language2.toLowerCase();
