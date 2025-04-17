@@ -3,8 +3,8 @@ import Link from "next/link";
 import { PostType } from "../../../models";
 import useTranslation from "next-translate/useTranslation";
 
-import { SiTryhackme, SiHackthebox, SiWindows11, SiApple, SiRootme, SiAndroid, SiAstro, SiCplusplus, SiElectron, SiGnubash, SiHtml5, SiJavascript, SiLinux, SiPhp, SiPostgresql, SiPowershell, SiPython, SiReact, SiSqlite, SiTailwindcss, SiTypescript, SiWordpress, SiHelpdesk, SiKalilinux} from "react-icons/si";
-import { FaLinux, FaLink, FaJava, FaTools, FaRobot, FaBrain, FaRegMoon } from "react-icons/fa";
+import { SiAstro, SiCplusplus, SiElectron, SiGnubash, SiHtml5, SiJavascript, SiLinux, SiPhp, SiPostgresql, SiPowershell, SiPython, SiReact, SiSqlite, SiTailwindcss, SiTypescript, SiWordpress, SiHelpdesk, SiKalilinux, SiWindows} from "react-icons/si";
+import { FaLinux, FaJava, FaTools, FaRobot, FaBrain, FaRegMoon } from "react-icons/fa";
 
 function getTagIcon(tag_1: string) {
   const icons: Record<string, JSX.Element> = {
@@ -33,6 +33,7 @@ function getTagIcon(tag_1: string) {
     ai: <FaRobot className="inline-block w-4 h-4 mr-1" />,
     mental: <FaBrain className="inline-block w-4 h-4 mr-1" />,
     irl: <FaRegMoon className="inline-block w-4 h-4 mr-1" />,
+    windows: <SiWindows className="inline-block w-4 h-4 mr-1" />
   };
 
   const l = tag_1.toLowerCase();
@@ -66,6 +67,7 @@ function getTagIcon2(tag_2: string) {
     ai: <FaRobot className="inline-block w-4 h-4 mr-1" />,
     mental: <FaBrain className="inline-block w-4 h-4 mr-1" />,
     irl: <FaRegMoon className="inline-block w-4 h-4 mr-1" />,
+    windows: <SiWindows className="inline-block w-4 h-4 mr-1" />
   };
 
   const l = tag_2.toLowerCase();
@@ -95,7 +97,7 @@ export default function Post({ post }: PostType) {
               <p className="mt-2 text-gray-600 dark:text-gray-300">
                 {post.frontmatter.excerpt} 
               </p>
-              <div className="flex items-center mt-2">
+              <div className="flex items-center mt-2 space-x-2">
                 <button
                       title="Tag 1"
                       className="flex items-center px-2 py-1 text-xs text-gray-800 border border-gray-400 rounded-md dark:text-gray-200"
@@ -103,12 +105,6 @@ export default function Post({ post }: PostType) {
                     {getTagIcon(post.frontmatter.tags1)}
                     <span>{post.frontmatter.tags1}</span>
                 </button>
-                {/* <button title="Badge" className="flex items-center px-2 py-1 mr-2 text-sm font-semibold border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500 border-l-zinc-400">
-                  {post.frontmatter.tags1}
-                </button> */}
-                {/* <button title="Badge" className="flex items-center px-2 py-1 text-sm font-semibold border-2 rounded-md dark:border-b-violet-300 dark:bg-zinc-900 border-b-zinc-500 border-l-zinc-400">
-                  {post.frontmatter.tags2}
-                </button> */}
                 <button
                       title="Tag 1"
                       className="flex items-center px-2 py-1 text-xs text-gray-800 border border-gray-400 rounded-md dark:text-gray-200"

@@ -56,7 +56,7 @@
 .markdown {
   max-width: 100%;
   margin: 0 auto;
-  line-height: 1.7; /* para que no quede tan pegado */
+  line-height: 1.7;
 }
 
 .markdown h1,
@@ -89,4 +89,8 @@
   margin: 1rem 0;
   color: #555;
   font-style: italic;
+}
+
+.link{
+  color: aqua
 }

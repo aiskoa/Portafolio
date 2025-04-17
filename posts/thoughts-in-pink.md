@@ -8,7 +8,7 @@ tags1: "IRL"
 tags2: "Mental"
 ---
 
-# Hi there! 👋, this is the first publish as a life blog.
+# Hi there! 👋, this is the first publish as a life blog
 
 &nbsp;
 
@@ -111,7 +111,7 @@ You overthink things, over and over again, until you fall under the weight of th
 
 > 13, 2, 18, 6, 17, 12, 20
 
-Me levante y tome un **JUGO** de naranja frio, posteriormente avance __ pasos como un inglés, me quede ahi usando aquella cosa, después me canse y camine __ pasos, para ver la tv, me dormí y decidi pararme a viajar __ pasos hasta caer cansado, entonces me fui a mi cama comoda fabricada en **PRADA**, al dia siguiente me levante temprano contando __ pasos hasta llegar al baño, me quede solo __ minutos por distraido al ver tiktok, despues sali a dar un paseo, eran __ pasos hasta llegar a la tienda donde decidí comprar un helado de __ pesos, barato me salio el coso, mas barato que mi **AUTO**, felizmente me sente en una banca blanca.
+Me levante y tome un **JUGO** de naranja frio, posteriormente avance **pasos como un inglés, me quede ahi usando aquella cosa, después me canse y camine** pasos, para ver la tv, me dormí y decidi pararme a viajar **pasos hasta caer cansado, entonces me fui a mi cama comoda fabricada en **PRADA**, al dia siguiente me levante temprano contando** pasos hasta llegar al baño, me quede solo **minutos por distraido al ver tiktok, despues sali a dar un paseo, eran** pasos hasta llegar a la tienda donde decidí comprar un helado de __ pesos, barato me salio el coso, mas barato que mi **AUTO**, felizmente me sente en una banca blanca.
 
 RESULT= J
 
@@ -121,11 +121,11 @@ RESULT= J
 
 > X = Mathematical operation that consists of reducing or separating something from a whole.
 > Y = 62 / 62
-> G = 
+> G =
 
 &nbsp;
 
-*Ha{Y}nLkJFy{G}x9PKAv{X}swED4wt{Y}ELgTEp{RESULT}*
+**Ha{Y}nLkJFy{G}x9PKAv{X}swED4wt{Y}ELgTEp{RESULT}**
 
 &nbsp;
 
