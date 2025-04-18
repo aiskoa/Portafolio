@@ -106,7 +106,7 @@ const WriteUp: NextPage = () => {
       <Head>
         <title>AISKOA - WriteUps</title>
         <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
-        <meta name="description" content="Aiskoa's Portfolio." />
+        <meta name="description" content="Aiskoa's Pentest machines writeups and notes." />
         <meta property="og:description" content="Aiskoa's WriteUps." />
         <meta property="og:title" content="AISKOA - WriteUps" />
         <meta name="theme-color:" content="#8e52f5" />

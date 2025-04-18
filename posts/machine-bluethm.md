@@ -80,46 +80,7 @@ nmap 10.10.90.82 -p- -sV -oN all_ports.nmap -Pn --min-rate 5000
 sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.90.82 -oG Escaneo
 ```
 
-## Preparación de Ambiente de Pruebas
-
-| Nombre | Descripción |
-| --|--|
-| 🐦 **VMware Workstation** | [LINK A VMWARE](https://www.vmware.com/) |
-| 🐦 **PNET Lab** | [LINK A PNET](https://pnetlab.com/pages/download) |
-| 🐦 **Windows Client Side Eve-ng** | [LINK A EVE-NG](https://www.eve-ng.net/index.php/download/) |
-| 🐦 **Kali Linux** | [LINK A KALI](https://www.kali.org/get-kali/#kali-platforms) |
-| 🐦 **UNET LAB DRIVE** | [LINK A UNET LAB](https://drive.labhub.eu.org/) |
-| 🐦 **DOCS** | [LINK A DOCUMENTACIÓN](https://www.eve-ng.net/index.php/documentation/) |
-
 &nbsp;
-
-## Paso 1: Instalación de PNET
-
-Descarga la maquina PNET en el sitio oficial, deberás obtener un **.OVA** que 
-
-comando directamente en pnet de vmware o mediante ssh desde una terminal en
-
-windows, lo que es más sencillo.
-
-```powershell
-  ishare2 pull bin <number>
-  ishare2 pull qemu <number>
-  ishare2 pull dynamips <number>
-```
-
-## Paso 6: Creación de Salida a Red
-
-![PLA4](https://i.ibb.co/LXRmRWVR/pla4.png)
-
-Ahora seleccionaras la opción de Network
-
-![PLA7](https://i.ibb.co/0RwDwPMP/pl7.png)
-
-### Diferencias
-
-**NAT (Network Address Translation):**
-
-Propósito: Permite que varios dispositivos en una red local (LAN) usen una sola dirección IP pública para conectarse a internet.
 
 > Se que todo esto es bastante simple y me explicación no fue la mejor pero intento detallar lo mas claro posible..
 
@@ -131,12 +92,4 @@ Propósito: Permite que varios dispositivos en una red local (LAN) usen una sola
 
 &nbsp;
 
-- 💜 Acceso al [--> Blog](https://rawier.vercel.app/es/blog/)
-
-### Gracias por leer
-
-&nbsp;
-
-### Fuentes de consulta
-
-- 🔖 PNET y Eve-ng
+* 💜 Acceso al [--> Blog](https://aiskoa.vercel.app/es/blog/)
