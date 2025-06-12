@@ -105,7 +105,7 @@ El puerto 445/tcp para microsoft-ds Windows 7 está abierto, este es el puerto p
 Usando Nmap se usa el comando *nmap 10.10.90.82 -p- -sV -oN all_ports.nmap -Pn --min-rate 5000* donde las opciones son:
 
 * *-p-*: Escanea todos los puertos (desde el 1 hasta el 65535).
-* *-sV*:* Detecta versiones de los servicios en los puertos abiertos.
+* *-sV*: Detecta versiones de los servicios en los puertos abiertos.
 * *-oN all_ports.nmap*: Guarda los resultados en un archivo llamado all_ports.nmap que puede ser leído más tarde.
 * *-Pn*: Omite el escaneo de ping y asume que el host está activo.
 * *--min-rate 5000*: Establece una tasa mínima de 5000 paquetes por segundo, acelerando el escaneo, (cabe aclarar que esto causa mucho ruido).
@@ -116,12 +116,12 @@ Descubrimos que responde a JON-PC y confirmamos que utiliza Windows 7 como siste
 
 Gracias a este escaneo identificamos los puertos:
 
-* 135/tcp (MSRPC): Relacionado con el servicio de RPC de Windows.
-* 139/tcp (NetBIOS-SSN): Es utilizado para compartir archivos y dispositivos
+* **135/tcp (MSRPC)**: Relacionado con el servicio de RPC de Windows.
+* **139/tcp (NetBIOS-SSN)**: Es utilizado para compartir archivos y dispositivos
 en redes locales.
-* 445/tcp (SMB): Al igual que NetBIOS permite compartir archivos, impresoras, directorios y otros recursos entre dispositivos en una red.
-* 3389/tcp (RDP): El protocolo RDP permite la conexión remota a computadoras a través de una interfaz gráfica. Es fundamental para la administración remota.
-* 49152-49160/tcp (MSRPC dinámico): Estos puertos están relacionados con la asignación dinámica de RPC.
+* **445/tcp (SMB)**: Al igual que NetBIOS permite compartir archivos, impresoras, directorios y otros recursos entre dispositivos en una red.
+* **3389/tcp (RDP)**: El protocolo RDP permite la conexión remota a computadoras a través de una interfaz gráfica. Es fundamental para la administración remota.
+* **49152-49160/tcp (MSRPC dinámico)**: Estos puertos están relacionados con la asignación dinámica de RPC.
 
 &nbsp;
 
@@ -200,14 +200,94 @@ Podemos ver la lista de comandos los cuales hay muchas opciones que nos permiten
 
 Entonces decidimos invocar una terminal remota para poder interactuar con el activo.
 
-sx
+Nos damos cuenta al ejecutar el comando whoami que somos el usuario **NT/AUTHORITY/SYSTEM**
+
+## ¿Qué es el usuario NT/AUTHORITY/SYSTEM?
+
+El usuario NT AUTHORITY\SYSTEM en Windows es una cuenta especial con privilegios elevados que permite a los servicios del sistema operar con acceso total a los recursos locales. Es más poderosa que cualquier cuenta de administrador estándar y se usa para ejecutar procesos críticos del sistema.
+
+Esta cuenta no está asociada a un usuario y se emplea para tareas como la administración de archivos, la ejecución de servicios y el acceso a recursos protegidos. Similar al usuario root en Linux.
+
+Usando PowerShell desde nuestras maquinas podemos listar los servicios que se ejecutan bajo esta cuenta:
+
+```powershell
+Get-WmiObject win32_service | select Name, StartName | Where-Object {($_.StartName -eq "LocalSystem")} 
+```
+
+## Post-Explotación
+
+Ahora nos interesa tener persistencia o buscar las flags ocultas en el equipo, si bien podemos usar herramientas de busqueda avanzada o crear un nuevo usuario con privilegios de administración, decidimos usar el usuario existente en la maquina, JON.
+
+Usando hashdump obtenemos el listado de los usuarios alojados en el sistema con su respectivo password.
+
+![hashdump](https://i.postimg.cc/02PQgDpY/image.png)
+
+Podemos usar herramientas online para descifrar el hash pero usaremos John The Ripper para descifrar contraseñas y el diccionario rockyou.txt encontramos que la contraseña para el usuario Jon es: **alqfna22**.
+
+![johntheripper](https://i.postimg.cc/k4PVBZtZ/image.png)
+
+Por ultimo, utilizando el protocolo RDP del puerto 3389 que observamos que está abierto durante la fase de enumeración nos conectamos usando rdesktop.
+Conectandonos a la maquina Windows  nos damos cuenta que esta desactualizada, ya que esta en una actualización de windows 7 vieja y por lo tanto muy vulnerable, por eso mismo fue posible usar eternalblue de forma tan sencilla.
+
+![desktop](https://i.postimg.cc/5NytN1Ry/image.png)
+
+Encontramos la evidencia (la flag3) dentro de System32/config que es donde se guardan las contraseñas en Windows 7.
+
+![flag3](https://i.postimg.cc/SNtcymmN/image.png)
+
+## Recomendaciones
+
+Como se ha notado a lo largo del informe el impacto de esta vulnerabilidad es critica por lo tanto se recomienda seguir ciertas recomendaciones.
+
+1. Actualización:
+a. Instalar el parche de seguridad que Microsoft a proporcionado MS17-010.
+b. Instalar las actualizaciones disponibles de Windows Update.
+2. Desactivar los protocolos innecesarios y/o vulnerables:
+a. Desde Programas y características, “Activar o desactivar características de Windows”, desmarcar “Soporte para compartir archivos SMB 1.0/CIFS”
+b. también se puede desactivar desde PowerShell usando el comando: *sc.exe config lanmanworkstation depend=bowser/mrxsmb10/mrxsmb20/nsi sc.exe config mrxsmb10 start= disabled*
+3. Uso de Firewall
+a. Configura reglas de entrada solo para las fuentes y puertos necesarios.
+4. Desactivar o asegurar RDP
+a. Desactivar el RDP en favor de “Solo conexiones con autenticación a nivel de red (NLA)”, Desde panel de control, Sistema, “Configuración de acceso remoto”.
+b. Usar contraseñas fuertes y 2FA si es posible.
+5. Utilizar alguna herramienta de monitoreo o SIEM/SOAR.
+
+### Estandar
+
+Se recomienda seguir el estándar NIST, específicamente NIST SP 800-53 y NIST SP 800-171.
+
+* NIST SP 800-53: Es un catalogo de controles de seguridad que cubren lo necesario respecto a protección de sistemas.
+    o Limita quien puede acceder a que (control de acceso).
+    o Restringe servicios innecesarios (reducción de superficie de ataque).
+    o Asegura la configuración del sistema (hardening)
+    o Aplica parches a tiempo (gestión de vulnerabilidades).
+    o Protege y supervisa.
+    o Documenta y responde a incidentes
+* NIST SP 800-171: Se enfoca a proteger información en sistemas de empresas.
+    o Autenticación fuerte
+    o Configuraciones seguras en los equipos.
+
+## Fuentes de consulta
+
+* P. José Luis / Madrid, España. (n.d.). Packet crafting - GTI - Glosario Terminología informatica. T U G U R I U M. <https://www.tugurium.com/gti/termino.php?Tr=packet%20crafting>
+* What is packet crafting? (2025, May 22). IT Certification Boot Camp Courses | Master IT Certifications Fast – Training Camp. <https://trainingcamp.com/glossary/packet-crafting/>
+* <https://nvd.nist.gov/vuln/detail/cve-2017-0144>
+* <https://nvd.nist.gov/vuln/detail/CVE-2025-29927>
+* MS17-010 EternalBlue SMB remote Windows kernel pool corruption. (n.d.). Rapid7. <https://www.rapid7.com/db/modules/exploit/windows/smb/ms17_010_eternal>
+ blue/
+
+### Glosario de Hacking Ciberseguridad y Redes
+
+Recomiendo revisar mi articulo sobre esto para poder entender de mejor los terminos de este writeup.
+
+🍁 Glosario de terminos [--> Glosario](https://aiskoa.vercel.app/es/blog/glossary)
 
 ---
 
 &nbsp;
 
-> Mas adelante mostraré a realizar pruebas de penetración a diferentes sistemas en tu laboratorio.
+> Gracias por leer mi blog, espero que te haya gustado.
 
 &nbsp;
 
-* 💜 Acceso al [--> Blog](https://aiskoa.vercel.app/es/blog/)
+* 💜 Acceso a más writeups [--> WriteUps](https://aiskoa.vercel.app/writeup)

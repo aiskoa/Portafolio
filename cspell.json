@@ -41,6 +41,7 @@
         "ciberseguridad",
         "DCOM",
         "Escalabilidad",
+        "hashdump",
         "Metasploit",
         "meterpreter",
         "misconfig",
@@ -49,7 +50,8 @@
         "nmap",
         "Pentesting",
         "PNET",
-        "Rawier"
+        "Rawier",
+        "rockyou"
     ],
     "ignoreWords": [],
     "import": []
